@@ -1,0 +1,2211 @@
+Nov 08 17:21:46 nsimon kernel: Linux version 6.6.0 (root@nsimon) (gcc (GCC) 11.3.1 20221121 (Red Hat 11.3.1-4), GNU ld version 2.35.2-37.el9) #5 SMP PREEMPT_DYNAMIC Wed Nov  8 17:04:39 CET 2023
+Nov 08 17:21:46 nsimon kernel: Command line: BOOT_IMAGE=(hd0,msdos1)/vmlinuz-6.6.0 root=/dev/mapper/rl-root ro crashkernel=1G-4G:192M,4G-64G:256M,64G-:512M resume=/dev/mapper/rl-swap rd.lvm.lv=rl/root rd.lvm.lv=rl/swap
+Nov 08 17:21:46 nsimon kernel: Disabled fast string operations
+Nov 08 17:21:46 nsimon kernel: BIOS-provided physical RAM map:
+Nov 08 17:21:46 nsimon kernel: BIOS-e820: [mem 0x0000000000000000-0x0000000000097bff] usable
+Nov 08 17:21:46 nsimon kernel: BIOS-e820: [mem 0x0000000000097c00-0x000000000009ffff] reserved
+Nov 08 17:21:46 nsimon kernel: BIOS-e820: [mem 0x00000000000ce000-0x00000000000cffff] reserved
+Nov 08 17:21:46 nsimon kernel: BIOS-e820: [mem 0x00000000000dc000-0x00000000000fffff] reserved
+Nov 08 17:21:46 nsimon kernel: BIOS-e820: [mem 0x0000000000100000-0x00000000bfecffff] usable
+Nov 08 17:21:46 nsimon kernel: BIOS-e820: [mem 0x00000000bfed0000-0x00000000bfefefff] ACPI data
+Nov 08 17:21:46 nsimon kernel: BIOS-e820: [mem 0x00000000bfeff000-0x00000000bfefffff] ACPI NVS
+Nov 08 17:21:46 nsimon kernel: BIOS-e820: [mem 0x00000000bff00000-0x00000000bfffffff] usable
+Nov 08 17:21:46 nsimon kernel: BIOS-e820: [mem 0x00000000f0000000-0x00000000f7ffffff] reserved
+Nov 08 17:21:46 nsimon kernel: BIOS-e820: [mem 0x00000000fec00000-0x00000000fec0ffff] reserved
+Nov 08 17:21:46 nsimon kernel: BIOS-e820: [mem 0x00000000fee00000-0x00000000fee00fff] reserved
+Nov 08 17:21:46 nsimon kernel: BIOS-e820: [mem 0x00000000fffe0000-0x00000000ffffffff] reserved
+Nov 08 17:21:46 nsimon kernel: BIOS-e820: [mem 0x0000000100000000-0x000000013fffffff] usable
+Nov 08 17:21:46 nsimon kernel: NX (Execute Disable) protection: active
+Nov 08 17:21:46 nsimon kernel: APIC: Static calls initialized
+Nov 08 17:21:46 nsimon kernel: SMBIOS 2.7 present.
+Nov 08 17:21:46 nsimon kernel: DMI: VMware, Inc. VMware Virtual Platform/440BX Desktop Reference Platform, BIOS 6.00 11/12/2020
+Nov 08 17:21:46 nsimon kernel: vmware: hypercall mode: 0x02
+Nov 08 17:21:46 nsimon kernel: Hypervisor detected: VMware
+Nov 08 17:21:46 nsimon kernel: vmware: TSC freq read from hypervisor : 2304.000 MHz
+Nov 08 17:21:46 nsimon kernel: vmware: Host bus clock speed read from hypervisor : 66000000 Hz
+Nov 08 17:21:46 nsimon kernel: vmware: using clock offset of 17303928587 ns
+Nov 08 17:21:46 nsimon kernel: tsc: Detected 2304.000 MHz processor
+Nov 08 17:21:46 nsimon kernel: e820: update [mem 0x00000000-0x00000fff] usable ==> reserved
+Nov 08 17:21:46 nsimon kernel: e820: remove [mem 0x000a0000-0x000fffff] usable
+Nov 08 17:21:46 nsimon kernel: last_pfn = 0x140000 max_arch_pfn = 0x400000000
+Nov 08 17:21:46 nsimon kernel: total RAM covered: 130048M
+Nov 08 17:21:46 nsimon kernel: Found optimal setting for mtrr clean up
+Nov 08 17:21:46 nsimon kernel:  gran_size: 64K         chunk_size: 64K         num_reg: 7          lose cover RAM: 0G
+Nov 08 17:21:46 nsimon kernel: MTRR map: 7 entries (5 fixed + 2 variable; max 21), built from 8 variable MTRRs
+Nov 08 17:21:46 nsimon kernel: x86/PAT: Configuration [0-7]: WB  WC  UC- UC  WB  WP  UC- WT  
+Nov 08 17:21:46 nsimon kernel: e820: update [mem 0xc0000000-0xffffffff] usable ==> reserved
+Nov 08 17:21:46 nsimon kernel: last_pfn = 0xc0000 max_arch_pfn = 0x400000000
+Nov 08 17:21:46 nsimon kernel: found SMP MP-table at [mem 0x000f6a70-0x000f6a7f]
+Nov 08 17:21:46 nsimon kernel: Using GB pages for direct mapping
+Nov 08 17:21:46 nsimon kernel: RAMDISK: [mem 0x2cc1b000-0x32605fff]
+Nov 08 17:21:46 nsimon kernel: ACPI: Early table checksum verification disabled
+Nov 08 17:21:46 nsimon kernel: ACPI: RSDP 0x00000000000F6A00 000024 (v02 PTLTD )
+Nov 08 17:21:46 nsimon kernel: ACPI: XSDT 0x00000000BFEDC633 00005C (v01 INTEL  440BX    06040000 VMW  01324272)
+Nov 08 17:21:46 nsimon kernel: ACPI: FACP 0x00000000BFEFEE73 0000F4 (v04 INTEL  440BX    06040000 PTL  000F4240)
+Nov 08 17:21:46 nsimon kernel: ACPI: DSDT 0x00000000BFEDD9E8 02148B (v01 PTLTD  Custom   06040000 MSFT 03000001)
+Nov 08 17:21:46 nsimon kernel: ACPI: FACS 0x00000000BFEFFFC0 000040
+Nov 08 17:21:46 nsimon kernel: ACPI: FACS 0x00000000BFEFFFC0 000040
+Nov 08 17:21:46 nsimon kernel: ACPI: BOOT 0x00000000BFEDD9C0 000028 (v01 PTLTD  $SBFTBL$ 06040000  LTP 00000001)
+Nov 08 17:21:46 nsimon kernel: ACPI: APIC 0x00000000BFEDD27E 000742 (v01 PTLTD  ? APIC   06040000  LTP 00000000)
+Nov 08 17:21:46 nsimon kernel: ACPI: MCFG 0x00000000BFEDD242 00003C (v01 PTLTD  $PCITBL$ 06040000  LTP 00000001)
+Nov 08 17:21:46 nsimon kernel: ACPI: SRAT 0x00000000BFEDC72F 0008D0 (v02 VMWARE MEMPLUG  06040000 VMW  00000001)
+Nov 08 17:21:46 nsimon kernel: ACPI: HPET 0x00000000BFEDC6F7 000038 (v01 VMWARE VMW HPET 06040000 VMW  00000001)
+Nov 08 17:21:46 nsimon kernel: ACPI: WAET 0x00000000BFEDC6CF 000028 (v01 VMWARE VMW WAET 06040000 VMW  00000001)
+Nov 08 17:21:46 nsimon kernel: ACPI: Reserving FACP table memory at [mem 0xbfefee73-0xbfefef66]
+Nov 08 17:21:46 nsimon kernel: ACPI: Reserving DSDT table memory at [mem 0xbfedd9e8-0xbfefee72]
+Nov 08 17:21:46 nsimon kernel: ACPI: Reserving FACS table memory at [mem 0xbfefffc0-0xbfefffff]
+Nov 08 17:21:46 nsimon kernel: ACPI: Reserving FACS table memory at [mem 0xbfefffc0-0xbfefffff]
+Nov 08 17:21:46 nsimon kernel: ACPI: Reserving BOOT table memory at [mem 0xbfedd9c0-0xbfedd9e7]
+Nov 08 17:21:46 nsimon kernel: ACPI: Reserving APIC table memory at [mem 0xbfedd27e-0xbfedd9bf]
+Nov 08 17:21:46 nsimon kernel: ACPI: Reserving MCFG table memory at [mem 0xbfedd242-0xbfedd27d]
+Nov 08 17:21:46 nsimon kernel: ACPI: Reserving SRAT table memory at [mem 0xbfedc72f-0xbfedcffe]
+Nov 08 17:21:46 nsimon kernel: ACPI: Reserving HPET table memory at [mem 0xbfedc6f7-0xbfedc72e]
+Nov 08 17:21:46 nsimon kernel: ACPI: Reserving WAET table memory at [mem 0xbfedc6cf-0xbfedc6f6]
+Nov 08 17:21:46 nsimon kernel: system APIC only can use physical flat
+Nov 08 17:21:46 nsimon kernel: APIC: Switched APIC routing to: physical flat
+Nov 08 17:21:46 nsimon kernel: SRAT: PXM 0 -> APIC 0x00 -> Node 0
+Nov 08 17:21:46 nsimon kernel: SRAT: PXM 0 -> APIC 0x02 -> Node 0
+Nov 08 17:21:46 nsimon kernel: SRAT: PXM 0 -> APIC 0x04 -> Node 0
+Nov 08 17:21:46 nsimon kernel: SRAT: PXM 0 -> APIC 0x06 -> Node 0
+Nov 08 17:21:46 nsimon kernel: SRAT: PXM 0 -> APIC 0x08 -> Node 0
+Nov 08 17:21:46 nsimon kernel: SRAT: PXM 0 -> APIC 0x0a -> Node 0
+Nov 08 17:21:46 nsimon kernel: SRAT: PXM 0 -> APIC 0x0c -> Node 0
+Nov 08 17:21:46 nsimon kernel: SRAT: PXM 0 -> APIC 0x0e -> Node 0
+Nov 08 17:21:46 nsimon kernel: SRAT: PXM 0 -> APIC 0x10 -> Node 0
+Nov 08 17:21:46 nsimon kernel: SRAT: PXM 0 -> APIC 0x12 -> Node 0
+Nov 08 17:21:46 nsimon kernel: SRAT: PXM 0 -> APIC 0x14 -> Node 0
+Nov 08 17:21:46 nsimon kernel: SRAT: PXM 0 -> APIC 0x16 -> Node 0
+Nov 08 17:21:46 nsimon kernel: SRAT: PXM 0 -> APIC 0x18 -> Node 0
+Nov 08 17:21:46 nsimon kernel: SRAT: PXM 0 -> APIC 0x1a -> Node 0
+Nov 08 17:21:46 nsimon kernel: SRAT: PXM 0 -> APIC 0x1c -> Node 0
+Nov 08 17:21:46 nsimon kernel: SRAT: PXM 0 -> APIC 0x1e -> Node 0
+Nov 08 17:21:46 nsimon kernel: SRAT: PXM 0 -> APIC 0x20 -> Node 0
+Nov 08 17:21:46 nsimon kernel: SRAT: PXM 0 -> APIC 0x22 -> Node 0
+Nov 08 17:21:46 nsimon kernel: SRAT: PXM 0 -> APIC 0x24 -> Node 0
+Nov 08 17:21:46 nsimon kernel: SRAT: PXM 0 -> APIC 0x26 -> Node 0
+Nov 08 17:21:46 nsimon kernel: SRAT: PXM 0 -> APIC 0x28 -> Node 0
+Nov 08 17:21:46 nsimon kernel: SRAT: PXM 0 -> APIC 0x2a -> Node 0
+Nov 08 17:21:46 nsimon kernel: SRAT: PXM 0 -> APIC 0x2c -> Node 0
+Nov 08 17:21:46 nsimon kernel: SRAT: PXM 0 -> APIC 0x2e -> Node 0
+Nov 08 17:21:46 nsimon kernel: SRAT: PXM 0 -> APIC 0x30 -> Node 0
+Nov 08 17:21:46 nsimon kernel: SRAT: PXM 0 -> APIC 0x32 -> Node 0
+Nov 08 17:21:46 nsimon kernel: SRAT: PXM 0 -> APIC 0x34 -> Node 0
+Nov 08 17:21:46 nsimon kernel: SRAT: PXM 0 -> APIC 0x36 -> Node 0
+Nov 08 17:21:46 nsimon kernel: SRAT: PXM 0 -> APIC 0x38 -> Node 0
+Nov 08 17:21:46 nsimon kernel: SRAT: PXM 0 -> APIC 0x3a -> Node 0
+Nov 08 17:21:46 nsimon kernel: SRAT: PXM 0 -> APIC 0x3c -> Node 0
+Nov 08 17:21:46 nsimon kernel: SRAT: PXM 0 -> APIC 0x3e -> Node 0
+Nov 08 17:21:46 nsimon kernel: SRAT: PXM 0 -> APIC 0x40 -> Node 0
+Nov 08 17:21:46 nsimon kernel: SRAT: PXM 0 -> APIC 0x42 -> Node 0
+Nov 08 17:21:46 nsimon kernel: SRAT: PXM 0 -> APIC 0x44 -> Node 0
+Nov 08 17:21:46 nsimon kernel: SRAT: PXM 0 -> APIC 0x46 -> Node 0
+Nov 08 17:21:46 nsimon kernel: SRAT: PXM 0 -> APIC 0x48 -> Node 0
+Nov 08 17:21:46 nsimon kernel: SRAT: PXM 0 -> APIC 0x4a -> Node 0
+Nov 08 17:21:46 nsimon kernel: SRAT: PXM 0 -> APIC 0x4c -> Node 0
+Nov 08 17:21:46 nsimon kernel: SRAT: PXM 0 -> APIC 0x4e -> Node 0
+Nov 08 17:21:46 nsimon kernel: SRAT: PXM 0 -> APIC 0x50 -> Node 0
+Nov 08 17:21:46 nsimon kernel: SRAT: PXM 0 -> APIC 0x52 -> Node 0
+Nov 08 17:21:46 nsimon kernel: SRAT: PXM 0 -> APIC 0x54 -> Node 0
+Nov 08 17:21:46 nsimon kernel: SRAT: PXM 0 -> APIC 0x56 -> Node 0
+Nov 08 17:21:46 nsimon kernel: SRAT: PXM 0 -> APIC 0x58 -> Node 0
+Nov 08 17:21:46 nsimon kernel: SRAT: PXM 0 -> APIC 0x5a -> Node 0
+Nov 08 17:21:46 nsimon kernel: SRAT: PXM 0 -> APIC 0x5c -> Node 0
+Nov 08 17:21:46 nsimon kernel: SRAT: PXM 0 -> APIC 0x5e -> Node 0
+Nov 08 17:21:46 nsimon kernel: SRAT: PXM 0 -> APIC 0x60 -> Node 0
+Nov 08 17:21:46 nsimon kernel: SRAT: PXM 0 -> APIC 0x62 -> Node 0
+Nov 08 17:21:46 nsimon kernel: SRAT: PXM 0 -> APIC 0x64 -> Node 0
+Nov 08 17:21:46 nsimon kernel: SRAT: PXM 0 -> APIC 0x66 -> Node 0
+Nov 08 17:21:46 nsimon kernel: SRAT: PXM 0 -> APIC 0x68 -> Node 0
+Nov 08 17:21:46 nsimon kernel: SRAT: PXM 0 -> APIC 0x6a -> Node 0
+Nov 08 17:21:46 nsimon kernel: SRAT: PXM 0 -> APIC 0x6c -> Node 0
+Nov 08 17:21:46 nsimon kernel: SRAT: PXM 0 -> APIC 0x6e -> Node 0
+Nov 08 17:21:46 nsimon kernel: SRAT: PXM 0 -> APIC 0x70 -> Node 0
+Nov 08 17:21:46 nsimon kernel: SRAT: PXM 0 -> APIC 0x72 -> Node 0
+Nov 08 17:21:46 nsimon kernel: SRAT: PXM 0 -> APIC 0x74 -> Node 0
+Nov 08 17:21:46 nsimon kernel: SRAT: PXM 0 -> APIC 0x76 -> Node 0
+Nov 08 17:21:46 nsimon kernel: SRAT: PXM 0 -> APIC 0x78 -> Node 0
+Nov 08 17:21:46 nsimon kernel: SRAT: PXM 0 -> APIC 0x7a -> Node 0
+Nov 08 17:21:46 nsimon kernel: SRAT: PXM 0 -> APIC 0x7c -> Node 0
+Nov 08 17:21:46 nsimon kernel: SRAT: PXM 0 -> APIC 0x7e -> Node 0
+Nov 08 17:21:46 nsimon kernel: SRAT: PXM 0 -> APIC 0x80 -> Node 0
+Nov 08 17:21:46 nsimon kernel: SRAT: PXM 0 -> APIC 0x82 -> Node 0
+Nov 08 17:21:46 nsimon kernel: SRAT: PXM 0 -> APIC 0x84 -> Node 0
+Nov 08 17:21:46 nsimon kernel: SRAT: PXM 0 -> APIC 0x86 -> Node 0
+Nov 08 17:21:46 nsimon kernel: SRAT: PXM 0 -> APIC 0x88 -> Node 0
+Nov 08 17:21:46 nsimon kernel: SRAT: PXM 0 -> APIC 0x8a -> Node 0
+Nov 08 17:21:46 nsimon kernel: SRAT: PXM 0 -> APIC 0x8c -> Node 0
+Nov 08 17:21:46 nsimon kernel: SRAT: PXM 0 -> APIC 0x8e -> Node 0
+Nov 08 17:21:46 nsimon kernel: SRAT: PXM 0 -> APIC 0x90 -> Node 0
+Nov 08 17:21:46 nsimon kernel: SRAT: PXM 0 -> APIC 0x92 -> Node 0
+Nov 08 17:21:46 nsimon kernel: SRAT: PXM 0 -> APIC 0x94 -> Node 0
+Nov 08 17:21:46 nsimon kernel: SRAT: PXM 0 -> APIC 0x96 -> Node 0
+Nov 08 17:21:46 nsimon kernel: SRAT: PXM 0 -> APIC 0x98 -> Node 0
+Nov 08 17:21:46 nsimon kernel: SRAT: PXM 0 -> APIC 0x9a -> Node 0
+Nov 08 17:21:46 nsimon kernel: SRAT: PXM 0 -> APIC 0x9c -> Node 0
+Nov 08 17:21:46 nsimon kernel: SRAT: PXM 0 -> APIC 0x9e -> Node 0
+Nov 08 17:21:46 nsimon kernel: SRAT: PXM 0 -> APIC 0xa0 -> Node 0
+Nov 08 17:21:46 nsimon kernel: SRAT: PXM 0 -> APIC 0xa2 -> Node 0
+Nov 08 17:21:46 nsimon kernel: SRAT: PXM 0 -> APIC 0xa4 -> Node 0
+Nov 08 17:21:46 nsimon kernel: SRAT: PXM 0 -> APIC 0xa6 -> Node 0
+Nov 08 17:21:46 nsimon kernel: SRAT: PXM 0 -> APIC 0xa8 -> Node 0
+Nov 08 17:21:46 nsimon kernel: SRAT: PXM 0 -> APIC 0xaa -> Node 0
+Nov 08 17:21:46 nsimon kernel: SRAT: PXM 0 -> APIC 0xac -> Node 0
+Nov 08 17:21:46 nsimon kernel: SRAT: PXM 0 -> APIC 0xae -> Node 0
+Nov 08 17:21:46 nsimon kernel: SRAT: PXM 0 -> APIC 0xb0 -> Node 0
+Nov 08 17:21:46 nsimon kernel: SRAT: PXM 0 -> APIC 0xb2 -> Node 0
+Nov 08 17:21:46 nsimon kernel: SRAT: PXM 0 -> APIC 0xb4 -> Node 0
+Nov 08 17:21:46 nsimon kernel: SRAT: PXM 0 -> APIC 0xb6 -> Node 0
+Nov 08 17:21:46 nsimon kernel: SRAT: PXM 0 -> APIC 0xb8 -> Node 0
+Nov 08 17:21:46 nsimon kernel: SRAT: PXM 0 -> APIC 0xba -> Node 0
+Nov 08 17:21:46 nsimon kernel: SRAT: PXM 0 -> APIC 0xbc -> Node 0
+Nov 08 17:21:46 nsimon kernel: SRAT: PXM 0 -> APIC 0xbe -> Node 0
+Nov 08 17:21:46 nsimon kernel: SRAT: PXM 0 -> APIC 0xc0 -> Node 0
+Nov 08 17:21:46 nsimon kernel: SRAT: PXM 0 -> APIC 0xc2 -> Node 0
+Nov 08 17:21:46 nsimon kernel: SRAT: PXM 0 -> APIC 0xc4 -> Node 0
+Nov 08 17:21:46 nsimon kernel: SRAT: PXM 0 -> APIC 0xc6 -> Node 0
+Nov 08 17:21:46 nsimon kernel: SRAT: PXM 0 -> APIC 0xc8 -> Node 0
+Nov 08 17:21:46 nsimon kernel: SRAT: PXM 0 -> APIC 0xca -> Node 0
+Nov 08 17:21:46 nsimon kernel: SRAT: PXM 0 -> APIC 0xcc -> Node 0
+Nov 08 17:21:46 nsimon kernel: SRAT: PXM 0 -> APIC 0xce -> Node 0
+Nov 08 17:21:46 nsimon kernel: SRAT: PXM 0 -> APIC 0xd0 -> Node 0
+Nov 08 17:21:46 nsimon kernel: SRAT: PXM 0 -> APIC 0xd2 -> Node 0
+Nov 08 17:21:46 nsimon kernel: SRAT: PXM 0 -> APIC 0xd4 -> Node 0
+Nov 08 17:21:46 nsimon kernel: SRAT: PXM 0 -> APIC 0xd6 -> Node 0
+Nov 08 17:21:46 nsimon kernel: SRAT: PXM 0 -> APIC 0xd8 -> Node 0
+Nov 08 17:21:46 nsimon kernel: SRAT: PXM 0 -> APIC 0xda -> Node 0
+Nov 08 17:21:46 nsimon kernel: SRAT: PXM 0 -> APIC 0xdc -> Node 0
+Nov 08 17:21:46 nsimon kernel: SRAT: PXM 0 -> APIC 0xde -> Node 0
+Nov 08 17:21:46 nsimon kernel: SRAT: PXM 0 -> APIC 0xe0 -> Node 0
+Nov 08 17:21:46 nsimon kernel: SRAT: PXM 0 -> APIC 0xe2 -> Node 0
+Nov 08 17:21:46 nsimon kernel: SRAT: PXM 0 -> APIC 0xe4 -> Node 0
+Nov 08 17:21:46 nsimon kernel: SRAT: PXM 0 -> APIC 0xe6 -> Node 0
+Nov 08 17:21:46 nsimon kernel: SRAT: PXM 0 -> APIC 0xe8 -> Node 0
+Nov 08 17:21:46 nsimon kernel: SRAT: PXM 0 -> APIC 0xea -> Node 0
+Nov 08 17:21:46 nsimon kernel: SRAT: PXM 0 -> APIC 0xec -> Node 0
+Nov 08 17:21:46 nsimon kernel: SRAT: PXM 0 -> APIC 0xee -> Node 0
+Nov 08 17:21:46 nsimon kernel: SRAT: PXM 0 -> APIC 0xf0 -> Node 0
+Nov 08 17:21:46 nsimon kernel: SRAT: PXM 0 -> APIC 0xf2 -> Node 0
+Nov 08 17:21:46 nsimon kernel: SRAT: PXM 0 -> APIC 0xf4 -> Node 0
+Nov 08 17:21:46 nsimon kernel: SRAT: PXM 0 -> APIC 0xf6 -> Node 0
+Nov 08 17:21:46 nsimon kernel: SRAT: PXM 0 -> APIC 0xf8 -> Node 0
+Nov 08 17:21:46 nsimon kernel: SRAT: PXM 0 -> APIC 0xfa -> Node 0
+Nov 08 17:21:46 nsimon kernel: SRAT: PXM 0 -> APIC 0xfc -> Node 0
+Nov 08 17:21:46 nsimon kernel: SRAT: PXM 0 -> APIC 0xfe -> Node 0
+Nov 08 17:21:46 nsimon kernel: ACPI: SRAT: Node 0 PXM 0 [mem 0x00000000-0x0009ffff]
+Nov 08 17:21:46 nsimon kernel: ACPI: SRAT: Node 0 PXM 0 [mem 0x00100000-0xbfffffff]
+Nov 08 17:21:46 nsimon kernel: ACPI: SRAT: Node 0 PXM 0 [mem 0x100000000-0x13fffffff]
+Nov 08 17:21:46 nsimon kernel: ACPI: SRAT: Node 0 PXM 0 [mem 0x140000000-0x103fffffff] hotplug
+Nov 08 17:21:46 nsimon kernel: NUMA: Node 0 [mem 0x00000000-0x0009ffff] + [mem 0x00100000-0xbfffffff] -> [mem 0x00000000-0xbfffffff]
+Nov 08 17:21:46 nsimon kernel: NUMA: Node 0 [mem 0x00000000-0xbfffffff] + [mem 0x100000000-0x13fffffff] -> [mem 0x00000000-0x13fffffff]
+Nov 08 17:21:46 nsimon kernel: NODE_DATA(0) allocated [mem 0x13ffd3000-0x13fffdfff]
+Nov 08 17:21:46 nsimon kernel: Reserving 256MB of memory at 2800MB for crashkernel (System RAM: 4095MB)
+Nov 08 17:21:46 nsimon kernel: Zone ranges:
+Nov 08 17:21:46 nsimon kernel:   DMA      [mem 0x0000000000001000-0x0000000000ffffff]
+Nov 08 17:21:46 nsimon kernel:   DMA32    [mem 0x0000000001000000-0x00000000ffffffff]
+Nov 08 17:21:46 nsimon kernel:   Normal   [mem 0x0000000100000000-0x000000013fffffff]
+Nov 08 17:21:46 nsimon kernel:   Device   empty
+Nov 08 17:21:46 nsimon kernel: Movable zone start for each node
+Nov 08 17:21:46 nsimon kernel: Early memory node ranges
+Nov 08 17:21:46 nsimon kernel:   node   0: [mem 0x0000000000001000-0x0000000000096fff]
+Nov 08 17:21:46 nsimon kernel:   node   0: [mem 0x0000000000100000-0x00000000bfecffff]
+Nov 08 17:21:46 nsimon kernel:   node   0: [mem 0x00000000bff00000-0x00000000bfffffff]
+Nov 08 17:21:46 nsimon kernel:   node   0: [mem 0x0000000100000000-0x000000013fffffff]
+Nov 08 17:21:46 nsimon kernel: Initmem setup node 0 [mem 0x0000000000001000-0x000000013fffffff]
+Nov 08 17:21:46 nsimon kernel: On node 0, zone DMA: 1 pages in unavailable ranges
+Nov 08 17:21:46 nsimon kernel: On node 0, zone DMA: 105 pages in unavailable ranges
+Nov 08 17:21:46 nsimon kernel: On node 0, zone DMA32: 48 pages in unavailable ranges
+Nov 08 17:21:46 nsimon kernel: ACPI: PM-Timer IO Port: 0x1008
+Nov 08 17:21:46 nsimon kernel: system APIC only can use physical flat
+Nov 08 17:21:46 nsimon kernel: ACPI: LAPIC_NMI (acpi_id[0x00] high edge lint[0x1])
+Nov 08 17:21:46 nsimon kernel: ACPI: LAPIC_NMI (acpi_id[0x01] high edge lint[0x1])
+Nov 08 17:21:46 nsimon kernel: ACPI: LAPIC_NMI (acpi_id[0x02] high edge lint[0x1])
+Nov 08 17:21:46 nsimon kernel: ACPI: LAPIC_NMI (acpi_id[0x03] high edge lint[0x1])
+Nov 08 17:21:46 nsimon kernel: ACPI: LAPIC_NMI (acpi_id[0x04] high edge lint[0x1])
+Nov 08 17:21:46 nsimon kernel: ACPI: LAPIC_NMI (acpi_id[0x05] high edge lint[0x1])
+Nov 08 17:21:46 nsimon kernel: ACPI: LAPIC_NMI (acpi_id[0x06] high edge lint[0x1])
+Nov 08 17:21:46 nsimon kernel: ACPI: LAPIC_NMI (acpi_id[0x07] high edge lint[0x1])
+Nov 08 17:21:46 nsimon kernel: ACPI: LAPIC_NMI (acpi_id[0x08] high edge lint[0x1])
+Nov 08 17:21:46 nsimon kernel: ACPI: LAPIC_NMI (acpi_id[0x09] high edge lint[0x1])
+Nov 08 17:21:46 nsimon kernel: ACPI: LAPIC_NMI (acpi_id[0x0a] high edge lint[0x1])
+Nov 08 17:21:46 nsimon kernel: ACPI: LAPIC_NMI (acpi_id[0x0b] high edge lint[0x1])
+Nov 08 17:21:46 nsimon kernel: ACPI: LAPIC_NMI (acpi_id[0x0c] high edge lint[0x1])
+Nov 08 17:21:46 nsimon kernel: ACPI: LAPIC_NMI (acpi_id[0x0d] high edge lint[0x1])
+Nov 08 17:21:46 nsimon kernel: ACPI: LAPIC_NMI (acpi_id[0x0e] high edge lint[0x1])
+Nov 08 17:21:46 nsimon kernel: ACPI: LAPIC_NMI (acpi_id[0x0f] high edge lint[0x1])
+Nov 08 17:21:46 nsimon kernel: ACPI: LAPIC_NMI (acpi_id[0x10] high edge lint[0x1])
+Nov 08 17:21:46 nsimon kernel: ACPI: LAPIC_NMI (acpi_id[0x11] high edge lint[0x1])
+Nov 08 17:21:46 nsimon kernel: ACPI: LAPIC_NMI (acpi_id[0x12] high edge lint[0x1])
+Nov 08 17:21:46 nsimon kernel: ACPI: LAPIC_NMI (acpi_id[0x13] high edge lint[0x1])
+Nov 08 17:21:46 nsimon kernel: ACPI: LAPIC_NMI (acpi_id[0x14] high edge lint[0x1])
+Nov 08 17:21:46 nsimon kernel: ACPI: LAPIC_NMI (acpi_id[0x15] high edge lint[0x1])
+Nov 08 17:21:46 nsimon kernel: ACPI: LAPIC_NMI (acpi_id[0x16] high edge lint[0x1])
+Nov 08 17:21:46 nsimon kernel: ACPI: LAPIC_NMI (acpi_id[0x17] high edge lint[0x1])
+Nov 08 17:21:46 nsimon kernel: ACPI: LAPIC_NMI (acpi_id[0x18] high edge lint[0x1])
+Nov 08 17:21:46 nsimon kernel: ACPI: LAPIC_NMI (acpi_id[0x19] high edge lint[0x1])
+Nov 08 17:21:46 nsimon kernel: ACPI: LAPIC_NMI (acpi_id[0x1a] high edge lint[0x1])
+Nov 08 17:21:46 nsimon kernel: ACPI: LAPIC_NMI (acpi_id[0x1b] high edge lint[0x1])
+Nov 08 17:21:46 nsimon kernel: ACPI: LAPIC_NMI (acpi_id[0x1c] high edge lint[0x1])
+Nov 08 17:21:46 nsimon kernel: ACPI: LAPIC_NMI (acpi_id[0x1d] high edge lint[0x1])
+Nov 08 17:21:46 nsimon kernel: ACPI: LAPIC_NMI (acpi_id[0x1e] high edge lint[0x1])
+Nov 08 17:21:46 nsimon kernel: ACPI: LAPIC_NMI (acpi_id[0x1f] high edge lint[0x1])
+Nov 08 17:21:46 nsimon kernel: ACPI: LAPIC_NMI (acpi_id[0x20] high edge lint[0x1])
+Nov 08 17:21:46 nsimon kernel: ACPI: LAPIC_NMI (acpi_id[0x21] high edge lint[0x1])
+Nov 08 17:21:46 nsimon kernel: ACPI: LAPIC_NMI (acpi_id[0x22] high edge lint[0x1])
+Nov 08 17:21:46 nsimon kernel: ACPI: LAPIC_NMI (acpi_id[0x23] high edge lint[0x1])
+Nov 08 17:21:46 nsimon kernel: ACPI: LAPIC_NMI (acpi_id[0x24] high edge lint[0x1])
+Nov 08 17:21:46 nsimon kernel: ACPI: LAPIC_NMI (acpi_id[0x25] high edge lint[0x1])
+Nov 08 17:21:46 nsimon kernel: ACPI: LAPIC_NMI (acpi_id[0x26] high edge lint[0x1])
+Nov 08 17:21:46 nsimon kernel: ACPI: LAPIC_NMI (acpi_id[0x27] high edge lint[0x1])
+Nov 08 17:21:46 nsimon kernel: ACPI: LAPIC_NMI (acpi_id[0x28] high edge lint[0x1])
+Nov 08 17:21:46 nsimon kernel: ACPI: LAPIC_NMI (acpi_id[0x29] high edge lint[0x1])
+Nov 08 17:21:46 nsimon kernel: ACPI: LAPIC_NMI (acpi_id[0x2a] high edge lint[0x1])
+Nov 08 17:21:46 nsimon kernel: ACPI: LAPIC_NMI (acpi_id[0x2b] high edge lint[0x1])
+Nov 08 17:21:46 nsimon kernel: ACPI: LAPIC_NMI (acpi_id[0x2c] high edge lint[0x1])
+Nov 08 17:21:46 nsimon kernel: ACPI: LAPIC_NMI (acpi_id[0x2d] high edge lint[0x1])
+Nov 08 17:21:46 nsimon kernel: ACPI: LAPIC_NMI (acpi_id[0x2e] high edge lint[0x1])
+Nov 08 17:21:46 nsimon kernel: ACPI: LAPIC_NMI (acpi_id[0x2f] high edge lint[0x1])
+Nov 08 17:21:46 nsimon kernel: ACPI: LAPIC_NMI (acpi_id[0x30] high edge lint[0x1])
+Nov 08 17:21:46 nsimon kernel: ACPI: LAPIC_NMI (acpi_id[0x31] high edge lint[0x1])
+Nov 08 17:21:46 nsimon kernel: ACPI: LAPIC_NMI (acpi_id[0x32] high edge lint[0x1])
+Nov 08 17:21:46 nsimon kernel: ACPI: LAPIC_NMI (acpi_id[0x33] high edge lint[0x1])
+Nov 08 17:21:46 nsimon kernel: ACPI: LAPIC_NMI (acpi_id[0x34] high edge lint[0x1])
+Nov 08 17:21:46 nsimon kernel: ACPI: LAPIC_NMI (acpi_id[0x35] high edge lint[0x1])
+Nov 08 17:21:46 nsimon kernel: ACPI: LAPIC_NMI (acpi_id[0x36] high edge lint[0x1])
+Nov 08 17:21:46 nsimon kernel: ACPI: LAPIC_NMI (acpi_id[0x37] high edge lint[0x1])
+Nov 08 17:21:46 nsimon kernel: ACPI: LAPIC_NMI (acpi_id[0x38] high edge lint[0x1])
+Nov 08 17:21:46 nsimon kernel: ACPI: LAPIC_NMI (acpi_id[0x39] high edge lint[0x1])
+Nov 08 17:21:46 nsimon kernel: ACPI: LAPIC_NMI (acpi_id[0x3a] high edge lint[0x1])
+Nov 08 17:21:46 nsimon kernel: ACPI: LAPIC_NMI (acpi_id[0x3b] high edge lint[0x1])
+Nov 08 17:21:46 nsimon kernel: ACPI: LAPIC_NMI (acpi_id[0x3c] high edge lint[0x1])
+Nov 08 17:21:46 nsimon kernel: ACPI: LAPIC_NMI (acpi_id[0x3d] high edge lint[0x1])
+Nov 08 17:21:46 nsimon kernel: ACPI: LAPIC_NMI (acpi_id[0x3e] high edge lint[0x1])
+Nov 08 17:21:46 nsimon kernel: ACPI: LAPIC_NMI (acpi_id[0x3f] high edge lint[0x1])
+Nov 08 17:21:46 nsimon kernel: ACPI: LAPIC_NMI (acpi_id[0x40] high edge lint[0x1])
+Nov 08 17:21:46 nsimon kernel: ACPI: LAPIC_NMI (acpi_id[0x41] high edge lint[0x1])
+Nov 08 17:21:46 nsimon kernel: ACPI: LAPIC_NMI (acpi_id[0x42] high edge lint[0x1])
+Nov 08 17:21:46 nsimon kernel: ACPI: LAPIC_NMI (acpi_id[0x43] high edge lint[0x1])
+Nov 08 17:21:46 nsimon kernel: ACPI: LAPIC_NMI (acpi_id[0x44] high edge lint[0x1])
+Nov 08 17:21:46 nsimon kernel: ACPI: LAPIC_NMI (acpi_id[0x45] high edge lint[0x1])
+Nov 08 17:21:46 nsimon kernel: ACPI: LAPIC_NMI (acpi_id[0x46] high edge lint[0x1])
+Nov 08 17:21:46 nsimon kernel: ACPI: LAPIC_NMI (acpi_id[0x47] high edge lint[0x1])
+Nov 08 17:21:46 nsimon kernel: ACPI: LAPIC_NMI (acpi_id[0x48] high edge lint[0x1])
+Nov 08 17:21:46 nsimon kernel: ACPI: LAPIC_NMI (acpi_id[0x49] high edge lint[0x1])
+Nov 08 17:21:46 nsimon kernel: ACPI: LAPIC_NMI (acpi_id[0x4a] high edge lint[0x1])
+Nov 08 17:21:46 nsimon kernel: ACPI: LAPIC_NMI (acpi_id[0x4b] high edge lint[0x1])
+Nov 08 17:21:46 nsimon kernel: ACPI: LAPIC_NMI (acpi_id[0x4c] high edge lint[0x1])
+Nov 08 17:21:46 nsimon kernel: ACPI: LAPIC_NMI (acpi_id[0x4d] high edge lint[0x1])
+Nov 08 17:21:46 nsimon kernel: ACPI: LAPIC_NMI (acpi_id[0x4e] high edge lint[0x1])
+Nov 08 17:21:46 nsimon kernel: ACPI: LAPIC_NMI (acpi_id[0x4f] high edge lint[0x1])
+Nov 08 17:21:46 nsimon kernel: ACPI: LAPIC_NMI (acpi_id[0x50] high edge lint[0x1])
+Nov 08 17:21:46 nsimon kernel: ACPI: LAPIC_NMI (acpi_id[0x51] high edge lint[0x1])
+Nov 08 17:21:46 nsimon kernel: ACPI: LAPIC_NMI (acpi_id[0x52] high edge lint[0x1])
+Nov 08 17:21:46 nsimon kernel: ACPI: LAPIC_NMI (acpi_id[0x53] high edge lint[0x1])
+Nov 08 17:21:46 nsimon kernel: ACPI: LAPIC_NMI (acpi_id[0x54] high edge lint[0x1])
+Nov 08 17:21:46 nsimon kernel: ACPI: LAPIC_NMI (acpi_id[0x55] high edge lint[0x1])
+Nov 08 17:21:46 nsimon kernel: ACPI: LAPIC_NMI (acpi_id[0x56] high edge lint[0x1])
+Nov 08 17:21:46 nsimon kernel: ACPI: LAPIC_NMI (acpi_id[0x57] high edge lint[0x1])
+Nov 08 17:21:46 nsimon kernel: ACPI: LAPIC_NMI (acpi_id[0x58] high edge lint[0x1])
+Nov 08 17:21:46 nsimon kernel: ACPI: LAPIC_NMI (acpi_id[0x59] high edge lint[0x1])
+Nov 08 17:21:46 nsimon kernel: ACPI: LAPIC_NMI (acpi_id[0x5a] high edge lint[0x1])
+Nov 08 17:21:46 nsimon kernel: ACPI: LAPIC_NMI (acpi_id[0x5b] high edge lint[0x1])
+Nov 08 17:21:46 nsimon kernel: ACPI: LAPIC_NMI (acpi_id[0x5c] high edge lint[0x1])
+Nov 08 17:21:46 nsimon kernel: ACPI: LAPIC_NMI (acpi_id[0x5d] high edge lint[0x1])
+Nov 08 17:21:46 nsimon kernel: ACPI: LAPIC_NMI (acpi_id[0x5e] high edge lint[0x1])
+Nov 08 17:21:46 nsimon kernel: ACPI: LAPIC_NMI (acpi_id[0x5f] high edge lint[0x1])
+Nov 08 17:21:46 nsimon kernel: ACPI: LAPIC_NMI (acpi_id[0x60] high edge lint[0x1])
+Nov 08 17:21:46 nsimon kernel: ACPI: LAPIC_NMI (acpi_id[0x61] high edge lint[0x1])
+Nov 08 17:21:46 nsimon kernel: ACPI: LAPIC_NMI (acpi_id[0x62] high edge lint[0x1])
+Nov 08 17:21:46 nsimon kernel: ACPI: LAPIC_NMI (acpi_id[0x63] high edge lint[0x1])
+Nov 08 17:21:46 nsimon kernel: ACPI: LAPIC_NMI (acpi_id[0x64] high edge lint[0x1])
+Nov 08 17:21:46 nsimon kernel: ACPI: LAPIC_NMI (acpi_id[0x65] high edge lint[0x1])
+Nov 08 17:21:46 nsimon kernel: ACPI: LAPIC_NMI (acpi_id[0x66] high edge lint[0x1])
+Nov 08 17:21:46 nsimon kernel: ACPI: LAPIC_NMI (acpi_id[0x67] high edge lint[0x1])
+Nov 08 17:21:46 nsimon kernel: ACPI: LAPIC_NMI (acpi_id[0x68] high edge lint[0x1])
+Nov 08 17:21:46 nsimon kernel: ACPI: LAPIC_NMI (acpi_id[0x69] high edge lint[0x1])
+Nov 08 17:21:46 nsimon kernel: ACPI: LAPIC_NMI (acpi_id[0x6a] high edge lint[0x1])
+Nov 08 17:21:46 nsimon kernel: ACPI: LAPIC_NMI (acpi_id[0x6b] high edge lint[0x1])
+Nov 08 17:21:46 nsimon kernel: ACPI: LAPIC_NMI (acpi_id[0x6c] high edge lint[0x1])
+Nov 08 17:21:46 nsimon kernel: ACPI: LAPIC_NMI (acpi_id[0x6d] high edge lint[0x1])
+Nov 08 17:21:46 nsimon kernel: ACPI: LAPIC_NMI (acpi_id[0x6e] high edge lint[0x1])
+Nov 08 17:21:46 nsimon kernel: ACPI: LAPIC_NMI (acpi_id[0x6f] high edge lint[0x1])
+Nov 08 17:21:46 nsimon kernel: ACPI: LAPIC_NMI (acpi_id[0x70] high edge lint[0x1])
+Nov 08 17:21:46 nsimon kernel: ACPI: LAPIC_NMI (acpi_id[0x71] high edge lint[0x1])
+Nov 08 17:21:46 nsimon kernel: ACPI: LAPIC_NMI (acpi_id[0x72] high edge lint[0x1])
+Nov 08 17:21:46 nsimon kernel: ACPI: LAPIC_NMI (acpi_id[0x73] high edge lint[0x1])
+Nov 08 17:21:46 nsimon kernel: ACPI: LAPIC_NMI (acpi_id[0x74] high edge lint[0x1])
+Nov 08 17:21:46 nsimon kernel: ACPI: LAPIC_NMI (acpi_id[0x75] high edge lint[0x1])
+Nov 08 17:21:46 nsimon kernel: ACPI: LAPIC_NMI (acpi_id[0x76] high edge lint[0x1])
+Nov 08 17:21:46 nsimon kernel: ACPI: LAPIC_NMI (acpi_id[0x77] high edge lint[0x1])
+Nov 08 17:21:46 nsimon kernel: ACPI: LAPIC_NMI (acpi_id[0x78] high edge lint[0x1])
+Nov 08 17:21:46 nsimon kernel: ACPI: LAPIC_NMI (acpi_id[0x79] high edge lint[0x1])
+Nov 08 17:21:46 nsimon kernel: ACPI: LAPIC_NMI (acpi_id[0x7a] high edge lint[0x1])
+Nov 08 17:21:46 nsimon kernel: ACPI: LAPIC_NMI (acpi_id[0x7b] high edge lint[0x1])
+Nov 08 17:21:46 nsimon kernel: ACPI: LAPIC_NMI (acpi_id[0x7c] high edge lint[0x1])
+Nov 08 17:21:46 nsimon kernel: ACPI: LAPIC_NMI (acpi_id[0x7d] high edge lint[0x1])
+Nov 08 17:21:46 nsimon kernel: ACPI: LAPIC_NMI (acpi_id[0x7e] high edge lint[0x1])
+Nov 08 17:21:46 nsimon kernel: ACPI: LAPIC_NMI (acpi_id[0x7f] high edge lint[0x1])
+Nov 08 17:21:46 nsimon kernel: IOAPIC[0]: apic_id 1, version 32, address 0xfec00000, GSI 0-23
+Nov 08 17:21:46 nsimon kernel: ACPI: INT_SRC_OVR (bus 0 bus_irq 0 global_irq 2 high edge)
+Nov 08 17:21:46 nsimon kernel: ACPI: Using ACPI (MADT) for SMP configuration information
+Nov 08 17:21:46 nsimon kernel: ACPI: HPET id: 0x8086af01 base: 0xfed00000
+Nov 08 17:21:46 nsimon kernel: TSC deadline timer available
+Nov 08 17:21:46 nsimon kernel: smpboot: Allowing 128 CPUs, 120 hotplug CPUs
+Nov 08 17:21:46 nsimon kernel: PM: hibernation: Registered nosave memory: [mem 0x00000000-0x00000fff]
+Nov 08 17:21:46 nsimon kernel: PM: hibernation: Registered nosave memory: [mem 0x00097000-0x00097fff]
+Nov 08 17:21:46 nsimon kernel: PM: hibernation: Registered nosave memory: [mem 0x00098000-0x0009ffff]
+Nov 08 17:21:46 nsimon kernel: PM: hibernation: Registered nosave memory: [mem 0x000a0000-0x000cdfff]
+Nov 08 17:21:46 nsimon kernel: PM: hibernation: Registered nosave memory: [mem 0x000ce000-0x000cffff]
+Nov 08 17:21:46 nsimon kernel: PM: hibernation: Registered nosave memory: [mem 0x000d0000-0x000dbfff]
+Nov 08 17:21:46 nsimon kernel: PM: hibernation: Registered nosave memory: [mem 0x000dc000-0x000fffff]
+Nov 08 17:21:46 nsimon kernel: PM: hibernation: Registered nosave memory: [mem 0xbfed0000-0xbfefefff]
+Nov 08 17:21:46 nsimon kernel: PM: hibernation: Registered nosave memory: [mem 0xbfeff000-0xbfefffff]
+Nov 08 17:21:46 nsimon kernel: PM: hibernation: Registered nosave memory: [mem 0xc0000000-0xefffffff]
+Nov 08 17:21:46 nsimon kernel: PM: hibernation: Registered nosave memory: [mem 0xf0000000-0xf7ffffff]
+Nov 08 17:21:46 nsimon kernel: PM: hibernation: Registered nosave memory: [mem 0xf8000000-0xfebfffff]
+Nov 08 17:21:46 nsimon kernel: PM: hibernation: Registered nosave memory: [mem 0xfec00000-0xfec0ffff]
+Nov 08 17:21:46 nsimon kernel: PM: hibernation: Registered nosave memory: [mem 0xfec10000-0xfedfffff]
+Nov 08 17:21:46 nsimon kernel: PM: hibernation: Registered nosave memory: [mem 0xfee00000-0xfee00fff]
+Nov 08 17:21:46 nsimon kernel: PM: hibernation: Registered nosave memory: [mem 0xfee01000-0xfffdffff]
+Nov 08 17:21:46 nsimon kernel: PM: hibernation: Registered nosave memory: [mem 0xfffe0000-0xffffffff]
+Nov 08 17:21:46 nsimon kernel: [mem 0xc0000000-0xefffffff] available for PCI devices
+Nov 08 17:21:46 nsimon kernel: Booting paravirtualized kernel on VMware hypervisor
+Nov 08 17:21:46 nsimon kernel: clocksource: refined-jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 1910969940391419 ns
+Nov 08 17:21:46 nsimon kernel: setup_percpu: NR_CPUS:8192 nr_cpumask_bits:128 nr_cpu_ids:128 nr_node_ids:1
+Nov 08 17:21:46 nsimon kernel: percpu: Embedded 62 pages/cpu s217088 r8192 d28672 u262144
+Nov 08 17:21:46 nsimon kernel: pcpu-alloc: s217088 r8192 d28672 u262144 alloc=1*2097152
+Nov 08 17:21:46 nsimon kernel: pcpu-alloc: [0] 000 001 002 003 004 005 006 007 
+Nov 08 17:21:46 nsimon kernel: pcpu-alloc: [0] 008 009 010 011 012 013 014 015 
+Nov 08 17:21:46 nsimon kernel: pcpu-alloc: [0] 016 017 018 019 020 021 022 023 
+Nov 08 17:21:46 nsimon kernel: pcpu-alloc: [0] 024 025 026 027 028 029 030 031 
+Nov 08 17:21:46 nsimon kernel: pcpu-alloc: [0] 032 033 034 035 036 037 038 039 
+Nov 08 17:21:46 nsimon kernel: pcpu-alloc: [0] 040 041 042 043 044 045 046 047 
+Nov 08 17:21:46 nsimon kernel: pcpu-alloc: [0] 048 049 050 051 052 053 054 055 
+Nov 08 17:21:46 nsimon kernel: pcpu-alloc: [0] 056 057 058 059 060 061 062 063 
+Nov 08 17:21:46 nsimon kernel: pcpu-alloc: [0] 064 065 066 067 068 069 070 071 
+Nov 08 17:21:46 nsimon kernel: pcpu-alloc: [0] 072 073 074 075 076 077 078 079 
+Nov 08 17:21:46 nsimon kernel: pcpu-alloc: [0] 080 081 082 083 084 085 086 087 
+Nov 08 17:21:46 nsimon kernel: pcpu-alloc: [0] 088 089 090 091 092 093 094 095 
+Nov 08 17:21:46 nsimon kernel: pcpu-alloc: [0] 096 097 098 099 100 101 102 103 
+Nov 08 17:21:46 nsimon kernel: pcpu-alloc: [0] 104 105 106 107 108 109 110 111 
+Nov 08 17:21:46 nsimon kernel: pcpu-alloc: [0] 112 113 114 115 116 117 118 119 
+Nov 08 17:21:46 nsimon kernel: pcpu-alloc: [0] 120 121 122 123 124 125 126 127 
+Nov 08 17:21:46 nsimon kernel: Kernel command line: BOOT_IMAGE=(hd0,msdos1)/vmlinuz-6.6.0 root=/dev/mapper/rl-root ro crashkernel=1G-4G:192M,4G-64G:256M,64G-:512M resume=/dev/mapper/rl-swap rd.lvm.lv=rl/root rd.lvm.lv=rl/swap
+Nov 08 17:21:46 nsimon kernel: Unknown kernel command line parameters "BOOT_IMAGE=(hd0,msdos1)/vmlinuz-6.6.0", will be passed to user space.
+Nov 08 17:21:46 nsimon kernel: random: crng init done
+Nov 08 17:21:46 nsimon kernel: Dentry cache hash table entries: 524288 (order: 10, 4194304 bytes, linear)
+Nov 08 17:21:46 nsimon kernel: Inode-cache hash table entries: 262144 (order: 9, 2097152 bytes, linear)
+Nov 08 17:21:46 nsimon kernel: Fallback order for Node 0: 0 
+Nov 08 17:21:46 nsimon kernel: Built 1 zonelists, mobility grouping on.  Total pages: 1031888
+Nov 08 17:21:46 nsimon kernel: Policy zone: Normal
+Nov 08 17:21:46 nsimon kernel: mem auto-init: stack:off, heap alloc:off, heap free:off
+Nov 08 17:21:46 nsimon kernel: software IO TLB: area num 128.
+Nov 08 17:21:46 nsimon kernel: Memory: 2804296K/4193688K available (16384K kernel code, 5647K rwdata, 12416K rodata, 4040K init, 5712K bss, 579448K reserved, 0K cma-reserved)
+Nov 08 17:21:46 nsimon kernel: SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=128, Nodes=1
+Nov 08 17:21:46 nsimon kernel: ftrace: allocating 48540 entries in 190 pages
+Nov 08 17:21:46 nsimon kernel: ftrace: allocated 190 pages with 6 groups
+Nov 08 17:21:46 nsimon kernel: Dynamic Preempt: voluntary
+Nov 08 17:21:46 nsimon kernel: rcu: Preemptible hierarchical RCU implementation.
+Nov 08 17:21:46 nsimon kernel: rcu:         RCU restricting CPUs from NR_CPUS=8192 to nr_cpu_ids=128.
+Nov 08 17:21:46 nsimon kernel:         Trampoline variant of Tasks RCU enabled.
+Nov 08 17:21:46 nsimon kernel:         Rude variant of Tasks RCU enabled.
+Nov 08 17:21:46 nsimon kernel:         Tracing variant of Tasks RCU enabled.
+Nov 08 17:21:46 nsimon kernel: rcu: RCU calculated value of scheduler-enlistment delay is 100 jiffies.
+Nov 08 17:21:46 nsimon kernel: rcu: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=128
+Nov 08 17:21:46 nsimon kernel: NR_IRQS: 524544, nr_irqs: 1448, preallocated irqs: 16
+Nov 08 17:21:46 nsimon kernel: rcu: srcu_init: Setting srcu_struct sizes to big.
+Nov 08 17:21:46 nsimon kernel: kfence: initialized - using 2097152 bytes for 255 objects at 0x(____ptrval____)-0x(____ptrval____)
+Nov 08 17:21:46 nsimon kernel: Console: colour VGA+ 80x25
+Nov 08 17:21:46 nsimon kernel: printk: console [tty0] enabled
+Nov 08 17:21:46 nsimon kernel: ACPI: Core revision 20230628
+Nov 08 17:21:46 nsimon kernel: clocksource: hpet: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 133484882848 ns
+Nov 08 17:21:46 nsimon kernel: APIC: Switch to symmetric I/O mode setup
+Nov 08 17:21:46 nsimon kernel: x2apic enabled
+Nov 08 17:21:46 nsimon kernel: APIC: Switched APIC routing to: physical x2apic
+Nov 08 17:21:46 nsimon kernel: ..TIMER: vector=0x30 apic1=0 pin1=2 apic2=-1 pin2=-1
+Nov 08 17:21:46 nsimon kernel: clocksource: tsc-early: mask: 0xffffffffffffffff max_cycles: 0x2135f7c97c8, max_idle_ns: 440795273205 ns
+Nov 08 17:21:46 nsimon kernel: Calibrating delay loop (skipped) preset value.. 4608.00 BogoMIPS (lpj=2304000)
+Nov 08 17:21:46 nsimon kernel: Disabled fast string operations
+Nov 08 17:21:46 nsimon kernel: Last level iTLB entries: 4KB 64, 2MB 8, 4MB 8
+Nov 08 17:21:46 nsimon kernel: Last level dTLB entries: 4KB 64, 2MB 0, 4MB 0, 1GB 4
+Nov 08 17:21:46 nsimon kernel: Spectre V1 : Mitigation: usercopy/swapgs barriers and __user pointer sanitization
+Nov 08 17:21:46 nsimon kernel: Spectre V2 : Mitigation: Enhanced / Automatic IBRS
+Nov 08 17:21:46 nsimon kernel: Spectre V2 : Spectre v2 / SpectreRSB mitigation: Filling RSB on context switch
+Nov 08 17:21:46 nsimon kernel: Spectre V2 : Spectre v2 / PBRSB-eIBRS: Retire a single CALL on VMEXIT
+Nov 08 17:21:46 nsimon kernel: RETBleed: Mitigation: Enhanced IBRS
+Nov 08 17:21:46 nsimon kernel: Spectre V2 : mitigation: Enabling conditional Indirect Branch Prediction Barrier
+Nov 08 17:21:46 nsimon kernel: Speculative Store Bypass: Mitigation: Speculative Store Bypass disabled via prctl
+Nov 08 17:21:46 nsimon kernel: MMIO Stale Data: Vulnerable: Clear CPU buffers attempted, no microcode
+Nov 08 17:21:46 nsimon kernel: SRBDS: Unknown: Dependent on hypervisor status
+Nov 08 17:21:46 nsimon kernel: GDS: Unknown: Dependent on hypervisor status
+Nov 08 17:21:46 nsimon kernel: x86/fpu: Supporting XSAVE feature 0x001: 'x87 floating point registers'
+Nov 08 17:21:46 nsimon kernel: x86/fpu: Supporting XSAVE feature 0x002: 'SSE registers'
+Nov 08 17:21:46 nsimon kernel: x86/fpu: Supporting XSAVE feature 0x004: 'AVX registers'
+Nov 08 17:21:46 nsimon kernel: x86/fpu: xstate_offset[2]:  576, xstate_sizes[2]:  256
+Nov 08 17:21:46 nsimon kernel: x86/fpu: Enabled xstate features 0x7, context size is 832 bytes, using 'compacted' format.
+Nov 08 17:21:46 nsimon kernel: Freeing SMP alternatives memory: 40K
+Nov 08 17:21:46 nsimon kernel: pid_max: default: 131072 minimum: 1024
+Nov 08 17:21:46 nsimon kernel: LSM: initializing lsm=lockdown,capability,yama,selinux,bpf,integrity
+Nov 08 17:21:46 nsimon kernel: Yama: becoming mindful.
+Nov 08 17:21:46 nsimon kernel: SELinux:  Initializing.
+Nov 08 17:21:46 nsimon kernel: LSM support for eBPF active
+Nov 08 17:21:46 nsimon kernel: Mount-cache hash table entries: 8192 (order: 4, 65536 bytes, linear)
+Nov 08 17:21:46 nsimon kernel: Mountpoint-cache hash table entries: 8192 (order: 4, 65536 bytes, linear)
+Nov 08 17:21:46 nsimon kernel: smpboot: CPU0: Intel(R) Core(TM) i9-9880H CPU @ 2.30GHz (family: 0x6, model: 0x9e, stepping: 0xd)
+Nov 08 17:21:46 nsimon kernel: RCU Tasks: Setting shift to 7 and lim to 1 rcu_task_cb_adjust=1.
+Nov 08 17:21:46 nsimon kernel: RCU Tasks Rude: Setting shift to 7 and lim to 1 rcu_task_cb_adjust=1.
+Nov 08 17:21:46 nsimon kernel: RCU Tasks Trace: Setting shift to 7 and lim to 1 rcu_task_cb_adjust=1.
+Nov 08 17:21:46 nsimon kernel: Performance Events: Skylake events, core PMU driver.
+Nov 08 17:21:46 nsimon kernel: core: CPUID marked event: 'cpu cycles' unavailable
+Nov 08 17:21:46 nsimon kernel: core: CPUID marked event: 'instructions' unavailable
+Nov 08 17:21:46 nsimon kernel: core: CPUID marked event: 'bus cycles' unavailable
+Nov 08 17:21:46 nsimon kernel: core: CPUID marked event: 'cache references' unavailable
+Nov 08 17:21:46 nsimon kernel: core: CPUID marked event: 'cache misses' unavailable
+Nov 08 17:21:46 nsimon kernel: core: CPUID marked event: 'branch instructions' unavailable
+Nov 08 17:21:46 nsimon kernel: core: CPUID marked event: 'branch misses' unavailable
+Nov 08 17:21:46 nsimon kernel: ... version:                1
+Nov 08 17:21:46 nsimon kernel: ... bit width:              48
+Nov 08 17:21:46 nsimon kernel: ... generic registers:      4
+Nov 08 17:21:46 nsimon kernel: ... value mask:             0000ffffffffffff
+Nov 08 17:21:46 nsimon kernel: ... max period:             000000007fffffff
+Nov 08 17:21:46 nsimon kernel: ... fixed-purpose events:   0
+Nov 08 17:21:46 nsimon kernel: ... event mask:             000000000000000f
+Nov 08 17:21:46 nsimon kernel: signal: max sigframe size: 1776
+Nov 08 17:21:46 nsimon kernel: rcu: Hierarchical SRCU implementation.
+Nov 08 17:21:46 nsimon kernel: rcu:         Max phase no-delay instances is 400.
+Nov 08 17:21:46 nsimon kernel: NMI watchdog: Perf NMI watchdog permanently disabled
+Nov 08 17:21:46 nsimon kernel: smp: Bringing up secondary CPUs ...
+Nov 08 17:21:46 nsimon kernel: smpboot: x86: Booting SMP configuration:
+Nov 08 17:21:46 nsimon kernel: .... node  #0, CPUs:          #1   #2   #3   #4   #5   #6   #7
+Nov 08 17:21:46 nsimon kernel: Disabled fast string operations
+Nov 08 17:21:46 nsimon kernel: smpboot: CPU 1 Converting physical 2 to logical package 1
+Nov 08 17:21:46 nsimon kernel: smpboot: CPU 1 Converting physical 0 to logical die 1
+Nov 08 17:21:46 nsimon kernel: Disabled fast string operations
+Nov 08 17:21:46 nsimon kernel: smpboot: CPU 2 Converting physical 4 to logical package 2
+Nov 08 17:21:46 nsimon kernel: smpboot: CPU 2 Converting physical 0 to logical die 2
+Nov 08 17:21:46 nsimon kernel: Disabled fast string operations
+Nov 08 17:21:46 nsimon kernel: smpboot: CPU 3 Converting physical 6 to logical package 3
+Nov 08 17:21:46 nsimon kernel: smpboot: CPU 3 Converting physical 0 to logical die 3
+Nov 08 17:21:46 nsimon kernel: Disabled fast string operations
+Nov 08 17:21:46 nsimon kernel: smpboot: CPU 4 Converting physical 8 to logical package 4
+Nov 08 17:21:46 nsimon kernel: smpboot: CPU 4 Converting physical 0 to logical die 4
+Nov 08 17:21:46 nsimon kernel: Disabled fast string operations
+Nov 08 17:21:46 nsimon kernel: smpboot: CPU 5 Converting physical 10 to logical package 5
+Nov 08 17:21:46 nsimon kernel: smpboot: CPU 5 Converting physical 0 to logical die 5
+Nov 08 17:21:46 nsimon kernel: Disabled fast string operations
+Nov 08 17:21:46 nsimon kernel: smpboot: CPU 6 Converting physical 12 to logical package 6
+Nov 08 17:21:46 nsimon kernel: smpboot: CPU 6 Converting physical 0 to logical die 6
+Nov 08 17:21:46 nsimon kernel: Disabled fast string operations
+Nov 08 17:21:46 nsimon kernel: smpboot: CPU 7 Converting physical 14 to logical package 7
+Nov 08 17:21:46 nsimon kernel: smpboot: CPU 7 Converting physical 0 to logical die 7
+Nov 08 17:21:46 nsimon kernel: smp: Brought up 1 node, 8 CPUs
+Nov 08 17:21:46 nsimon kernel: smpboot: Max logical packages: 128
+Nov 08 17:21:46 nsimon kernel: smpboot: Total of 8 processors activated (36864.00 BogoMIPS)
+Nov 08 17:21:46 nsimon kernel: node 0 deferred pages initialised in 9ms
+Nov 08 17:21:46 nsimon kernel: devtmpfs: initialized
+Nov 08 17:21:46 nsimon kernel: x86/mm: Memory block size: 128MB
+Nov 08 17:21:46 nsimon kernel: ACPI: PM: Registering ACPI NVS region [mem 0xbfeff000-0xbfefffff] (4096 bytes)
+Nov 08 17:21:46 nsimon kernel: clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 1911260446275000 ns
+Nov 08 17:21:46 nsimon kernel: futex hash table entries: 32768 (order: 9, 2097152 bytes, linear)
+Nov 08 17:21:46 nsimon kernel: pinctrl core: initialized pinctrl subsystem
+Nov 08 17:21:46 nsimon kernel: NET: Registered PF_NETLINK/PF_ROUTE protocol family
+Nov 08 17:21:46 nsimon kernel: DMA: preallocated 512 KiB GFP_KERNEL pool for atomic allocations
+Nov 08 17:21:46 nsimon kernel: DMA: preallocated 512 KiB GFP_KERNEL|GFP_DMA pool for atomic allocations
+Nov 08 17:21:46 nsimon kernel: DMA: preallocated 512 KiB GFP_KERNEL|GFP_DMA32 pool for atomic allocations
+Nov 08 17:21:46 nsimon kernel: audit: initializing netlink subsys (disabled)
+Nov 08 17:21:46 nsimon kernel: audit: type=2000 audit(1699460504.095:1): state=initialized audit_enabled=0 res=1
+Nov 08 17:21:46 nsimon kernel: thermal_sys: Registered thermal governor 'fair_share'
+Nov 08 17:21:46 nsimon kernel: thermal_sys: Registered thermal governor 'step_wise'
+Nov 08 17:21:46 nsimon kernel: thermal_sys: Registered thermal governor 'user_space'
+Nov 08 17:21:46 nsimon kernel: cpuidle: using governor menu
+Nov 08 17:21:46 nsimon kernel: Simple Boot Flag at 0x36 set to 0x1
+Nov 08 17:21:46 nsimon kernel: acpiphp: ACPI Hot Plug PCI Controller Driver version: 0.5
+Nov 08 17:21:46 nsimon kernel: PCI: MMCONFIG for domain 0000 [bus 00-7f] at [mem 0xf0000000-0xf7ffffff] (base 0xf0000000)
+Nov 08 17:21:46 nsimon kernel: PCI: MMCONFIG at [mem 0xf0000000-0xf7ffffff] reserved as E820 entry
+Nov 08 17:21:46 nsimon kernel: PCI: Using configuration type 1 for base access
+Nov 08 17:21:46 nsimon kernel: kprobes: kprobe jump-optimization is enabled. All kprobes are optimized if possible.
+Nov 08 17:21:46 nsimon kernel: HugeTLB: registered 1.00 GiB page size, pre-allocated 0 pages
+Nov 08 17:21:46 nsimon kernel: HugeTLB: 16380 KiB vmemmap can be freed for a 1.00 GiB page
+Nov 08 17:21:46 nsimon kernel: HugeTLB: registered 2.00 MiB page size, pre-allocated 0 pages
+Nov 08 17:21:46 nsimon kernel: HugeTLB: 28 KiB vmemmap can be freed for a 2.00 MiB page
+Nov 08 17:21:46 nsimon kernel: cryptd: max_cpu_qlen set to 1000
+Nov 08 17:21:46 nsimon kernel: ACPI: Added _OSI(Module Device)
+Nov 08 17:21:46 nsimon kernel: ACPI: Added _OSI(Processor Device)
+Nov 08 17:21:46 nsimon kernel: ACPI: Added _OSI(3.0 _SCP Extensions)
+Nov 08 17:21:46 nsimon kernel: ACPI: Added _OSI(Processor Aggregator Device)
+Nov 08 17:21:46 nsimon kernel: ACPI: 1 ACPI AML tables successfully acquired and loaded
+Nov 08 17:21:46 nsimon kernel: ACPI: [Firmware Bug]: BIOS _OSI(Linux) query ignored
+Nov 08 17:21:46 nsimon kernel: ACPI: _OSC evaluation for CPUs failed, trying _PDC
+Nov 08 17:21:46 nsimon kernel: ACPI: Interpreter enabled
+Nov 08 17:21:46 nsimon kernel: ACPI: PM: (supports S0 S1 S4 S5)
+Nov 08 17:21:46 nsimon kernel: ACPI: Using IOAPIC for interrupt routing
+Nov 08 17:21:46 nsimon kernel: PCI: Using host bridge windows from ACPI; if necessary, use "pci=nocrs" and report a bug
+Nov 08 17:21:46 nsimon kernel: PCI: Using E820 reservations for host bridge windows
+Nov 08 17:21:46 nsimon kernel: ACPI: Enabled 4 GPEs in block 00 to 0F
+Nov 08 17:21:46 nsimon kernel: ACPI: PCI Root Bridge [PCI0] (domain 0000 [bus 00-7f])
+Nov 08 17:21:46 nsimon kernel: acpi PNP0A03:00: _OSC: OS supports [ExtendedConfig ASPM ClockPM Segments MSI EDR HPX-Type3]
+Nov 08 17:21:46 nsimon kernel: acpi PNP0A03:00: _OSC: platform does not support [AER LTR DPC]
+Nov 08 17:21:46 nsimon kernel: acpi PNP0A03:00: _OSC: OS now controls [PCIeHotplug SHPCHotplug PME PCIeCapability]
+Nov 08 17:21:46 nsimon kernel: PCI host bridge to bus 0000:00
+Nov 08 17:21:46 nsimon kernel: pci_bus 0000:00: root bus resource [mem 0x000a0000-0x000bffff window]
+Nov 08 17:21:46 nsimon kernel: pci_bus 0000:00: root bus resource [mem 0x000d0000-0x000dbfff window]
+Nov 08 17:21:46 nsimon kernel: pci_bus 0000:00: root bus resource [mem 0xc0000000-0xfebfffff window]
+Nov 08 17:21:46 nsimon kernel: pci_bus 0000:00: root bus resource [io  0x0000-0x0cf7 window]
+Nov 08 17:21:46 nsimon kernel: pci_bus 0000:00: root bus resource [io  0x0d00-0xfeff window]
+Nov 08 17:21:46 nsimon kernel: pci_bus 0000:00: root bus resource [bus 00-7f]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:00.0: [8086:7190] type 00 class 0x060000
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:01.0: [8086:7191] type 01 class 0x060400
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:07.0: [8086:7110] type 00 class 0x060100
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:07.1: [8086:7111] type 00 class 0x01018a
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:07.1: reg 0x20: [io  0x1060-0x106f]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:07.1: legacy IDE quirk: reg 0x10: [io  0x01f0-0x01f7]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:07.1: legacy IDE quirk: reg 0x14: [io  0x03f6]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:07.1: legacy IDE quirk: reg 0x18: [io  0x0170-0x0177]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:07.1: legacy IDE quirk: reg 0x1c: [io  0x0376]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:07.3: [8086:7113] type 00 class 0x068000
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:07.3: quirk: [io  0x1000-0x103f] claimed by PIIX4 ACPI
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:07.3: quirk: [io  0x1040-0x104f] claimed by PIIX4 SMB
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:07.7: [15ad:0740] type 00 class 0x088000
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:07.7: reg 0x10: [io  0x1080-0x10bf]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:07.7: reg 0x14: [mem 0xfebfe000-0xfebfffff 64bit]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:0f.0: [15ad:0405] type 00 class 0x030000
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:0f.0: reg 0x10: [io  0x1070-0x107f]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:0f.0: reg 0x14: [mem 0xe8000000-0xefffffff pref]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:0f.0: reg 0x18: [mem 0xfe000000-0xfe7fffff]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:0f.0: reg 0x30: [mem 0x00000000-0x00007fff pref]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:0f.0: Video device with shadowed ROM at [mem 0x000c0000-0x000dffff]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:11.0: [15ad:0790] type 01 class 0x060401
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:15.0: [15ad:07a0] type 01 class 0x060400
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:15.0: PME# supported from D0 D3hot D3cold
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:15.1: [15ad:07a0] type 01 class 0x060400
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:15.1: PME# supported from D0 D3hot D3cold
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:15.2: [15ad:07a0] type 01 class 0x060400
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:15.2: PME# supported from D0 D3hot D3cold
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:15.3: [15ad:07a0] type 01 class 0x060400
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:15.3: PME# supported from D0 D3hot D3cold
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:15.4: [15ad:07a0] type 01 class 0x060400
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:15.4: PME# supported from D0 D3hot D3cold
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:15.5: [15ad:07a0] type 01 class 0x060400
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:15.5: PME# supported from D0 D3hot D3cold
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:15.6: [15ad:07a0] type 01 class 0x060400
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:15.6: PME# supported from D0 D3hot D3cold
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:15.7: [15ad:07a0] type 01 class 0x060400
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:15.7: PME# supported from D0 D3hot D3cold
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:16.0: [15ad:07a0] type 01 class 0x060400
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:16.0: PME# supported from D0 D3hot D3cold
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:16.1: [15ad:07a0] type 01 class 0x060400
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:16.1: PME# supported from D0 D3hot D3cold
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:16.2: [15ad:07a0] type 01 class 0x060400
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:16.2: PME# supported from D0 D3hot D3cold
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:16.3: [15ad:07a0] type 01 class 0x060400
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:16.3: PME# supported from D0 D3hot D3cold
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:16.4: [15ad:07a0] type 01 class 0x060400
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:16.4: PME# supported from D0 D3hot D3cold
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:16.5: [15ad:07a0] type 01 class 0x060400
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:16.5: PME# supported from D0 D3hot D3cold
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:16.6: [15ad:07a0] type 01 class 0x060400
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:16.6: PME# supported from D0 D3hot D3cold
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:16.7: [15ad:07a0] type 01 class 0x060400
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:16.7: PME# supported from D0 D3hot D3cold
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:17.0: [15ad:07a0] type 01 class 0x060400
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:17.0: PME# supported from D0 D3hot D3cold
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:17.1: [15ad:07a0] type 01 class 0x060400
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:17.1: PME# supported from D0 D3hot D3cold
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:17.2: [15ad:07a0] type 01 class 0x060400
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:17.2: PME# supported from D0 D3hot D3cold
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:17.3: [15ad:07a0] type 01 class 0x060400
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:17.3: PME# supported from D0 D3hot D3cold
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:17.4: [15ad:07a0] type 01 class 0x060400
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:17.4: PME# supported from D0 D3hot D3cold
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:17.5: [15ad:07a0] type 01 class 0x060400
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:17.5: PME# supported from D0 D3hot D3cold
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:17.6: [15ad:07a0] type 01 class 0x060400
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:17.6: PME# supported from D0 D3hot D3cold
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:17.7: [15ad:07a0] type 01 class 0x060400
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:17.7: PME# supported from D0 D3hot D3cold
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:18.0: [15ad:07a0] type 01 class 0x060400
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:18.0: PME# supported from D0 D3hot D3cold
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:18.1: [15ad:07a0] type 01 class 0x060400
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:18.1: PME# supported from D0 D3hot D3cold
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:18.2: [15ad:07a0] type 01 class 0x060400
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:18.2: PME# supported from D0 D3hot D3cold
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:18.3: [15ad:07a0] type 01 class 0x060400
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:18.3: PME# supported from D0 D3hot D3cold
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:18.4: [15ad:07a0] type 01 class 0x060400
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:18.4: PME# supported from D0 D3hot D3cold
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:18.5: [15ad:07a0] type 01 class 0x060400
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:18.5: PME# supported from D0 D3hot D3cold
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:18.6: [15ad:07a0] type 01 class 0x060400
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:18.6: PME# supported from D0 D3hot D3cold
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:18.7: [15ad:07a0] type 01 class 0x060400
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:18.7: PME# supported from D0 D3hot D3cold
+Nov 08 17:21:46 nsimon kernel: pci_bus 0000:01: extended config space not accessible
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:01.0: PCI bridge to [bus 01]
+Nov 08 17:21:46 nsimon kernel: pci_bus 0000:02: extended config space not accessible
+Nov 08 17:21:46 nsimon kernel: acpiphp: Slot [32] registered
+Nov 08 17:21:46 nsimon kernel: acpiphp: Slot [33] registered
+Nov 08 17:21:46 nsimon kernel: acpiphp: Slot [34] registered
+Nov 08 17:21:46 nsimon kernel: acpiphp: Slot [35] registered
+Nov 08 17:21:46 nsimon kernel: acpiphp: Slot [36] registered
+Nov 08 17:21:46 nsimon kernel: acpiphp: Slot [37] registered
+Nov 08 17:21:46 nsimon kernel: acpiphp: Slot [38] registered
+Nov 08 17:21:46 nsimon kernel: acpiphp: Slot [39] registered
+Nov 08 17:21:46 nsimon kernel: acpiphp: Slot [40] registered
+Nov 08 17:21:46 nsimon kernel: acpiphp: Slot [41] registered
+Nov 08 17:21:46 nsimon kernel: acpiphp: Slot [42] registered
+Nov 08 17:21:46 nsimon kernel: acpiphp: Slot [43] registered
+Nov 08 17:21:46 nsimon kernel: acpiphp: Slot [44] registered
+Nov 08 17:21:46 nsimon kernel: acpiphp: Slot [45] registered
+Nov 08 17:21:46 nsimon kernel: acpiphp: Slot [46] registered
+Nov 08 17:21:46 nsimon kernel: acpiphp: Slot [47] registered
+Nov 08 17:21:46 nsimon kernel: acpiphp: Slot [48] registered
+Nov 08 17:21:46 nsimon kernel: acpiphp: Slot [49] registered
+Nov 08 17:21:46 nsimon kernel: acpiphp: Slot [50] registered
+Nov 08 17:21:46 nsimon kernel: acpiphp: Slot [51] registered
+Nov 08 17:21:46 nsimon kernel: acpiphp: Slot [52] registered
+Nov 08 17:21:46 nsimon kernel: acpiphp: Slot [53] registered
+Nov 08 17:21:46 nsimon kernel: acpiphp: Slot [54] registered
+Nov 08 17:21:46 nsimon kernel: acpiphp: Slot [55] registered
+Nov 08 17:21:46 nsimon kernel: acpiphp: Slot [56] registered
+Nov 08 17:21:46 nsimon kernel: acpiphp: Slot [57] registered
+Nov 08 17:21:46 nsimon kernel: acpiphp: Slot [58] registered
+Nov 08 17:21:46 nsimon kernel: acpiphp: Slot [59] registered
+Nov 08 17:21:46 nsimon kernel: acpiphp: Slot [60] registered
+Nov 08 17:21:46 nsimon kernel: acpiphp: Slot [61] registered
+Nov 08 17:21:46 nsimon kernel: acpiphp: Slot [62] registered
+Nov 08 17:21:46 nsimon kernel: acpiphp: Slot [63] registered
+Nov 08 17:21:46 nsimon kernel: pci 0000:02:00.0: [15ad:0774] type 00 class 0x0c0300
+Nov 08 17:21:46 nsimon kernel: pci 0000:02:00.0: reg 0x20: [io  0x2040-0x205f]
+Nov 08 17:21:46 nsimon kernel: pci 0000:02:01.0: [1274:1371] type 00 class 0x040100
+Nov 08 17:21:46 nsimon kernel: pci 0000:02:01.0: reg 0x10: [io  0x2000-0x203f]
+Nov 08 17:21:46 nsimon kernel: pci 0000:02:02.0: [15ad:0770] type 00 class 0x0c0320
+Nov 08 17:21:46 nsimon kernel: pci 0000:02:02.0: reg 0x10: [mem 0xfd5ff000-0xfd5fffff]
+Nov 08 17:21:46 nsimon kernel: pci 0000:02:03.0: [15ad:07e0] type 00 class 0x010601
+Nov 08 17:21:46 nsimon kernel: pci 0000:02:03.0: reg 0x24: [mem 0xfd5fe000-0xfd5fefff]
+Nov 08 17:21:46 nsimon kernel: pci 0000:02:03.0: reg 0x30: [mem 0x00000000-0x0000ffff pref]
+Nov 08 17:21:46 nsimon kernel: pci 0000:02:03.0: PME# supported from D3hot
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:11.0: PCI bridge to [bus 02] (subtractive decode)
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:11.0:   bridge window [io  0x2000-0x3fff]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:11.0:   bridge window [mem 0xfd500000-0xfdffffff]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:11.0:   bridge window [mem 0xe7b00000-0xe7ffffff 64bit pref]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:11.0:   bridge window [mem 0x000a0000-0x000bffff window] (subtractive decode)
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:11.0:   bridge window [mem 0x000d0000-0x000dbfff window] (subtractive decode)
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:11.0:   bridge window [mem 0xc0000000-0xfebfffff window] (subtractive decode)
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:11.0:   bridge window [io  0x0000-0x0cf7 window] (subtractive decode)
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:11.0:   bridge window [io  0x0d00-0xfeff window] (subtractive decode)
+Nov 08 17:21:46 nsimon kernel: pci 0000:03:00.0: [15ad:07b0] type 00 class 0x020000
+Nov 08 17:21:46 nsimon kernel: pci 0000:03:00.0: reg 0x10: [mem 0xfd4fc000-0xfd4fcfff]
+Nov 08 17:21:46 nsimon kernel: pci 0000:03:00.0: reg 0x14: [mem 0xfd4fd000-0xfd4fdfff]
+Nov 08 17:21:46 nsimon kernel: pci 0000:03:00.0: reg 0x18: [mem 0xfd4fe000-0xfd4fffff]
+Nov 08 17:21:46 nsimon kernel: pci 0000:03:00.0: reg 0x1c: [io  0x4000-0x400f]
+Nov 08 17:21:46 nsimon kernel: pci 0000:03:00.0: reg 0x30: [mem 0x00000000-0x0000ffff pref]
+Nov 08 17:21:46 nsimon kernel: pci 0000:03:00.0: supports D1 D2
+Nov 08 17:21:46 nsimon kernel: pci 0000:03:00.0: PME# supported from D0 D1 D2 D3hot D3cold
+Nov 08 17:21:46 nsimon kernel: pci 0000:03:00.0: disabling ASPM on pre-1.1 PCIe device.  You can enable it with 'pcie_aspm=force'
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:15.0: PCI bridge to [bus 03]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:15.0:   bridge window [io  0x4000-0x4fff]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:15.0:   bridge window [mem 0xfd400000-0xfd4fffff]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:15.1: PCI bridge to [bus 04]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:15.1:   bridge window [io  0x8000-0x8fff]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:15.1:   bridge window [mem 0xfd000000-0xfd0fffff]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:15.1:   bridge window [mem 0xe7800000-0xe78fffff 64bit pref]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:15.2: PCI bridge to [bus 05]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:15.2:   bridge window [io  0xc000-0xcfff]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:15.2:   bridge window [mem 0xfcc00000-0xfccfffff]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:15.2:   bridge window [mem 0xe7400000-0xe74fffff 64bit pref]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:15.3: PCI bridge to [bus 06]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:15.3:   bridge window [mem 0xfc800000-0xfc8fffff]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:15.3:   bridge window [mem 0xe7000000-0xe70fffff 64bit pref]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:15.4: PCI bridge to [bus 07]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:15.4:   bridge window [mem 0xfc400000-0xfc4fffff]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:15.4:   bridge window [mem 0xe6c00000-0xe6cfffff 64bit pref]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:15.5: PCI bridge to [bus 08]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:15.5:   bridge window [mem 0xfc000000-0xfc0fffff]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:15.5:   bridge window [mem 0xe6800000-0xe68fffff 64bit pref]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:15.6: PCI bridge to [bus 09]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:15.6:   bridge window [mem 0xfbc00000-0xfbcfffff]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:15.6:   bridge window [mem 0xe6400000-0xe64fffff 64bit pref]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:15.7: PCI bridge to [bus 0a]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:15.7:   bridge window [mem 0xfb800000-0xfb8fffff]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:15.7:   bridge window [mem 0xe6000000-0xe60fffff 64bit pref]
+Nov 08 17:21:46 nsimon kernel: pci 0000:0b:00.0: [15ad:07f0] type 00 class 0x010802
+Nov 08 17:21:46 nsimon kernel: pci 0000:0b:00.0: reg 0x10: [mem 0xfd3fc000-0xfd3fffff 64bit]
+Nov 08 17:21:46 nsimon kernel: pci 0000:0b:00.0: reg 0x18: [io  0x5000-0x5007]
+Nov 08 17:21:46 nsimon kernel: pci 0000:0b:00.0: reg 0x30: [mem 0x00000000-0x00001fff pref]
+Nov 08 17:21:46 nsimon kernel: pci 0000:0b:00.0: PME# supported from D0 D3hot D3cold
+Nov 08 17:21:46 nsimon kernel: pci 0000:0b:00.0: disabling ASPM on pre-1.1 PCIe device.  You can enable it with 'pcie_aspm=force'
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:16.0: PCI bridge to [bus 0b]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:16.0:   bridge window [io  0x5000-0x5fff]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:16.0:   bridge window [mem 0xfd300000-0xfd3fffff]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:16.1: PCI bridge to [bus 0c]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:16.1:   bridge window [io  0x9000-0x9fff]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:16.1:   bridge window [mem 0xfcf00000-0xfcffffff]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:16.1:   bridge window [mem 0xe7700000-0xe77fffff 64bit pref]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:16.2: PCI bridge to [bus 0d]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:16.2:   bridge window [io  0xd000-0xdfff]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:16.2:   bridge window [mem 0xfcb00000-0xfcbfffff]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:16.2:   bridge window [mem 0xe7300000-0xe73fffff 64bit pref]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:16.3: PCI bridge to [bus 0e]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:16.3:   bridge window [mem 0xfc700000-0xfc7fffff]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:16.3:   bridge window [mem 0xe6f00000-0xe6ffffff 64bit pref]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:16.4: PCI bridge to [bus 0f]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:16.4:   bridge window [mem 0xfc300000-0xfc3fffff]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:16.4:   bridge window [mem 0xe6b00000-0xe6bfffff 64bit pref]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:16.5: PCI bridge to [bus 10]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:16.5:   bridge window [mem 0xfbf00000-0xfbffffff]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:16.5:   bridge window [mem 0xe6700000-0xe67fffff 64bit pref]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:16.6: PCI bridge to [bus 11]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:16.6:   bridge window [mem 0xfbb00000-0xfbbfffff]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:16.6:   bridge window [mem 0xe6300000-0xe63fffff 64bit pref]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:16.7: PCI bridge to [bus 12]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:16.7:   bridge window [mem 0xfb700000-0xfb7fffff]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:16.7:   bridge window [mem 0xe5f00000-0xe5ffffff 64bit pref]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:17.0: PCI bridge to [bus 13]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:17.0:   bridge window [io  0x6000-0x6fff]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:17.0:   bridge window [mem 0xfd200000-0xfd2fffff]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:17.0:   bridge window [mem 0xe7a00000-0xe7afffff 64bit pref]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:17.1: PCI bridge to [bus 14]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:17.1:   bridge window [io  0xa000-0xafff]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:17.1:   bridge window [mem 0xfce00000-0xfcefffff]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:17.1:   bridge window [mem 0xe7600000-0xe76fffff 64bit pref]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:17.2: PCI bridge to [bus 15]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:17.2:   bridge window [io  0xe000-0xefff]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:17.2:   bridge window [mem 0xfca00000-0xfcafffff]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:17.2:   bridge window [mem 0xe7200000-0xe72fffff 64bit pref]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:17.3: PCI bridge to [bus 16]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:17.3:   bridge window [mem 0xfc600000-0xfc6fffff]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:17.3:   bridge window [mem 0xe6e00000-0xe6efffff 64bit pref]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:17.4: PCI bridge to [bus 17]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:17.4:   bridge window [mem 0xfc200000-0xfc2fffff]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:17.4:   bridge window [mem 0xe6a00000-0xe6afffff 64bit pref]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:17.5: PCI bridge to [bus 18]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:17.5:   bridge window [mem 0xfbe00000-0xfbefffff]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:17.5:   bridge window [mem 0xe6600000-0xe66fffff 64bit pref]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:17.6: PCI bridge to [bus 19]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:17.6:   bridge window [mem 0xfba00000-0xfbafffff]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:17.6:   bridge window [mem 0xe6200000-0xe62fffff 64bit pref]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:17.7: PCI bridge to [bus 1a]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:17.7:   bridge window [mem 0xfb600000-0xfb6fffff]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:17.7:   bridge window [mem 0xe5e00000-0xe5efffff 64bit pref]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:18.0: PCI bridge to [bus 1b]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:18.0:   bridge window [io  0x7000-0x7fff]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:18.0:   bridge window [mem 0xfd100000-0xfd1fffff]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:18.0:   bridge window [mem 0xe7900000-0xe79fffff 64bit pref]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:18.1: PCI bridge to [bus 1c]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:18.1:   bridge window [io  0xb000-0xbfff]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:18.1:   bridge window [mem 0xfcd00000-0xfcdfffff]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:18.1:   bridge window [mem 0xe7500000-0xe75fffff 64bit pref]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:18.2: PCI bridge to [bus 1d]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:18.2:   bridge window [mem 0xfc900000-0xfc9fffff]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:18.2:   bridge window [mem 0xe7100000-0xe71fffff 64bit pref]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:18.3: PCI bridge to [bus 1e]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:18.3:   bridge window [mem 0xfc500000-0xfc5fffff]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:18.3:   bridge window [mem 0xe6d00000-0xe6dfffff 64bit pref]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:18.4: PCI bridge to [bus 1f]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:18.4:   bridge window [mem 0xfc100000-0xfc1fffff]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:18.4:   bridge window [mem 0xe6900000-0xe69fffff 64bit pref]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:18.5: PCI bridge to [bus 20]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:18.5:   bridge window [mem 0xfbd00000-0xfbdfffff]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:18.5:   bridge window [mem 0xe6500000-0xe65fffff 64bit pref]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:18.6: PCI bridge to [bus 21]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:18.6:   bridge window [mem 0xfb900000-0xfb9fffff]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:18.6:   bridge window [mem 0xe6100000-0xe61fffff 64bit pref]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:18.7: PCI bridge to [bus 22]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:18.7:   bridge window [mem 0xfb500000-0xfb5fffff]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:18.7:   bridge window [mem 0xe5d00000-0xe5dfffff 64bit pref]
+Nov 08 17:21:46 nsimon kernel: ACPI: PCI: Interrupt link LNKA configured for IRQ 9
+Nov 08 17:21:46 nsimon kernel: ACPI: PCI: Interrupt link LNKB configured for IRQ 7
+Nov 08 17:21:46 nsimon kernel: ACPI: PCI: Interrupt link LNKC configured for IRQ 11
+Nov 08 17:21:46 nsimon kernel: ACPI: PCI: Interrupt link LNKD configured for IRQ 10
+Nov 08 17:21:46 nsimon kernel: iommu: Default domain type: Translated
+Nov 08 17:21:46 nsimon kernel: iommu: DMA domain TLB invalidation policy: lazy mode
+Nov 08 17:21:46 nsimon kernel: SCSI subsystem initialized
+Nov 08 17:21:46 nsimon kernel: ACPI: bus type USB registered
+Nov 08 17:21:46 nsimon kernel: usbcore: registered new interface driver usbfs
+Nov 08 17:21:46 nsimon kernel: usbcore: registered new interface driver hub
+Nov 08 17:21:46 nsimon kernel: usbcore: registered new device driver usb
+Nov 08 17:21:46 nsimon kernel: pps_core: LinuxPPS API ver. 1 registered
+Nov 08 17:21:46 nsimon kernel: pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+Nov 08 17:21:46 nsimon kernel: PTP clock support registered
+Nov 08 17:21:46 nsimon kernel: EDAC MC: Ver: 3.0.0
+Nov 08 17:21:46 nsimon kernel: NetLabel: Initializing
+Nov 08 17:21:46 nsimon kernel: NetLabel:  domain hash size = 128
+Nov 08 17:21:46 nsimon kernel: NetLabel:  protocols = UNLABELED CIPSOv4 CALIPSO
+Nov 08 17:21:46 nsimon kernel: NetLabel:  unlabeled traffic allowed by default
+Nov 08 17:21:46 nsimon kernel: PCI: Using ACPI for IRQ routing
+Nov 08 17:21:46 nsimon kernel: PCI: pci_cache_line_size set to 64 bytes
+Nov 08 17:21:46 nsimon kernel: e820: reserve RAM buffer [mem 0x00097c00-0x0009ffff]
+Nov 08 17:21:46 nsimon kernel: e820: reserve RAM buffer [mem 0xbfed0000-0xbfffffff]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:0f.0: vgaarb: setting as boot VGA device
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:0f.0: vgaarb: bridge control possible
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:0f.0: vgaarb: VGA device added: decodes=io+mem,owns=io+mem,locks=none
+Nov 08 17:21:46 nsimon kernel: vgaarb: loaded
+Nov 08 17:21:46 nsimon kernel: hpet0: at MMIO 0xfed00000, IRQs 2, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+Nov 08 17:21:46 nsimon kernel: hpet0: 16 comparators, 64-bit 14.318180 MHz counter
+Nov 08 17:21:46 nsimon kernel: clocksource: Switched to clocksource tsc-early
+Nov 08 17:21:46 nsimon kernel: VFS: Disk quotas dquot_6.6.0
+Nov 08 17:21:46 nsimon kernel: VFS: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+Nov 08 17:21:46 nsimon kernel: pnp: PnP ACPI init
+Nov 08 17:21:46 nsimon kernel: system 00:00: [io  0x1000-0x103f] has been reserved
+Nov 08 17:21:46 nsimon kernel: system 00:00: [io  0x1040-0x104f] has been reserved
+Nov 08 17:21:46 nsimon kernel: system 00:00: [io  0x0cf0-0x0cf1] has been reserved
+Nov 08 17:21:46 nsimon kernel: system 00:04: [mem 0xfed00000-0xfed003ff] has been reserved
+Nov 08 17:21:46 nsimon kernel: system 00:06: [io  0xfce0-0xfcff] has been reserved
+Nov 08 17:21:46 nsimon kernel: system 00:06: [mem 0xf0000000-0xf7ffffff] has been reserved
+Nov 08 17:21:46 nsimon kernel: system 00:06: [mem 0xfe800000-0xfe9fffff] has been reserved
+Nov 08 17:21:46 nsimon kernel: pnp: PnP ACPI: found 7 devices
+Nov 08 17:21:46 nsimon kernel: clocksource: acpi_pm: mask: 0xffffff max_cycles: 0xffffff, max_idle_ns: 2085701024 ns
+Nov 08 17:21:46 nsimon kernel: NET: Registered PF_INET protocol family
+Nov 08 17:21:46 nsimon kernel: IP idents hash table entries: 65536 (order: 7, 524288 bytes, linear)
+Nov 08 17:21:46 nsimon kernel: tcp_listen_portaddr_hash hash table entries: 2048 (order: 3, 32768 bytes, linear)
+Nov 08 17:21:46 nsimon kernel: Table-perturb hash table entries: 65536 (order: 6, 262144 bytes, linear)
+Nov 08 17:21:46 nsimon kernel: TCP established hash table entries: 32768 (order: 6, 262144 bytes, linear)
+Nov 08 17:21:46 nsimon kernel: TCP bind hash table entries: 32768 (order: 8, 1048576 bytes, linear)
+Nov 08 17:21:46 nsimon kernel: TCP: Hash tables configured (established 32768 bind 32768)
+Nov 08 17:21:46 nsimon kernel: MPTCP token hash table entries: 4096 (order: 4, 98304 bytes, linear)
+Nov 08 17:21:46 nsimon kernel: UDP hash table entries: 2048 (order: 4, 65536 bytes, linear)
+Nov 08 17:21:46 nsimon kernel: UDP-Lite hash table entries: 2048 (order: 4, 65536 bytes, linear)
+Nov 08 17:21:46 nsimon kernel: NET: Registered PF_UNIX/PF_LOCAL protocol family
+Nov 08 17:21:46 nsimon kernel: NET: Registered PF_XDP protocol family
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:15.0: bridge window [mem 0x00100000-0x000fffff 64bit pref] to [bus 03] add_size 200000 add_align 100000
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:15.3: bridge window [io  0x1000-0x0fff] to [bus 06] add_size 1000
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:15.4: bridge window [io  0x1000-0x0fff] to [bus 07] add_size 1000
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:15.5: bridge window [io  0x1000-0x0fff] to [bus 08] add_size 1000
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:15.6: bridge window [io  0x1000-0x0fff] to [bus 09] add_size 1000
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:15.7: bridge window [io  0x1000-0x0fff] to [bus 0a] add_size 1000
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:16.0: bridge window [mem 0x00100000-0x000fffff 64bit pref] to [bus 0b] add_size 200000 add_align 100000
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:16.3: bridge window [io  0x1000-0x0fff] to [bus 0e] add_size 1000
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:16.4: bridge window [io  0x1000-0x0fff] to [bus 0f] add_size 1000
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:16.5: bridge window [io  0x1000-0x0fff] to [bus 10] add_size 1000
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:16.6: bridge window [io  0x1000-0x0fff] to [bus 11] add_size 1000
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:16.7: bridge window [io  0x1000-0x0fff] to [bus 12] add_size 1000
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:17.3: bridge window [io  0x1000-0x0fff] to [bus 16] add_size 1000
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:17.4: bridge window [io  0x1000-0x0fff] to [bus 17] add_size 1000
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:17.5: bridge window [io  0x1000-0x0fff] to [bus 18] add_size 1000
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:17.6: bridge window [io  0x1000-0x0fff] to [bus 19] add_size 1000
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:17.7: bridge window [io  0x1000-0x0fff] to [bus 1a] add_size 1000
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:18.2: bridge window [io  0x1000-0x0fff] to [bus 1d] add_size 1000
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:18.3: bridge window [io  0x1000-0x0fff] to [bus 1e] add_size 1000
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:18.4: bridge window [io  0x1000-0x0fff] to [bus 1f] add_size 1000
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:18.5: bridge window [io  0x1000-0x0fff] to [bus 20] add_size 1000
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:18.6: bridge window [io  0x1000-0x0fff] to [bus 21] add_size 1000
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:18.7: bridge window [io  0x1000-0x0fff] to [bus 22] add_size 1000
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:15.0: BAR 15: assigned [mem 0xc0000000-0xc01fffff 64bit pref]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:16.0: BAR 15: assigned [mem 0xc0200000-0xc03fffff 64bit pref]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:15.3: BAR 13: no space for [io  size 0x1000]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:15.3: BAR 13: failed to assign [io  size 0x1000]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:15.4: BAR 13: no space for [io  size 0x1000]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:15.4: BAR 13: failed to assign [io  size 0x1000]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:15.5: BAR 13: no space for [io  size 0x1000]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:15.5: BAR 13: failed to assign [io  size 0x1000]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:15.6: BAR 13: no space for [io  size 0x1000]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:15.6: BAR 13: failed to assign [io  size 0x1000]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:15.7: BAR 13: no space for [io  size 0x1000]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:15.7: BAR 13: failed to assign [io  size 0x1000]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:16.3: BAR 13: no space for [io  size 0x1000]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:16.3: BAR 13: failed to assign [io  size 0x1000]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:16.4: BAR 13: no space for [io  size 0x1000]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:16.4: BAR 13: failed to assign [io  size 0x1000]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:16.5: BAR 13: no space for [io  size 0x1000]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:16.5: BAR 13: failed to assign [io  size 0x1000]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:16.6: BAR 13: no space for [io  size 0x1000]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:16.6: BAR 13: failed to assign [io  size 0x1000]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:16.7: BAR 13: no space for [io  size 0x1000]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:16.7: BAR 13: failed to assign [io  size 0x1000]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:17.3: BAR 13: no space for [io  size 0x1000]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:17.3: BAR 13: failed to assign [io  size 0x1000]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:17.4: BAR 13: no space for [io  size 0x1000]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:17.4: BAR 13: failed to assign [io  size 0x1000]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:17.5: BAR 13: no space for [io  size 0x1000]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:17.5: BAR 13: failed to assign [io  size 0x1000]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:17.6: BAR 13: no space for [io  size 0x1000]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:17.6: BAR 13: failed to assign [io  size 0x1000]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:17.7: BAR 13: no space for [io  size 0x1000]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:17.7: BAR 13: failed to assign [io  size 0x1000]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:18.2: BAR 13: no space for [io  size 0x1000]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:18.2: BAR 13: failed to assign [io  size 0x1000]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:18.3: BAR 13: no space for [io  size 0x1000]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:18.3: BAR 13: failed to assign [io  size 0x1000]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:18.4: BAR 13: no space for [io  size 0x1000]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:18.4: BAR 13: failed to assign [io  size 0x1000]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:18.5: BAR 13: no space for [io  size 0x1000]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:18.5: BAR 13: failed to assign [io  size 0x1000]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:18.6: BAR 13: no space for [io  size 0x1000]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:18.6: BAR 13: failed to assign [io  size 0x1000]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:18.7: BAR 13: no space for [io  size 0x1000]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:18.7: BAR 13: failed to assign [io  size 0x1000]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:18.7: BAR 13: no space for [io  size 0x1000]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:18.7: BAR 13: failed to assign [io  size 0x1000]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:18.6: BAR 13: no space for [io  size 0x1000]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:18.6: BAR 13: failed to assign [io  size 0x1000]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:18.5: BAR 13: no space for [io  size 0x1000]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:18.5: BAR 13: failed to assign [io  size 0x1000]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:18.4: BAR 13: no space for [io  size 0x1000]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:18.4: BAR 13: failed to assign [io  size 0x1000]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:18.3: BAR 13: no space for [io  size 0x1000]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:18.3: BAR 13: failed to assign [io  size 0x1000]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:18.2: BAR 13: no space for [io  size 0x1000]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:18.2: BAR 13: failed to assign [io  size 0x1000]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:17.7: BAR 13: no space for [io  size 0x1000]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:17.7: BAR 13: failed to assign [io  size 0x1000]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:17.6: BAR 13: no space for [io  size 0x1000]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:17.6: BAR 13: failed to assign [io  size 0x1000]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:17.5: BAR 13: no space for [io  size 0x1000]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:17.5: BAR 13: failed to assign [io  size 0x1000]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:17.4: BAR 13: no space for [io  size 0x1000]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:17.4: BAR 13: failed to assign [io  size 0x1000]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:17.3: BAR 13: no space for [io  size 0x1000]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:17.3: BAR 13: failed to assign [io  size 0x1000]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:16.7: BAR 13: no space for [io  size 0x1000]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:16.7: BAR 13: failed to assign [io  size 0x1000]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:16.6: BAR 13: no space for [io  size 0x1000]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:16.6: BAR 13: failed to assign [io  size 0x1000]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:16.5: BAR 13: no space for [io  size 0x1000]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:16.5: BAR 13: failed to assign [io  size 0x1000]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:16.4: BAR 13: no space for [io  size 0x1000]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:16.4: BAR 13: failed to assign [io  size 0x1000]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:16.3: BAR 13: no space for [io  size 0x1000]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:16.3: BAR 13: failed to assign [io  size 0x1000]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:15.7: BAR 13: no space for [io  size 0x1000]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:15.7: BAR 13: failed to assign [io  size 0x1000]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:15.6: BAR 13: no space for [io  size 0x1000]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:15.6: BAR 13: failed to assign [io  size 0x1000]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:15.5: BAR 13: no space for [io  size 0x1000]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:15.5: BAR 13: failed to assign [io  size 0x1000]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:15.4: BAR 13: no space for [io  size 0x1000]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:15.4: BAR 13: failed to assign [io  size 0x1000]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:15.3: BAR 13: no space for [io  size 0x1000]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:15.3: BAR 13: failed to assign [io  size 0x1000]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:01.0: PCI bridge to [bus 01]
+Nov 08 17:21:46 nsimon kernel: pci 0000:02:03.0: BAR 6: assigned [mem 0xfd500000-0xfd50ffff pref]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:11.0: PCI bridge to [bus 02]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:11.0:   bridge window [io  0x2000-0x3fff]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:11.0:   bridge window [mem 0xfd500000-0xfdffffff]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:11.0:   bridge window [mem 0xe7b00000-0xe7ffffff 64bit pref]
+Nov 08 17:21:46 nsimon kernel: pci 0000:03:00.0: BAR 6: assigned [mem 0xfd400000-0xfd40ffff pref]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:15.0: PCI bridge to [bus 03]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:15.0:   bridge window [io  0x4000-0x4fff]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:15.0:   bridge window [mem 0xfd400000-0xfd4fffff]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:15.0:   bridge window [mem 0xc0000000-0xc01fffff 64bit pref]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:15.1: PCI bridge to [bus 04]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:15.1:   bridge window [io  0x8000-0x8fff]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:15.1:   bridge window [mem 0xfd000000-0xfd0fffff]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:15.1:   bridge window [mem 0xe7800000-0xe78fffff 64bit pref]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:15.2: PCI bridge to [bus 05]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:15.2:   bridge window [io  0xc000-0xcfff]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:15.2:   bridge window [mem 0xfcc00000-0xfccfffff]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:15.2:   bridge window [mem 0xe7400000-0xe74fffff 64bit pref]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:15.3: PCI bridge to [bus 06]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:15.3:   bridge window [mem 0xfc800000-0xfc8fffff]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:15.3:   bridge window [mem 0xe7000000-0xe70fffff 64bit pref]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:15.4: PCI bridge to [bus 07]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:15.4:   bridge window [mem 0xfc400000-0xfc4fffff]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:15.4:   bridge window [mem 0xe6c00000-0xe6cfffff 64bit pref]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:15.5: PCI bridge to [bus 08]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:15.5:   bridge window [mem 0xfc000000-0xfc0fffff]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:15.5:   bridge window [mem 0xe6800000-0xe68fffff 64bit pref]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:15.6: PCI bridge to [bus 09]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:15.6:   bridge window [mem 0xfbc00000-0xfbcfffff]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:15.6:   bridge window [mem 0xe6400000-0xe64fffff 64bit pref]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:15.7: PCI bridge to [bus 0a]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:15.7:   bridge window [mem 0xfb800000-0xfb8fffff]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:15.7:   bridge window [mem 0xe6000000-0xe60fffff 64bit pref]
+Nov 08 17:21:46 nsimon kernel: pci 0000:0b:00.0: BAR 6: assigned [mem 0xfd300000-0xfd301fff pref]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:16.0: PCI bridge to [bus 0b]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:16.0:   bridge window [io  0x5000-0x5fff]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:16.0:   bridge window [mem 0xfd300000-0xfd3fffff]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:16.0:   bridge window [mem 0xc0200000-0xc03fffff 64bit pref]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:16.1: PCI bridge to [bus 0c]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:16.1:   bridge window [io  0x9000-0x9fff]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:16.1:   bridge window [mem 0xfcf00000-0xfcffffff]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:16.1:   bridge window [mem 0xe7700000-0xe77fffff 64bit pref]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:16.2: PCI bridge to [bus 0d]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:16.2:   bridge window [io  0xd000-0xdfff]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:16.2:   bridge window [mem 0xfcb00000-0xfcbfffff]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:16.2:   bridge window [mem 0xe7300000-0xe73fffff 64bit pref]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:16.3: PCI bridge to [bus 0e]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:16.3:   bridge window [mem 0xfc700000-0xfc7fffff]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:16.3:   bridge window [mem 0xe6f00000-0xe6ffffff 64bit pref]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:16.4: PCI bridge to [bus 0f]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:16.4:   bridge window [mem 0xfc300000-0xfc3fffff]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:16.4:   bridge window [mem 0xe6b00000-0xe6bfffff 64bit pref]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:16.5: PCI bridge to [bus 10]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:16.5:   bridge window [mem 0xfbf00000-0xfbffffff]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:16.5:   bridge window [mem 0xe6700000-0xe67fffff 64bit pref]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:16.6: PCI bridge to [bus 11]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:16.6:   bridge window [mem 0xfbb00000-0xfbbfffff]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:16.6:   bridge window [mem 0xe6300000-0xe63fffff 64bit pref]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:16.7: PCI bridge to [bus 12]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:16.7:   bridge window [mem 0xfb700000-0xfb7fffff]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:16.7:   bridge window [mem 0xe5f00000-0xe5ffffff 64bit pref]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:17.0: PCI bridge to [bus 13]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:17.0:   bridge window [io  0x6000-0x6fff]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:17.0:   bridge window [mem 0xfd200000-0xfd2fffff]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:17.0:   bridge window [mem 0xe7a00000-0xe7afffff 64bit pref]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:17.1: PCI bridge to [bus 14]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:17.1:   bridge window [io  0xa000-0xafff]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:17.1:   bridge window [mem 0xfce00000-0xfcefffff]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:17.1:   bridge window [mem 0xe7600000-0xe76fffff 64bit pref]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:17.2: PCI bridge to [bus 15]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:17.2:   bridge window [io  0xe000-0xefff]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:17.2:   bridge window [mem 0xfca00000-0xfcafffff]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:17.2:   bridge window [mem 0xe7200000-0xe72fffff 64bit pref]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:17.3: PCI bridge to [bus 16]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:17.3:   bridge window [mem 0xfc600000-0xfc6fffff]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:17.3:   bridge window [mem 0xe6e00000-0xe6efffff 64bit pref]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:17.4: PCI bridge to [bus 17]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:17.4:   bridge window [mem 0xfc200000-0xfc2fffff]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:17.4:   bridge window [mem 0xe6a00000-0xe6afffff 64bit pref]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:17.5: PCI bridge to [bus 18]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:17.5:   bridge window [mem 0xfbe00000-0xfbefffff]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:17.5:   bridge window [mem 0xe6600000-0xe66fffff 64bit pref]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:17.6: PCI bridge to [bus 19]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:17.6:   bridge window [mem 0xfba00000-0xfbafffff]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:17.6:   bridge window [mem 0xe6200000-0xe62fffff 64bit pref]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:17.7: PCI bridge to [bus 1a]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:17.7:   bridge window [mem 0xfb600000-0xfb6fffff]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:17.7:   bridge window [mem 0xe5e00000-0xe5efffff 64bit pref]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:18.0: PCI bridge to [bus 1b]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:18.0:   bridge window [io  0x7000-0x7fff]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:18.0:   bridge window [mem 0xfd100000-0xfd1fffff]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:18.0:   bridge window [mem 0xe7900000-0xe79fffff 64bit pref]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:18.1: PCI bridge to [bus 1c]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:18.1:   bridge window [io  0xb000-0xbfff]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:18.1:   bridge window [mem 0xfcd00000-0xfcdfffff]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:18.1:   bridge window [mem 0xe7500000-0xe75fffff 64bit pref]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:18.2: PCI bridge to [bus 1d]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:18.2:   bridge window [mem 0xfc900000-0xfc9fffff]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:18.2:   bridge window [mem 0xe7100000-0xe71fffff 64bit pref]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:18.3: PCI bridge to [bus 1e]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:18.3:   bridge window [mem 0xfc500000-0xfc5fffff]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:18.3:   bridge window [mem 0xe6d00000-0xe6dfffff 64bit pref]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:18.4: PCI bridge to [bus 1f]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:18.4:   bridge window [mem 0xfc100000-0xfc1fffff]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:18.4:   bridge window [mem 0xe6900000-0xe69fffff 64bit pref]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:18.5: PCI bridge to [bus 20]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:18.5:   bridge window [mem 0xfbd00000-0xfbdfffff]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:18.5:   bridge window [mem 0xe6500000-0xe65fffff 64bit pref]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:18.6: PCI bridge to [bus 21]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:18.6:   bridge window [mem 0xfb900000-0xfb9fffff]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:18.6:   bridge window [mem 0xe6100000-0xe61fffff 64bit pref]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:18.7: PCI bridge to [bus 22]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:18.7:   bridge window [mem 0xfb500000-0xfb5fffff]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:18.7:   bridge window [mem 0xe5d00000-0xe5dfffff 64bit pref]
+Nov 08 17:21:46 nsimon kernel: pci_bus 0000:00: resource 4 [mem 0x000a0000-0x000bffff window]
+Nov 08 17:21:46 nsimon kernel: pci_bus 0000:00: resource 5 [mem 0x000d0000-0x000dbfff window]
+Nov 08 17:21:46 nsimon kernel: pci_bus 0000:00: resource 6 [mem 0xc0000000-0xfebfffff window]
+Nov 08 17:21:46 nsimon kernel: pci_bus 0000:00: resource 7 [io  0x0000-0x0cf7 window]
+Nov 08 17:21:46 nsimon kernel: pci_bus 0000:00: resource 8 [io  0x0d00-0xfeff window]
+Nov 08 17:21:46 nsimon kernel: pci_bus 0000:02: resource 0 [io  0x2000-0x3fff]
+Nov 08 17:21:46 nsimon kernel: pci_bus 0000:02: resource 1 [mem 0xfd500000-0xfdffffff]
+Nov 08 17:21:46 nsimon kernel: pci_bus 0000:02: resource 2 [mem 0xe7b00000-0xe7ffffff 64bit pref]
+Nov 08 17:21:46 nsimon kernel: pci_bus 0000:02: resource 4 [mem 0x000a0000-0x000bffff window]
+Nov 08 17:21:46 nsimon kernel: pci_bus 0000:02: resource 5 [mem 0x000d0000-0x000dbfff window]
+Nov 08 17:21:46 nsimon kernel: pci_bus 0000:02: resource 6 [mem 0xc0000000-0xfebfffff window]
+Nov 08 17:21:46 nsimon kernel: pci_bus 0000:02: resource 7 [io  0x0000-0x0cf7 window]
+Nov 08 17:21:46 nsimon kernel: pci_bus 0000:02: resource 8 [io  0x0d00-0xfeff window]
+Nov 08 17:21:46 nsimon kernel: pci_bus 0000:03: resource 0 [io  0x4000-0x4fff]
+Nov 08 17:21:46 nsimon kernel: pci_bus 0000:03: resource 1 [mem 0xfd400000-0xfd4fffff]
+Nov 08 17:21:46 nsimon kernel: pci_bus 0000:03: resource 2 [mem 0xc0000000-0xc01fffff 64bit pref]
+Nov 08 17:21:46 nsimon kernel: pci_bus 0000:04: resource 0 [io  0x8000-0x8fff]
+Nov 08 17:21:46 nsimon kernel: pci_bus 0000:04: resource 1 [mem 0xfd000000-0xfd0fffff]
+Nov 08 17:21:46 nsimon kernel: pci_bus 0000:04: resource 2 [mem 0xe7800000-0xe78fffff 64bit pref]
+Nov 08 17:21:46 nsimon kernel: pci_bus 0000:05: resource 0 [io  0xc000-0xcfff]
+Nov 08 17:21:46 nsimon kernel: pci_bus 0000:05: resource 1 [mem 0xfcc00000-0xfccfffff]
+Nov 08 17:21:46 nsimon kernel: pci_bus 0000:05: resource 2 [mem 0xe7400000-0xe74fffff 64bit pref]
+Nov 08 17:21:46 nsimon kernel: pci_bus 0000:06: resource 1 [mem 0xfc800000-0xfc8fffff]
+Nov 08 17:21:46 nsimon kernel: pci_bus 0000:06: resource 2 [mem 0xe7000000-0xe70fffff 64bit pref]
+Nov 08 17:21:46 nsimon kernel: pci_bus 0000:07: resource 1 [mem 0xfc400000-0xfc4fffff]
+Nov 08 17:21:46 nsimon kernel: pci_bus 0000:07: resource 2 [mem 0xe6c00000-0xe6cfffff 64bit pref]
+Nov 08 17:21:46 nsimon kernel: pci_bus 0000:08: resource 1 [mem 0xfc000000-0xfc0fffff]
+Nov 08 17:21:46 nsimon kernel: pci_bus 0000:08: resource 2 [mem 0xe6800000-0xe68fffff 64bit pref]
+Nov 08 17:21:46 nsimon kernel: pci_bus 0000:09: resource 1 [mem 0xfbc00000-0xfbcfffff]
+Nov 08 17:21:46 nsimon kernel: pci_bus 0000:09: resource 2 [mem 0xe6400000-0xe64fffff 64bit pref]
+Nov 08 17:21:46 nsimon kernel: pci_bus 0000:0a: resource 1 [mem 0xfb800000-0xfb8fffff]
+Nov 08 17:21:46 nsimon kernel: pci_bus 0000:0a: resource 2 [mem 0xe6000000-0xe60fffff 64bit pref]
+Nov 08 17:21:46 nsimon kernel: pci_bus 0000:0b: resource 0 [io  0x5000-0x5fff]
+Nov 08 17:21:46 nsimon kernel: pci_bus 0000:0b: resource 1 [mem 0xfd300000-0xfd3fffff]
+Nov 08 17:21:46 nsimon kernel: pci_bus 0000:0b: resource 2 [mem 0xc0200000-0xc03fffff 64bit pref]
+Nov 08 17:21:46 nsimon kernel: pci_bus 0000:0c: resource 0 [io  0x9000-0x9fff]
+Nov 08 17:21:46 nsimon kernel: pci_bus 0000:0c: resource 1 [mem 0xfcf00000-0xfcffffff]
+Nov 08 17:21:46 nsimon kernel: pci_bus 0000:0c: resource 2 [mem 0xe7700000-0xe77fffff 64bit pref]
+Nov 08 17:21:46 nsimon kernel: pci_bus 0000:0d: resource 0 [io  0xd000-0xdfff]
+Nov 08 17:21:46 nsimon kernel: pci_bus 0000:0d: resource 1 [mem 0xfcb00000-0xfcbfffff]
+Nov 08 17:21:46 nsimon kernel: pci_bus 0000:0d: resource 2 [mem 0xe7300000-0xe73fffff 64bit pref]
+Nov 08 17:21:46 nsimon kernel: pci_bus 0000:0e: resource 1 [mem 0xfc700000-0xfc7fffff]
+Nov 08 17:21:46 nsimon kernel: pci_bus 0000:0e: resource 2 [mem 0xe6f00000-0xe6ffffff 64bit pref]
+Nov 08 17:21:46 nsimon kernel: pci_bus 0000:0f: resource 1 [mem 0xfc300000-0xfc3fffff]
+Nov 08 17:21:46 nsimon kernel: pci_bus 0000:0f: resource 2 [mem 0xe6b00000-0xe6bfffff 64bit pref]
+Nov 08 17:21:46 nsimon kernel: pci_bus 0000:10: resource 1 [mem 0xfbf00000-0xfbffffff]
+Nov 08 17:21:46 nsimon kernel: pci_bus 0000:10: resource 2 [mem 0xe6700000-0xe67fffff 64bit pref]
+Nov 08 17:21:46 nsimon kernel: pci_bus 0000:11: resource 1 [mem 0xfbb00000-0xfbbfffff]
+Nov 08 17:21:46 nsimon kernel: pci_bus 0000:11: resource 2 [mem 0xe6300000-0xe63fffff 64bit pref]
+Nov 08 17:21:46 nsimon kernel: pci_bus 0000:12: resource 1 [mem 0xfb700000-0xfb7fffff]
+Nov 08 17:21:46 nsimon kernel: pci_bus 0000:12: resource 2 [mem 0xe5f00000-0xe5ffffff 64bit pref]
+Nov 08 17:21:46 nsimon kernel: pci_bus 0000:13: resource 0 [io  0x6000-0x6fff]
+Nov 08 17:21:46 nsimon kernel: pci_bus 0000:13: resource 1 [mem 0xfd200000-0xfd2fffff]
+Nov 08 17:21:46 nsimon kernel: pci_bus 0000:13: resource 2 [mem 0xe7a00000-0xe7afffff 64bit pref]
+Nov 08 17:21:46 nsimon kernel: pci_bus 0000:14: resource 0 [io  0xa000-0xafff]
+Nov 08 17:21:46 nsimon kernel: pci_bus 0000:14: resource 1 [mem 0xfce00000-0xfcefffff]
+Nov 08 17:21:46 nsimon kernel: pci_bus 0000:14: resource 2 [mem 0xe7600000-0xe76fffff 64bit pref]
+Nov 08 17:21:46 nsimon kernel: pci_bus 0000:15: resource 0 [io  0xe000-0xefff]
+Nov 08 17:21:46 nsimon kernel: pci_bus 0000:15: resource 1 [mem 0xfca00000-0xfcafffff]
+Nov 08 17:21:46 nsimon kernel: pci_bus 0000:15: resource 2 [mem 0xe7200000-0xe72fffff 64bit pref]
+Nov 08 17:21:46 nsimon kernel: pci_bus 0000:16: resource 1 [mem 0xfc600000-0xfc6fffff]
+Nov 08 17:21:46 nsimon kernel: pci_bus 0000:16: resource 2 [mem 0xe6e00000-0xe6efffff 64bit pref]
+Nov 08 17:21:46 nsimon kernel: pci_bus 0000:17: resource 1 [mem 0xfc200000-0xfc2fffff]
+Nov 08 17:21:46 nsimon kernel: pci_bus 0000:17: resource 2 [mem 0xe6a00000-0xe6afffff 64bit pref]
+Nov 08 17:21:46 nsimon kernel: pci_bus 0000:18: resource 1 [mem 0xfbe00000-0xfbefffff]
+Nov 08 17:21:46 nsimon kernel: pci_bus 0000:18: resource 2 [mem 0xe6600000-0xe66fffff 64bit pref]
+Nov 08 17:21:46 nsimon kernel: pci_bus 0000:19: resource 1 [mem 0xfba00000-0xfbafffff]
+Nov 08 17:21:46 nsimon kernel: pci_bus 0000:19: resource 2 [mem 0xe6200000-0xe62fffff 64bit pref]
+Nov 08 17:21:46 nsimon kernel: pci_bus 0000:1a: resource 1 [mem 0xfb600000-0xfb6fffff]
+Nov 08 17:21:46 nsimon kernel: pci_bus 0000:1a: resource 2 [mem 0xe5e00000-0xe5efffff 64bit pref]
+Nov 08 17:21:46 nsimon kernel: pci_bus 0000:1b: resource 0 [io  0x7000-0x7fff]
+Nov 08 17:21:46 nsimon kernel: pci_bus 0000:1b: resource 1 [mem 0xfd100000-0xfd1fffff]
+Nov 08 17:21:46 nsimon kernel: pci_bus 0000:1b: resource 2 [mem 0xe7900000-0xe79fffff 64bit pref]
+Nov 08 17:21:46 nsimon kernel: pci_bus 0000:1c: resource 0 [io  0xb000-0xbfff]
+Nov 08 17:21:46 nsimon kernel: pci_bus 0000:1c: resource 1 [mem 0xfcd00000-0xfcdfffff]
+Nov 08 17:21:46 nsimon kernel: pci_bus 0000:1c: resource 2 [mem 0xe7500000-0xe75fffff 64bit pref]
+Nov 08 17:21:46 nsimon kernel: pci_bus 0000:1d: resource 1 [mem 0xfc900000-0xfc9fffff]
+Nov 08 17:21:46 nsimon kernel: pci_bus 0000:1d: resource 2 [mem 0xe7100000-0xe71fffff 64bit pref]
+Nov 08 17:21:46 nsimon kernel: pci_bus 0000:1e: resource 1 [mem 0xfc500000-0xfc5fffff]
+Nov 08 17:21:46 nsimon kernel: pci_bus 0000:1e: resource 2 [mem 0xe6d00000-0xe6dfffff 64bit pref]
+Nov 08 17:21:46 nsimon kernel: pci_bus 0000:1f: resource 1 [mem 0xfc100000-0xfc1fffff]
+Nov 08 17:21:46 nsimon kernel: pci_bus 0000:1f: resource 2 [mem 0xe6900000-0xe69fffff 64bit pref]
+Nov 08 17:21:46 nsimon kernel: pci_bus 0000:20: resource 1 [mem 0xfbd00000-0xfbdfffff]
+Nov 08 17:21:46 nsimon kernel: pci_bus 0000:20: resource 2 [mem 0xe6500000-0xe65fffff 64bit pref]
+Nov 08 17:21:46 nsimon kernel: pci_bus 0000:21: resource 1 [mem 0xfb900000-0xfb9fffff]
+Nov 08 17:21:46 nsimon kernel: pci_bus 0000:21: resource 2 [mem 0xe6100000-0xe61fffff 64bit pref]
+Nov 08 17:21:46 nsimon kernel: pci_bus 0000:22: resource 1 [mem 0xfb500000-0xfb5fffff]
+Nov 08 17:21:46 nsimon kernel: pci_bus 0000:22: resource 2 [mem 0xe5d00000-0xe5dfffff 64bit pref]
+Nov 08 17:21:46 nsimon kernel: pci 0000:00:00.0: Limiting direct PCI/PCI transfers
+Nov 08 17:21:46 nsimon kernel: PCI: CLS 32 bytes, default 64
+Nov 08 17:21:46 nsimon kernel: PCI-DMA: Using software bounce buffering for IO (SWIOTLB)
+Nov 08 17:21:46 nsimon kernel: software IO TLB: mapped [mem 0x00000000ab000000-0x00000000af000000] (64MB)
+Nov 08 17:21:46 nsimon kernel: ACPI: bus type thunderbolt registered
+Nov 08 17:21:46 nsimon kernel: Trying to unpack rootfs image as initramfs...
+Nov 08 17:21:46 nsimon kernel: clocksource: tsc: mask: 0xffffffffffffffff max_cycles: 0x2135f7c97c8, max_idle_ns: 440795273205 ns
+Nov 08 17:21:46 nsimon kernel: clocksource: Switched to clocksource tsc
+Nov 08 17:21:46 nsimon kernel: Initialise system trusted keyrings
+Nov 08 17:21:46 nsimon kernel: Key type blacklist registered
+Nov 08 17:21:46 nsimon kernel: workingset: timestamp_bits=36 max_order=20 bucket_order=0
+Nov 08 17:21:46 nsimon kernel: zbud: loaded
+Nov 08 17:21:46 nsimon kernel: integrity: Platform Keyring initialized
+Nov 08 17:21:46 nsimon kernel: NET: Registered PF_ALG protocol family
+Nov 08 17:21:46 nsimon kernel: Key type asymmetric registered
+Nov 08 17:21:46 nsimon kernel: Asymmetric key parser 'x509' registered
+Nov 08 17:21:46 nsimon kernel: Running certificate verification selftests
+Nov 08 17:21:46 nsimon kernel: Loaded X.509 cert 'Certificate verification self-testing key: f58703bb33ce1b73ee02eccdee5b8817518fe3db'
+Nov 08 17:21:46 nsimon kernel: Freeing initrd memory: 92076K
+Nov 08 17:21:46 nsimon kernel: Block layer SCSI generic (bsg) driver version 0.4 loaded (major 245)
+Nov 08 17:21:46 nsimon kernel: io scheduler mq-deadline registered
+Nov 08 17:21:46 nsimon kernel: io scheduler kyber registered
+Nov 08 17:21:46 nsimon kernel: io scheduler bfq registered
+Nov 08 17:21:46 nsimon kernel: atomic64_test: passed for x86-64 platform with CX8 and with SSE
+Nov 08 17:21:46 nsimon kernel: pcieport 0000:00:15.0: PME: Signaling with IRQ 24
+Nov 08 17:21:46 nsimon kernel: pcieport 0000:00:15.0: pciehp: Slot #160 AttnBtn+ PwrCtrl+ MRL- AttnInd- PwrInd- HotPlug+ Surprise- Interlock- NoCompl+ IbPresDis- LLActRep+
+Nov 08 17:21:46 nsimon kernel: pcieport 0000:00:15.1: PME: Signaling with IRQ 25
+Nov 08 17:21:46 nsimon kernel: pcieport 0000:00:15.1: pciehp: Slot #161 AttnBtn+ PwrCtrl+ MRL- AttnInd- PwrInd- HotPlug+ Surprise- Interlock- NoCompl+ IbPresDis- LLActRep+
+Nov 08 17:21:46 nsimon kernel: pcieport 0000:00:15.2: PME: Signaling with IRQ 26
+Nov 08 17:21:46 nsimon kernel: pcieport 0000:00:15.2: pciehp: Slot #162 AttnBtn+ PwrCtrl+ MRL- AttnInd- PwrInd- HotPlug+ Surprise- Interlock- NoCompl+ IbPresDis- LLActRep+
+Nov 08 17:21:46 nsimon kernel: pcieport 0000:00:15.3: PME: Signaling with IRQ 27
+Nov 08 17:21:46 nsimon kernel: pcieport 0000:00:15.3: pciehp: Slot #163 AttnBtn+ PwrCtrl+ MRL- AttnInd- PwrInd- HotPlug+ Surprise- Interlock- NoCompl+ IbPresDis- LLActRep+
+Nov 08 17:21:46 nsimon kernel: pcieport 0000:00:15.4: PME: Signaling with IRQ 28
+Nov 08 17:21:46 nsimon kernel: pcieport 0000:00:15.4: pciehp: Slot #164 AttnBtn+ PwrCtrl+ MRL- AttnInd- PwrInd- HotPlug+ Surprise- Interlock- NoCompl+ IbPresDis- LLActRep+
+Nov 08 17:21:46 nsimon kernel: pcieport 0000:00:15.5: PME: Signaling with IRQ 29
+Nov 08 17:21:46 nsimon kernel: pcieport 0000:00:15.5: pciehp: Slot #165 AttnBtn+ PwrCtrl+ MRL- AttnInd- PwrInd- HotPlug+ Surprise- Interlock- NoCompl+ IbPresDis- LLActRep+
+Nov 08 17:21:46 nsimon kernel: pcieport 0000:00:15.6: PME: Signaling with IRQ 30
+Nov 08 17:21:46 nsimon kernel: pcieport 0000:00:15.6: pciehp: Slot #166 AttnBtn+ PwrCtrl+ MRL- AttnInd- PwrInd- HotPlug+ Surprise- Interlock- NoCompl+ IbPresDis- LLActRep+
+Nov 08 17:21:46 nsimon kernel: pcieport 0000:00:15.7: PME: Signaling with IRQ 31
+Nov 08 17:21:46 nsimon kernel: pcieport 0000:00:15.7: pciehp: Slot #167 AttnBtn+ PwrCtrl+ MRL- AttnInd- PwrInd- HotPlug+ Surprise- Interlock- NoCompl+ IbPresDis- LLActRep+
+Nov 08 17:21:46 nsimon kernel: pcieport 0000:00:16.0: PME: Signaling with IRQ 32
+Nov 08 17:21:46 nsimon kernel: pcieport 0000:00:16.0: pciehp: Slot #192 AttnBtn+ PwrCtrl+ MRL- AttnInd- PwrInd- HotPlug+ Surprise- Interlock- NoCompl+ IbPresDis- LLActRep+
+Nov 08 17:21:46 nsimon kernel: pcieport 0000:00:16.1: PME: Signaling with IRQ 33
+Nov 08 17:21:46 nsimon kernel: pcieport 0000:00:16.1: pciehp: Slot #193 AttnBtn+ PwrCtrl+ MRL- AttnInd- PwrInd- HotPlug+ Surprise- Interlock- NoCompl+ IbPresDis- LLActRep+
+Nov 08 17:21:46 nsimon kernel: pcieport 0000:00:16.2: PME: Signaling with IRQ 34
+Nov 08 17:21:46 nsimon kernel: pcieport 0000:00:16.2: pciehp: Slot #194 AttnBtn+ PwrCtrl+ MRL- AttnInd- PwrInd- HotPlug+ Surprise- Interlock- NoCompl+ IbPresDis- LLActRep+
+Nov 08 17:21:46 nsimon kernel: pcieport 0000:00:16.3: PME: Signaling with IRQ 35
+Nov 08 17:21:46 nsimon kernel: pcieport 0000:00:16.3: pciehp: Slot #195 AttnBtn+ PwrCtrl+ MRL- AttnInd- PwrInd- HotPlug+ Surprise- Interlock- NoCompl+ IbPresDis- LLActRep+
+Nov 08 17:21:46 nsimon kernel: pcieport 0000:00:16.4: PME: Signaling with IRQ 36
+Nov 08 17:21:46 nsimon kernel: pcieport 0000:00:16.4: pciehp: Slot #196 AttnBtn+ PwrCtrl+ MRL- AttnInd- PwrInd- HotPlug+ Surprise- Interlock- NoCompl+ IbPresDis- LLActRep+
+Nov 08 17:21:46 nsimon kernel: pcieport 0000:00:16.5: PME: Signaling with IRQ 37
+Nov 08 17:21:46 nsimon kernel: pcieport 0000:00:16.5: pciehp: Slot #197 AttnBtn+ PwrCtrl+ MRL- AttnInd- PwrInd- HotPlug+ Surprise- Interlock- NoCompl+ IbPresDis- LLActRep+
+Nov 08 17:21:46 nsimon kernel: pcieport 0000:00:16.6: PME: Signaling with IRQ 38
+Nov 08 17:21:46 nsimon kernel: pcieport 0000:00:16.6: pciehp: Slot #198 AttnBtn+ PwrCtrl+ MRL- AttnInd- PwrInd- HotPlug+ Surprise- Interlock- NoCompl+ IbPresDis- LLActRep+
+Nov 08 17:21:46 nsimon kernel: pcieport 0000:00:16.7: PME: Signaling with IRQ 39
+Nov 08 17:21:46 nsimon kernel: pcieport 0000:00:16.7: pciehp: Slot #199 AttnBtn+ PwrCtrl+ MRL- AttnInd- PwrInd- HotPlug+ Surprise- Interlock- NoCompl+ IbPresDis- LLActRep+
+Nov 08 17:21:46 nsimon kernel: pcieport 0000:00:17.0: PME: Signaling with IRQ 40
+Nov 08 17:21:46 nsimon kernel: pcieport 0000:00:17.0: pciehp: Slot #224 AttnBtn+ PwrCtrl+ MRL- AttnInd- PwrInd- HotPlug+ Surprise- Interlock- NoCompl+ IbPresDis- LLActRep+
+Nov 08 17:21:46 nsimon kernel: pcieport 0000:00:17.1: PME: Signaling with IRQ 41
+Nov 08 17:21:46 nsimon kernel: pcieport 0000:00:17.1: pciehp: Slot #225 AttnBtn+ PwrCtrl+ MRL- AttnInd- PwrInd- HotPlug+ Surprise- Interlock- NoCompl+ IbPresDis- LLActRep+
+Nov 08 17:21:46 nsimon kernel: pcieport 0000:00:17.2: PME: Signaling with IRQ 42
+Nov 08 17:21:46 nsimon kernel: pcieport 0000:00:17.2: pciehp: Slot #226 AttnBtn+ PwrCtrl+ MRL- AttnInd- PwrInd- HotPlug+ Surprise- Interlock- NoCompl+ IbPresDis- LLActRep+
+Nov 08 17:21:46 nsimon kernel: pcieport 0000:00:17.3: PME: Signaling with IRQ 43
+Nov 08 17:21:46 nsimon kernel: pcieport 0000:00:17.3: pciehp: Slot #227 AttnBtn+ PwrCtrl+ MRL- AttnInd- PwrInd- HotPlug+ Surprise- Interlock- NoCompl+ IbPresDis- LLActRep+
+Nov 08 17:21:46 nsimon kernel: pcieport 0000:00:17.4: PME: Signaling with IRQ 44
+Nov 08 17:21:46 nsimon kernel: pcieport 0000:00:17.4: pciehp: Slot #228 AttnBtn+ PwrCtrl+ MRL- AttnInd- PwrInd- HotPlug+ Surprise- Interlock- NoCompl+ IbPresDis- LLActRep+
+Nov 08 17:21:46 nsimon kernel: pcieport 0000:00:17.5: PME: Signaling with IRQ 45
+Nov 08 17:21:46 nsimon kernel: pcieport 0000:00:17.5: pciehp: Slot #229 AttnBtn+ PwrCtrl+ MRL- AttnInd- PwrInd- HotPlug+ Surprise- Interlock- NoCompl+ IbPresDis- LLActRep+
+Nov 08 17:21:46 nsimon kernel: pcieport 0000:00:17.6: PME: Signaling with IRQ 46
+Nov 08 17:21:46 nsimon kernel: pcieport 0000:00:17.6: pciehp: Slot #230 AttnBtn+ PwrCtrl+ MRL- AttnInd- PwrInd- HotPlug+ Surprise- Interlock- NoCompl+ IbPresDis- LLActRep+
+Nov 08 17:21:46 nsimon kernel: pcieport 0000:00:17.7: PME: Signaling with IRQ 47
+Nov 08 17:21:46 nsimon kernel: pcieport 0000:00:17.7: pciehp: Slot #231 AttnBtn+ PwrCtrl+ MRL- AttnInd- PwrInd- HotPlug+ Surprise- Interlock- NoCompl+ IbPresDis- LLActRep+
+Nov 08 17:21:46 nsimon kernel: pcieport 0000:00:18.0: PME: Signaling with IRQ 48
+Nov 08 17:21:46 nsimon kernel: pcieport 0000:00:18.0: pciehp: Slot #256 AttnBtn+ PwrCtrl+ MRL- AttnInd- PwrInd- HotPlug+ Surprise- Interlock- NoCompl+ IbPresDis- LLActRep+
+Nov 08 17:21:46 nsimon kernel: pcieport 0000:00:18.1: PME: Signaling with IRQ 49
+Nov 08 17:21:46 nsimon kernel: pcieport 0000:00:18.1: pciehp: Slot #257 AttnBtn+ PwrCtrl+ MRL- AttnInd- PwrInd- HotPlug+ Surprise- Interlock- NoCompl+ IbPresDis- LLActRep+
+Nov 08 17:21:46 nsimon kernel: pcieport 0000:00:18.2: PME: Signaling with IRQ 50
+Nov 08 17:21:46 nsimon kernel: pcieport 0000:00:18.2: pciehp: Slot #258 AttnBtn+ PwrCtrl+ MRL- AttnInd- PwrInd- HotPlug+ Surprise- Interlock- NoCompl+ IbPresDis- LLActRep+
+Nov 08 17:21:46 nsimon kernel: pcieport 0000:00:18.3: PME: Signaling with IRQ 51
+Nov 08 17:21:46 nsimon kernel: pcieport 0000:00:18.3: pciehp: Slot #259 AttnBtn+ PwrCtrl+ MRL- AttnInd- PwrInd- HotPlug+ Surprise- Interlock- NoCompl+ IbPresDis- LLActRep+
+Nov 08 17:21:46 nsimon kernel: pcieport 0000:00:18.4: PME: Signaling with IRQ 52
+Nov 08 17:21:46 nsimon kernel: pcieport 0000:00:18.4: pciehp: Slot #260 AttnBtn+ PwrCtrl+ MRL- AttnInd- PwrInd- HotPlug+ Surprise- Interlock- NoCompl+ IbPresDis- LLActRep+
+Nov 08 17:21:46 nsimon kernel: pcieport 0000:00:18.5: PME: Signaling with IRQ 53
+Nov 08 17:21:46 nsimon kernel: pcieport 0000:00:18.5: pciehp: Slot #261 AttnBtn+ PwrCtrl+ MRL- AttnInd- PwrInd- HotPlug+ Surprise- Interlock- NoCompl+ IbPresDis- LLActRep+
+Nov 08 17:21:46 nsimon kernel: pcieport 0000:00:18.6: PME: Signaling with IRQ 54
+Nov 08 17:21:46 nsimon kernel: pcieport 0000:00:18.6: pciehp: Slot #262 AttnBtn+ PwrCtrl+ MRL- AttnInd- PwrInd- HotPlug+ Surprise- Interlock- NoCompl+ IbPresDis- LLActRep+
+Nov 08 17:21:46 nsimon kernel: pcieport 0000:00:18.7: PME: Signaling with IRQ 55
+Nov 08 17:21:46 nsimon kernel: pcieport 0000:00:18.7: pciehp: Slot #263 AttnBtn+ PwrCtrl+ MRL- AttnInd- PwrInd- HotPlug+ Surprise- Interlock- NoCompl+ IbPresDis- LLActRep+
+Nov 08 17:21:46 nsimon kernel: shpchp: Standard Hot Plug PCI Controller Driver version: 0.4
+Nov 08 17:21:46 nsimon kernel: ACPI: AC: AC Adapter [ACAD] (on-line)
+Nov 08 17:21:46 nsimon kernel: input: Power Button as /devices/LNXSYSTM:00/LNXPWRBN:00/input/input0
+Nov 08 17:21:46 nsimon kernel: ACPI: button: Power Button [PWRF]
+Nov 08 17:21:46 nsimon kernel: Serial: 8250/16550 driver, 4 ports, IRQ sharing enabled
+Nov 08 17:21:46 nsimon kernel: 00:05: ttyS0 at I/O 0x3f8 (irq = 4, base_baud = 115200) is a 16550A
+Nov 08 17:21:46 nsimon kernel: Non-volatile memory driver v1.3
+Nov 08 17:21:46 nsimon kernel: rdac: device handler registered
+Nov 08 17:21:46 nsimon kernel: hp_sw: device handler registered
+Nov 08 17:21:46 nsimon kernel: emc: device handler registered
+Nov 08 17:21:46 nsimon kernel: alua: device handler registered
+Nov 08 17:21:46 nsimon kernel: nvme nvme0: pci function 0000:0b:00.0
+Nov 08 17:21:46 nsimon kernel: uhci_hcd 0000:02:00.0: UHCI Host Controller
+Nov 08 17:21:46 nsimon kernel: uhci_hcd 0000:02:00.0: new USB bus registered, assigned bus number 1
+Nov 08 17:21:46 nsimon kernel: uhci_hcd 0000:02:00.0: detected 2 ports
+Nov 08 17:21:46 nsimon kernel: uhci_hcd 0000:02:00.0: irq 18, io port 0x00002040
+Nov 08 17:21:46 nsimon kernel: usb usb1: New USB device found, idVendor=1d6b, idProduct=0001, bcdDevice= 6.06
+Nov 08 17:21:46 nsimon kernel: usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+Nov 08 17:21:46 nsimon kernel: usb usb1: Product: UHCI Host Controller
+Nov 08 17:21:46 nsimon kernel: usb usb1: Manufacturer: Linux 6.6.0 uhci_hcd
+Nov 08 17:21:46 nsimon kernel: nvme nvme0: 15/0/0 default/read/poll queues
+Nov 08 17:21:46 nsimon kernel: usb usb1: SerialNumber: 0000:02:00.0
+Nov 08 17:21:46 nsimon kernel: hub 1-0:1.0: USB hub found
+Nov 08 17:21:46 nsimon kernel: hub 1-0:1.0: 2 ports detected
+Nov 08 17:21:46 nsimon kernel: usbcore: registered new interface driver usbserial_generic
+Nov 08 17:21:46 nsimon kernel: ehci-pci 0000:02:02.0: EHCI Host Controller
+Nov 08 17:21:46 nsimon kernel: usbserial: USB Serial support registered for generic
+Nov 08 17:21:46 nsimon kernel: ehci-pci 0000:02:02.0: new USB bus registered, assigned bus number 2
+Nov 08 17:21:46 nsimon kernel: i8042: PNP: PS/2 Controller [PNP0303:KBC,PNP0f13:MOUS] at 0x60,0x64 irq 1,12
+Nov 08 17:21:46 nsimon kernel: ehci-pci 0000:02:02.0: irq 16, io mem 0xfd5ff000
+Nov 08 17:21:46 nsimon kernel: serio: i8042 KBD port at 0x60,0x64 irq 1
+Nov 08 17:21:46 nsimon kernel: serio: i8042 AUX port at 0x60,0x64 irq 12
+Nov 08 17:21:46 nsimon kernel: mousedev: PS/2 mouse device common for all mice
+Nov 08 17:21:46 nsimon kernel: rtc_cmos 00:01: registered as rtc0
+Nov 08 17:21:46 nsimon kernel:  nvme0n1: p1 p2
+Nov 08 17:21:46 nsimon kernel: rtc_cmos 00:01: setting system clock to 2023-11-08T16:21:46 UTC (1699460506)
+Nov 08 17:21:46 nsimon kernel: rtc_cmos 00:01: alarms up to one month, y3k, 114 bytes nvram
+Nov 08 17:21:46 nsimon kernel: intel_pstate: CPU model not supported
+Nov 08 17:21:46 nsimon kernel: ehci-pci 0000:02:02.0: USB 2.0 started, EHCI 1.00
+Nov 08 17:21:46 nsimon kernel: usb usb2: New USB device found, idVendor=1d6b, idProduct=0002, bcdDevice= 6.06
+Nov 08 17:21:46 nsimon kernel: hid: raw HID events driver (C) Jiri Kosina
+Nov 08 17:21:46 nsimon kernel: usb usb2: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+Nov 08 17:21:46 nsimon kernel: usbcore: registered new interface driver usbhid
+Nov 08 17:21:46 nsimon kernel: usb usb2: Product: EHCI Host Controller
+Nov 08 17:21:46 nsimon kernel: usb usb2: Manufacturer: Linux 6.6.0 ehci_hcd
+Nov 08 17:21:46 nsimon kernel: usb usb2: SerialNumber: 0000:02:02.0
+Nov 08 17:21:46 nsimon kernel: hub 2-0:1.0: USB hub found
+Nov 08 17:21:46 nsimon kernel: usbhid: USB HID core driver
+Nov 08 17:21:46 nsimon kernel: input: AT Translated Set 2 keyboard as /devices/platform/i8042/serio0/input/input1
+Nov 08 17:21:46 nsimon kernel: hub 2-0:1.0: 6 ports detected
+Nov 08 17:21:46 nsimon kernel: drop_monitor: Initializing network drop monitor service
+Nov 08 17:21:46 nsimon kernel: input: VirtualPS/2 VMware VMMouse as /devices/platform/i8042/serio1/input/input4
+Nov 08 17:21:46 nsimon kernel: input: VirtualPS/2 VMware VMMouse as /devices/platform/i8042/serio1/input/input3
+Nov 08 17:21:46 nsimon kernel: Initializing XFRM netlink socket
+Nov 08 17:21:46 nsimon kernel: NET: Registered PF_INET6 protocol family
+Nov 08 17:21:46 nsimon kernel: Segment Routing with IPv6
+Nov 08 17:21:46 nsimon kernel: In-situ OAM (IOAM) with IPv6
+Nov 08 17:21:46 nsimon kernel: NET: Registered PF_PACKET protocol family
+Nov 08 17:21:46 nsimon kernel: mpls_gso: MPLS GSO support
+Nov 08 17:21:46 nsimon kernel: IPI shorthand broadcast: enabled
+Nov 08 17:21:46 nsimon kernel: AVX2 version of gcm_enc/dec engaged.
+Nov 08 17:21:46 nsimon kernel: AES CTR mode by8 optimization enabled
+Nov 08 17:21:46 nsimon kernel: sched_clock: Marking stable (2144093566, 123526950)->(2318789510, -51168994)
+Nov 08 17:21:46 nsimon kernel: registered taskstats version 1
+Nov 08 17:21:46 nsimon kernel: Loading compiled-in X.509 certificates
+Nov 08 17:21:46 nsimon kernel: Loaded X.509 cert 'Build time autogenerated kernel key: ae4740cc8090888f1f778b5a79baa8876fb7a688'
+Nov 08 17:21:46 nsimon kernel: page_owner is disabled
+Nov 08 17:21:46 nsimon kernel: Key type big_key registered
+Nov 08 17:21:46 nsimon kernel: Key type encrypted registered
+Nov 08 17:21:46 nsimon kernel: ima: No TPM chip found, activating TPM-bypass!
+Nov 08 17:21:46 nsimon kernel: Loading compiled-in module X.509 certificates
+Nov 08 17:21:46 nsimon kernel: Loaded X.509 cert 'Build time autogenerated kernel key: ae4740cc8090888f1f778b5a79baa8876fb7a688'
+Nov 08 17:21:46 nsimon kernel: ima: Allocated hash algorithm: sha256
+Nov 08 17:21:46 nsimon kernel: ima: No architecture policies found
+Nov 08 17:21:46 nsimon kernel: evm: Initialising EVM extended attributes:
+Nov 08 17:21:46 nsimon kernel: evm: security.selinux
+Nov 08 17:21:46 nsimon kernel: evm: security.SMACK64 (disabled)
+Nov 08 17:21:46 nsimon kernel: evm: security.SMACK64EXEC (disabled)
+Nov 08 17:21:46 nsimon kernel: evm: security.SMACK64TRANSMUTE (disabled)
+Nov 08 17:21:46 nsimon kernel: evm: security.SMACK64MMAP (disabled)
+Nov 08 17:21:46 nsimon kernel: evm: security.apparmor (disabled)
+Nov 08 17:21:46 nsimon kernel: evm: security.ima
+Nov 08 17:21:46 nsimon kernel: evm: security.capability
+Nov 08 17:21:46 nsimon kernel: evm: HMAC attrs: 0x1
+Nov 08 17:21:46 nsimon kernel: clk: Disabling unused clocks
+Nov 08 17:21:46 nsimon kernel: Freeing unused decrypted memory: 2028K
+Nov 08 17:21:46 nsimon kernel: Freeing unused kernel image (initmem) memory: 4040K
+Nov 08 17:21:46 nsimon kernel: Write protecting the kernel read-only data: 30720k
+Nov 08 17:21:46 nsimon kernel: Freeing unused kernel image (rodata/data gap) memory: 1920K
+Nov 08 17:21:46 nsimon kernel: x86/mm: Checked W+X mappings: passed, no W+X pages found.
+Nov 08 17:21:46 nsimon kernel: usb 1-1: new full-speed USB device number 2 using uhci_hcd
+Nov 08 17:21:46 nsimon kernel: Run /init as init process
+Nov 08 17:21:46 nsimon kernel:   with arguments:
+Nov 08 17:21:46 nsimon kernel:     /init
+Nov 08 17:21:46 nsimon kernel:   with environment:
+Nov 08 17:21:46 nsimon kernel:     HOME=/
+Nov 08 17:21:46 nsimon kernel:     TERM=linux
+Nov 08 17:21:46 nsimon kernel:     BOOT_IMAGE=(hd0,msdos1)/vmlinuz-6.6.0
+Nov 08 17:21:46 nsimon systemd[1]: systemd 252-14.el9_2.3.0.1 running in system mode (+PAM +AUDIT +SELINUX -APPARMOR +IMA +SMACK +SECCOMP +GCRYPT +GNUTLS +OPENSSL +ACL +BLKID +CURL +ELFUTILS -FIDO2 +IDN2 -IDN -IPTC +KMOD +LIBCRYPTSETUP +LIBFDISK +PCRE2 -PWQUALITY +P11KIT -QRENCODE +TPM2 +BZIP2 +LZ4 +XZ +ZLIB +ZSTD -BPF_FRAMEWORK +XKBCOMMON +UTMP +SYSVINIT default-hierarchy=unified)
+Nov 08 17:21:46 nsimon systemd[1]: Detected virtualization vmware.
+Nov 08 17:21:46 nsimon systemd[1]: Detected architecture x86-64.
+Nov 08 17:21:46 nsimon systemd[1]: Running in initrd.
+Nov 08 17:21:46 nsimon systemd[1]: Hostname set to <nsimon>.
+Nov 08 17:21:46 nsimon kernel: usb 2-1: new high-speed USB device number 2 using ehci-pci
+Nov 08 17:21:46 nsimon systemd[1]: Queued start job for default target Initrd Default Target.
+Nov 08 17:21:46 nsimon systemd[1]: Created slice Slice /system/systemd-hibernate-resume.
+Nov 08 17:21:46 nsimon systemd[1]: Started Dispatch Password Requests to Console Directory Watch.
+Nov 08 17:21:46 nsimon systemd[1]: Reached target Initrd /usr File System.
+Nov 08 17:21:46 nsimon systemd[1]: Reached target Path Units.
+Nov 08 17:21:46 nsimon systemd[1]: Reached target Slice Units.
+Nov 08 17:21:46 nsimon systemd[1]: Reached target Swaps.
+Nov 08 17:21:46 nsimon systemd[1]: Reached target Timer Units.
+Nov 08 17:21:46 nsimon systemd[1]: Listening on D-Bus System Message Bus Socket.
+Nov 08 17:21:46 nsimon systemd[1]: Listening on Journal Socket (/dev/log).
+Nov 08 17:21:46 nsimon systemd[1]: Listening on Journal Socket.
+Nov 08 17:21:46 nsimon systemd[1]: Listening on udev Control Socket.
+Nov 08 17:21:46 nsimon systemd[1]: Listening on udev Kernel Socket.
+Nov 08 17:21:46 nsimon systemd[1]: Reached target Socket Units.
+Nov 08 17:21:46 nsimon systemd[1]: Starting Create List of Static Device Nodes...
+Nov 08 17:21:46 nsimon systemd[1]: Starting Journal Service...
+Nov 08 17:21:46 nsimon systemd[1]: Starting Load Kernel Modules...
+Nov 08 17:21:46 nsimon systemd[1]: Starting Create System Users...
+Nov 08 17:21:46 nsimon systemd[1]: Starting Setup Virtual Console...
+Nov 08 17:21:46 nsimon systemd[1]: Finished Create List of Static Device Nodes.
+Nov 08 17:21:46 nsimon kernel: usb 1-1: New USB device found, idVendor=0e0f, idProduct=0003, bcdDevice= 1.03
+Nov 08 17:21:46 nsimon kernel: usb 1-1: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+Nov 08 17:21:46 nsimon kernel: usb 1-1: Product: VMware Virtual USB Mouse
+Nov 08 17:21:46 nsimon kernel: usb 1-1: Manufacturer: VMware
+Nov 08 17:21:46 nsimon systemd[1]: Finished Create System Users.
+Nov 08 17:21:46 nsimon kernel: input: VMware VMware Virtual USB Mouse as /devices/pci0000:00/0000:00:11.0/0000:02:00.0/usb1/1-1/1-1:1.0/0003:0E0F:0003.0001/input/input5
+Nov 08 17:21:46 nsimon kernel: hid-generic 0003:0E0F:0003.0001: input,hidraw0: USB HID v1.10 Mouse [VMware VMware Virtual USB Mouse] on usb-0000:02:00.0-1/input0
+Nov 08 17:21:46 nsimon kernel: fuse: init (API version 7.39)
+Nov 08 17:21:46 nsimon kernel: usb 2-1: New USB device found, idVendor=0e0f, idProduct=000b, bcdDevice= 1.00
+Nov 08 17:21:46 nsimon kernel: usb 2-1: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+Nov 08 17:21:46 nsimon kernel: usb 2-1: Product: VMware Virtual USB Video Device
+Nov 08 17:21:46 nsimon kernel: usb 2-1: Manufacturer: VMware, Inc.
+Nov 08 17:21:46 nsimon systemd-journald[335]: Journal started
+Nov 08 17:21:46 nsimon systemd-journald[335]: Runtime Journal (/run/log/journal/bb7a069cf7444f94922887009ca1c627) is 8.0M, max 72.5M, 64.5M free.
+Nov 08 17:21:46 nsimon systemd-sysusers[339]: Creating group 'nobody' with GID 65534.
+Nov 08 17:21:46 nsimon systemd-sysusers[339]: Creating group 'users' with GID 100.
+Nov 08 17:21:46 nsimon systemd-sysusers[339]: Creating group 'dbus' with GID 81.
+Nov 08 17:21:46 nsimon systemd-sysusers[339]: Creating user 'dbus' (System Message Bus) with UID 81 and GID 81.
+Nov 08 17:21:46 nsimon systemd-modules-load[337]: Inserted module 'fuse'
+Nov 08 17:21:46 nsimon systemd[1]: Started Journal Service.
+Nov 08 17:21:46 nsimon systemd[1]: Finished Load Kernel Modules.
+Nov 08 17:21:46 nsimon systemd[1]: Starting Apply Kernel Variables...
+Nov 08 17:21:46 nsimon systemd[1]: Starting Create Static Device Nodes in /dev...
+Nov 08 17:21:46 nsimon systemd[1]: Starting Create Volatile Files and Directories...
+Nov 08 17:21:46 nsimon systemd[1]: Finished Apply Kernel Variables.
+Nov 08 17:21:46 nsimon systemd[1]: Finished Create Static Device Nodes in /dev.
+Nov 08 17:21:46 nsimon systemd[1]: Finished Create Volatile Files and Directories.
+Nov 08 17:21:46 nsimon kernel: usb 1-2: new full-speed USB device number 3 using uhci_hcd
+Nov 08 17:21:47 nsimon systemd[1]: Finished Setup Virtual Console.
+Nov 08 17:21:47 nsimon systemd[1]: dracut ask for additional cmdline parameters was skipped because no trigger condition checks were met.
+Nov 08 17:21:47 nsimon systemd[1]: Starting dracut cmdline hook...
+Nov 08 17:21:47 nsimon dracut-cmdline[359]: dracut-9.2 (Blue Onyx) dracut-057-21.git20230214.el9
+Nov 08 17:21:47 nsimon dracut-cmdline[359]: Using kernel command line parameters:    BOOT_IMAGE=(hd0,msdos1)/vmlinuz-6.6.0 root=/dev/mapper/rl-root ro crashkernel=1G-4G:192M,4G-64G:256M,64G-:512M resume=/dev/mapper/rl-swap rd.lvm.lv=rl/root rd.lvm.lv=rl/swap
+Nov 08 17:21:47 nsimon kernel: usb 1-2: New USB device found, idVendor=0e0f, idProduct=0002, bcdDevice= 1.00
+Nov 08 17:21:47 nsimon kernel: usb 1-2: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+Nov 08 17:21:47 nsimon kernel: usb 1-2: Product: VMware Virtual USB Hub
+Nov 08 17:21:47 nsimon kernel: usb 1-2: Manufacturer: VMware, Inc.
+Nov 08 17:21:47 nsimon kernel: hub 1-2:1.0: USB hub found
+Nov 08 17:21:47 nsimon kernel: hub 1-2:1.0: 7 ports detected
+Nov 08 17:21:47 nsimon systemd[1]: Finished dracut cmdline hook.
+Nov 08 17:21:47 nsimon systemd[1]: Starting dracut pre-udev hook...
+Nov 08 17:21:47 nsimon kernel: device-mapper: core: CONFIG_IMA_DISABLE_HTABLE is disabled. Duplicate IMA measurements will not be recorded in the IMA log.
+Nov 08 17:21:47 nsimon kernel: device-mapper: uevent: version 1.0.3
+Nov 08 17:21:47 nsimon kernel: device-mapper: ioctl: 4.48.0-ioctl (2023-03-01) initialised: dm-devel@redhat.com
+Nov 08 17:21:47 nsimon systemd[1]: Finished dracut pre-udev hook.
+Nov 08 17:21:47 nsimon systemd[1]: Starting Rule-based Manager for Device Events and Files...
+Nov 08 17:21:47 nsimon systemd-udevd[471]: Using default interface naming scheme 'rhel-9.0'.
+Nov 08 17:21:47 nsimon systemd[1]: Started Rule-based Manager for Device Events and Files.
+Nov 08 17:21:47 nsimon systemd[1]: dracut pre-trigger hook was skipped because no trigger condition checks were met.
+Nov 08 17:21:47 nsimon systemd[1]: Starting Coldplug All udev Devices...
+Nov 08 17:21:47 nsimon systemd[1]: sys-module-fuse.device: Failed to enqueue SYSTEMD_WANTS= job, ignoring: Unit sys-fs-fuse-connections.mount not found.
+Nov 08 17:21:47 nsimon systemd[1]: Finished Coldplug All udev Devices.
+Nov 08 17:21:47 nsimon systemd[1]: nm-initrd.service was skipped because of an unmet condition check (ConditionPathExists=/run/NetworkManager/initrd/neednet).
+Nov 08 17:21:47 nsimon systemd[1]: Reached target Network.
+Nov 08 17:21:47 nsimon systemd[1]: nm-wait-online-initrd.service was skipped because of an unmet condition check (ConditionPathExists=/run/NetworkManager/initrd/neednet).
+Nov 08 17:21:47 nsimon systemd[1]: Starting dracut initqueue hook...
+Nov 08 17:21:47 nsimon kernel: usb 1-2.1: new full-speed USB device number 4 using uhci_hcd
+Nov 08 17:21:47 nsimon kernel: usb 1-2.1: New USB device found, idVendor=0e0f, idProduct=0008, bcdDevice= 1.00
+Nov 08 17:21:47 nsimon kernel: usb 1-2.1: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+Nov 08 17:21:47 nsimon kernel: usb 1-2.1: Product: Virtual Bluetooth Adapter
+Nov 08 17:21:47 nsimon kernel: usb 1-2.1: Manufacturer: VMware
+Nov 08 17:21:47 nsimon kernel: usb 1-2.1: SerialNumber: 000650268328
+Nov 08 17:21:47 nsimon kernel: VMware vmxnet3 virtual NIC driver - version 1.7.0.0-k-NAPI
+Nov 08 17:21:47 nsimon kernel: vmxnet3 0000:03:00.0: # of Tx queues : 8, # of Rx queues : 8
+Nov 08 17:21:47 nsimon kernel: libata version 3.00 loaded.
+Nov 08 17:21:47 nsimon kernel: vmxnet3 0000:03:00.0 eth0: NIC Link is Up 10000 Mbps
+Nov 08 17:21:47 nsimon kernel: ata_piix 0000:00:07.1: version 2.13
+Nov 08 17:21:47 nsimon kernel: scsi host0: ata_piix
+Nov 08 17:21:47 nsimon kernel: ahci 0000:02:03.0: version 3.0
+Nov 08 17:21:47 nsimon kernel: scsi host1: ata_piix
+Nov 08 17:21:47 nsimon kernel: vmxnet3 0000:03:00.0 ens160: renamed from eth0
+Nov 08 17:21:47 nsimon kernel: ata1: PATA max UDMA/33 cmd 0x1f0 ctl 0x3f6 bmdma 0x1060 irq 14
+Nov 08 17:21:47 nsimon kernel: ahci 0000:02:03.0: AHCI 0001.0300 32 slots 30 ports 6 Gbps 0x3fffffff impl SATA mode
+Nov 08 17:21:47 nsimon kernel: ahci 0000:02:03.0: flags: 64bit ncq clo only 
+Nov 08 17:21:47 nsimon kernel: ata2: PATA max UDMA/33 cmd 0x170 ctl 0x376 bmdma 0x1068 irq 15
+Nov 08 17:21:47 nsimon kernel: scsi host2: ahci
+Nov 08 17:21:47 nsimon kernel: scsi host3: ahci
+Nov 08 17:21:47 nsimon kernel: scsi host4: ahci
+Nov 08 17:21:47 nsimon kernel: scsi host5: ahci
+Nov 08 17:21:47 nsimon kernel: scsi host6: ahci
+Nov 08 17:21:47 nsimon kernel: scsi host7: ahci
+Nov 08 17:21:47 nsimon kernel: scsi host8: ahci
+Nov 08 17:21:47 nsimon kernel: scsi host9: ahci
+Nov 08 17:21:47 nsimon kernel: scsi host10: ahci
+Nov 08 17:21:47 nsimon kernel: scsi host11: ahci
+Nov 08 17:21:47 nsimon kernel: scsi host12: ahci
+Nov 08 17:21:47 nsimon kernel: scsi host13: ahci
+Nov 08 17:21:47 nsimon kernel: scsi host14: ahci
+Nov 08 17:21:47 nsimon kernel: scsi host15: ahci
+Nov 08 17:21:47 nsimon kernel: scsi host16: ahci
+Nov 08 17:21:47 nsimon kernel: scsi host17: ahci
+Nov 08 17:21:47 nsimon kernel: scsi host18: ahci
+Nov 08 17:21:47 nsimon kernel: scsi host19: ahci
+Nov 08 17:21:47 nsimon kernel: scsi host20: ahci
+Nov 08 17:21:47 nsimon kernel: scsi host21: ahci
+Nov 08 17:21:47 nsimon kernel: scsi host22: ahci
+Nov 08 17:21:47 nsimon kernel: scsi host23: ahci
+Nov 08 17:21:47 nsimon kernel: scsi host24: ahci
+Nov 08 17:21:47 nsimon kernel: scsi host25: ahci
+Nov 08 17:21:47 nsimon kernel: scsi host26: ahci
+Nov 08 17:21:47 nsimon kernel: scsi host27: ahci
+Nov 08 17:21:47 nsimon kernel: scsi host28: ahci
+Nov 08 17:21:47 nsimon kernel: scsi host29: ahci
+Nov 08 17:21:47 nsimon kernel: scsi host30: ahci
+Nov 08 17:21:47 nsimon kernel: scsi host31: ahci
+Nov 08 17:21:47 nsimon kernel: ata3: SATA max UDMA/133 abar m4096@0xfd5fe000 port 0xfd5fe100 irq 81
+Nov 08 17:21:47 nsimon kernel: ata4: SATA max UDMA/133 abar m4096@0xfd5fe000 port 0xfd5fe180 irq 81
+Nov 08 17:21:47 nsimon kernel: ata5: SATA max UDMA/133 abar m4096@0xfd5fe000 port 0xfd5fe200 irq 81
+Nov 08 17:21:47 nsimon kernel: ata6: SATA max UDMA/133 abar m4096@0xfd5fe000 port 0xfd5fe280 irq 81
+Nov 08 17:21:47 nsimon kernel: ata7: SATA max UDMA/133 abar m4096@0xfd5fe000 port 0xfd5fe300 irq 81
+Nov 08 17:21:47 nsimon kernel: ata8: SATA max UDMA/133 abar m4096@0xfd5fe000 port 0xfd5fe380 irq 81
+Nov 08 17:21:47 nsimon kernel: ata9: SATA max UDMA/133 abar m4096@0xfd5fe000 port 0xfd5fe400 irq 81
+Nov 08 17:21:47 nsimon kernel: ata10: SATA max UDMA/133 abar m4096@0xfd5fe000 port 0xfd5fe480 irq 81
+Nov 08 17:21:47 nsimon kernel: ata11: SATA max UDMA/133 abar m4096@0xfd5fe000 port 0xfd5fe500 irq 81
+Nov 08 17:21:47 nsimon kernel: ata12: SATA max UDMA/133 abar m4096@0xfd5fe000 port 0xfd5fe580 irq 81
+Nov 08 17:21:47 nsimon kernel: ata13: SATA max UDMA/133 abar m4096@0xfd5fe000 port 0xfd5fe600 irq 81
+Nov 08 17:21:47 nsimon kernel: ata14: SATA max UDMA/133 abar m4096@0xfd5fe000 port 0xfd5fe680 irq 81
+Nov 08 17:21:47 nsimon kernel: ata15: SATA max UDMA/133 abar m4096@0xfd5fe000 port 0xfd5fe700 irq 81
+Nov 08 17:21:47 nsimon kernel: ata16: SATA max UDMA/133 abar m4096@0xfd5fe000 port 0xfd5fe780 irq 81
+Nov 08 17:21:47 nsimon kernel: ata17: SATA max UDMA/133 abar m4096@0xfd5fe000 port 0xfd5fe800 irq 81
+Nov 08 17:21:47 nsimon kernel: ata18: SATA max UDMA/133 abar m4096@0xfd5fe000 port 0xfd5fe880 irq 81
+Nov 08 17:21:47 nsimon kernel: ata19: SATA max UDMA/133 abar m4096@0xfd5fe000 port 0xfd5fe900 irq 81
+Nov 08 17:21:47 nsimon kernel: ata20: SATA max UDMA/133 abar m4096@0xfd5fe000 port 0xfd5fe980 irq 81
+Nov 08 17:21:47 nsimon kernel: ata21: SATA max UDMA/133 abar m4096@0xfd5fe000 port 0xfd5fea00 irq 81
+Nov 08 17:21:47 nsimon kernel: ata22: SATA max UDMA/133 abar m4096@0xfd5fe000 port 0xfd5fea80 irq 81
+Nov 08 17:21:47 nsimon kernel: ata23: SATA max UDMA/133 abar m4096@0xfd5fe000 port 0xfd5feb00 irq 81
+Nov 08 17:21:47 nsimon kernel: ata24: SATA max UDMA/133 abar m4096@0xfd5fe000 port 0xfd5feb80 irq 81
+Nov 08 17:21:47 nsimon kernel: ata25: SATA max UDMA/133 abar m4096@0xfd5fe000 port 0xfd5fec00 irq 81
+Nov 08 17:21:47 nsimon kernel: ata26: SATA max UDMA/133 abar m4096@0xfd5fe000 port 0xfd5fec80 irq 81
+Nov 08 17:21:47 nsimon kernel: ata27: SATA max UDMA/133 abar m4096@0xfd5fe000 port 0xfd5fed00 irq 81
+Nov 08 17:21:47 nsimon kernel: ata28: SATA max UDMA/133 abar m4096@0xfd5fe000 port 0xfd5fed80 irq 81
+Nov 08 17:21:47 nsimon kernel: ata29: SATA max UDMA/133 abar m4096@0xfd5fe000 port 0xfd5fee00 irq 81
+Nov 08 17:21:47 nsimon kernel: ata30: SATA max UDMA/133 abar m4096@0xfd5fe000 port 0xfd5fee80 irq 81
+Nov 08 17:21:47 nsimon kernel: ata31: SATA max UDMA/133 abar m4096@0xfd5fe000 port 0xfd5fef00 irq 81
+Nov 08 17:21:47 nsimon kernel: ata32: SATA max UDMA/133 abar m4096@0xfd5fe000 port 0xfd5fef80 irq 81
+Nov 08 17:21:47 nsimon kernel: ata6: SATA link down (SStatus 0 SControl 300)
+Nov 08 17:21:47 nsimon kernel: ata12: SATA link down (SStatus 0 SControl 300)
+Nov 08 17:21:47 nsimon kernel: ata3: SATA link down (SStatus 0 SControl 300)
+Nov 08 17:21:47 nsimon kernel: ata4: SATA link up 6.0 Gbps (SStatus 133 SControl 300)
+Nov 08 17:21:47 nsimon kernel: ata4.00: ATAPI: VMware Virtual SATA CDRW Drive, 00000001, max UDMA/33
+Nov 08 17:21:47 nsimon kernel: ata14: SATA link down (SStatus 0 SControl 300)
+Nov 08 17:21:47 nsimon kernel: ata10: SATA link down (SStatus 0 SControl 300)
+Nov 08 17:21:47 nsimon kernel: ata11: SATA link down (SStatus 0 SControl 300)
+Nov 08 17:21:47 nsimon kernel: ata13: SATA link down (SStatus 0 SControl 300)
+Nov 08 17:21:47 nsimon kernel: ata5: SATA link down (SStatus 0 SControl 300)
+Nov 08 17:21:47 nsimon kernel: ata31: SATA link down (SStatus 0 SControl 300)
+Nov 08 17:21:47 nsimon kernel: ata23: SATA link down (SStatus 0 SControl 300)
+Nov 08 17:21:47 nsimon kernel: ata30: SATA link down (SStatus 0 SControl 300)
+Nov 08 17:21:47 nsimon kernel: ata32: SATA link down (SStatus 0 SControl 300)
+Nov 08 17:21:47 nsimon kernel: ata17: SATA link down (SStatus 0 SControl 300)
+Nov 08 17:21:47 nsimon kernel: ata26: SATA link down (SStatus 0 SControl 300)
+Nov 08 17:21:47 nsimon kernel: ata8: SATA link down (SStatus 0 SControl 300)
+Nov 08 17:21:47 nsimon kernel: ata7: SATA link down (SStatus 0 SControl 300)
+Nov 08 17:21:47 nsimon kernel: ata20: SATA link down (SStatus 0 SControl 300)
+Nov 08 17:21:47 nsimon kernel: ata27: SATA link down (SStatus 0 SControl 300)
+Nov 08 17:21:47 nsimon kernel: ata9: SATA link down (SStatus 0 SControl 300)
+Nov 08 17:21:47 nsimon kernel: ata22: SATA link down (SStatus 0 SControl 300)
+Nov 08 17:21:47 nsimon kernel: ata25: SATA link down (SStatus 0 SControl 300)
+Nov 08 17:21:47 nsimon kernel: ata24: SATA link down (SStatus 0 SControl 300)
+Nov 08 17:21:47 nsimon kernel: ata4.00: configured for UDMA/33
+Nov 08 17:21:47 nsimon kernel: ata16: SATA link down (SStatus 0 SControl 300)
+Nov 08 17:21:47 nsimon kernel: ata15: SATA link down (SStatus 0 SControl 300)
+Nov 08 17:21:47 nsimon kernel: ata19: SATA link down (SStatus 0 SControl 300)
+Nov 08 17:21:47 nsimon kernel: ata21: SATA link down (SStatus 0 SControl 300)
+Nov 08 17:21:47 nsimon kernel: scsi 3:0:0:0: CD-ROM            NECVMWar VMware SATA CD01 1.00 PQ: 0 ANSI: 5
+Nov 08 17:21:47 nsimon kernel: ata18: SATA link down (SStatus 0 SControl 300)
+Nov 08 17:21:47 nsimon kernel: ata29: SATA link down (SStatus 0 SControl 300)
+Nov 08 17:21:47 nsimon kernel: ata28: SATA link down (SStatus 0 SControl 300)
+Nov 08 17:21:47 nsimon kernel: scsi 3:0:0:0: Attached scsi generic sg0 type 5
+Nov 08 17:21:47 nsimon kernel: sr 3:0:0:0: [sr0] scsi3-mmc drive: 1x/1x writer dvd-ram cd/rw xa/form2 cdda tray
+Nov 08 17:21:47 nsimon kernel: cdrom: Uniform CD-ROM driver Revision: 3.20
+Nov 08 17:21:47 nsimon kernel: sr 3:0:0:0: Attached scsi CD-ROM sr0
+Nov 08 17:21:48 nsimon dracut-initqueue[664]: Scanning devices nvme0n1p2  for LVM logical volumes rl/root
+Nov 08 17:21:48 nsimon dracut-initqueue[664]: rl/swap
+Nov 08 17:21:48 nsimon dracut-initqueue[664]:   rl/root linear
+Nov 08 17:21:48 nsimon dracut-initqueue[664]:   rl/swap linear
+Nov 08 17:21:48 nsimon systemd[1]: Found device /dev/mapper/rl-root.
+Nov 08 17:21:48 nsimon systemd[1]: Reached target Initrd Root Device.
+Nov 08 17:21:48 nsimon systemd[1]: Found device /dev/mapper/rl-swap.
+Nov 08 17:21:48 nsimon systemd[1]: Starting Resume from hibernation using device /dev/mapper/rl-swap...
+Nov 08 17:21:48 nsimon systemd-hibernate-resume[700]: Could not resume from '/dev/mapper/rl-swap' (253:1).
+Nov 08 17:21:48 nsimon kernel: PM: Image not found (code -22)
+Nov 08 17:21:48 nsimon systemd[1]: systemd-hibernate-resume@dev-mapper-rl\x2dswap.service: Deactivated successfully.
+Nov 08 17:21:48 nsimon systemd[1]: Finished Resume from hibernation using device /dev/mapper/rl-swap.
+Nov 08 17:21:48 nsimon systemd[1]: Reached target Preparation for Local File Systems.
+Nov 08 17:21:48 nsimon systemd[1]: Reached target Local File Systems.
+Nov 08 17:21:48 nsimon systemd[1]: Reached target System Initialization.
+Nov 08 17:21:48 nsimon systemd[1]: Reached target Basic System.
+Nov 08 17:21:48 nsimon systemd[1]: Finished dracut initqueue hook.
+Nov 08 17:21:48 nsimon systemd[1]: Reached target Preparation for Remote File Systems.
+Nov 08 17:21:48 nsimon systemd[1]: Reached target Remote File Systems.
+Nov 08 17:21:48 nsimon systemd[1]: dracut pre-mount hook was skipped because no trigger condition checks were met.
+Nov 08 17:21:48 nsimon systemd[1]: Starting File System Check on /dev/mapper/rl-root...
+Nov 08 17:21:48 nsimon systemd-fsck[712]: /usr/sbin/fsck.xfs: XFS file system.
+Nov 08 17:21:48 nsimon systemd[1]: Finished File System Check on /dev/mapper/rl-root.
+Nov 08 17:21:48 nsimon systemd[1]: Mounting /sysroot...
+Nov 08 17:21:48 nsimon kernel: SGI XFS with ACLs, security attributes, scrub, quota, fatal assert, debug enabled
+Nov 08 17:21:48 nsimon kernel: XFS (dm-0): Mounting V5 Filesystem 840e802d-9391-4dcc-93a3-7adcc452ee2f
+Nov 08 17:21:49 nsimon kernel: XFS (dm-0): Ending clean mount
+Nov 08 17:21:49 nsimon systemd[1]: Mounted /sysroot.
+Nov 08 17:21:49 nsimon systemd[1]: Reached target Initrd Root File System.
+Nov 08 17:21:49 nsimon systemd[1]: Starting Mountpoints Configured in the Real Root...
+Nov 08 17:21:49 nsimon systemd[1]: initrd-parse-etc.service: Deactivated successfully.
+Nov 08 17:21:49 nsimon systemd[1]: Finished Mountpoints Configured in the Real Root.
+Nov 08 17:21:49 nsimon systemd[1]: Reached target Initrd File Systems.
+Nov 08 17:21:49 nsimon systemd[1]: Reached target Initrd Default Target.
+Nov 08 17:21:49 nsimon systemd[1]: dracut mount hook was skipped because no trigger condition checks were met.
+Nov 08 17:21:49 nsimon systemd[1]: Starting dracut pre-pivot and cleanup hook...
+Nov 08 17:21:49 nsimon systemd[1]: Finished dracut pre-pivot and cleanup hook.
+Nov 08 17:21:49 nsimon systemd[1]: Starting Cleaning Up and Shutting Down Daemons...
+Nov 08 17:21:49 nsimon systemd[1]: Stopped target Network.
+Nov 08 17:21:49 nsimon systemd[1]: Stopped target Timer Units.
+Nov 08 17:21:49 nsimon systemd[1]: dbus.socket: Deactivated successfully.
+Nov 08 17:21:49 nsimon systemd[1]: Closed D-Bus System Message Bus Socket.
+Nov 08 17:21:49 nsimon systemd[1]: dracut-pre-pivot.service: Deactivated successfully.
+Nov 08 17:21:49 nsimon systemd[1]: Stopped dracut pre-pivot and cleanup hook.
+Nov 08 17:21:49 nsimon systemd[1]: Stopped target Initrd Default Target.
+Nov 08 17:21:49 nsimon systemd[1]: Stopped target Basic System.
+Nov 08 17:21:49 nsimon systemd[1]: Stopped target Initrd Root Device.
+Nov 08 17:21:49 nsimon systemd[1]: Stopped target Initrd /usr File System.
+Nov 08 17:21:49 nsimon systemd[1]: Stopped target Path Units.
+Nov 08 17:21:49 nsimon systemd[1]: systemd-ask-password-console.path: Deactivated successfully.
+Nov 08 17:21:49 nsimon systemd[1]: Stopped Dispatch Password Requests to Console Directory Watch.
+Nov 08 17:21:49 nsimon systemd[1]: Stopped target Remote File Systems.
+Nov 08 17:21:49 nsimon systemd[1]: Stopped target Preparation for Remote File Systems.
+Nov 08 17:21:49 nsimon systemd[1]: Stopped target Slice Units.
+Nov 08 17:21:49 nsimon systemd[1]: Stopped target Socket Units.
+Nov 08 17:21:49 nsimon systemd[1]: Stopped target System Initialization.
+Nov 08 17:21:49 nsimon systemd[1]: Stopped target Local File Systems.
+Nov 08 17:21:49 nsimon systemd[1]: Stopped target Preparation for Local File Systems.
+Nov 08 17:21:49 nsimon systemd[1]: Stopped target Swaps.
+Nov 08 17:21:49 nsimon systemd[1]: dracut-initqueue.service: Deactivated successfully.
+Nov 08 17:21:49 nsimon systemd[1]: Stopped dracut initqueue hook.
+Nov 08 17:21:49 nsimon systemd[1]: systemd-sysctl.service: Deactivated successfully.
+Nov 08 17:21:49 nsimon systemd[1]: Stopped Apply Kernel Variables.
+Nov 08 17:21:49 nsimon systemd[1]: systemd-modules-load.service: Deactivated successfully.
+Nov 08 17:21:49 nsimon systemd[1]: Stopped Load Kernel Modules.
+Nov 08 17:21:49 nsimon systemd[1]: systemd-tmpfiles-setup.service: Deactivated successfully.
+Nov 08 17:21:49 nsimon systemd[1]: Stopped Create Volatile Files and Directories.
+Nov 08 17:21:49 nsimon systemd[1]: systemd-udev-trigger.service: Deactivated successfully.
+Nov 08 17:21:49 nsimon systemd[1]: Stopped Coldplug All udev Devices.
+Nov 08 17:21:49 nsimon systemd[1]: Stopping Rule-based Manager for Device Events and Files...
+Nov 08 17:21:49 nsimon systemd[1]: systemd-vconsole-setup.service: Deactivated successfully.
+Nov 08 17:21:49 nsimon systemd[1]: Stopped Setup Virtual Console.
+Nov 08 17:21:49 nsimon systemd[1]: run-credentials-systemd\x2dtmpfiles\x2dsetup.service.mount: Deactivated successfully.
+Nov 08 17:21:49 nsimon systemd[1]: run-credentials-systemd\x2dsysctl.service.mount: Deactivated successfully.
+Nov 08 17:21:49 nsimon systemd[1]: initrd-cleanup.service: Deactivated successfully.
+Nov 08 17:21:49 nsimon systemd[1]: Finished Cleaning Up and Shutting Down Daemons.
+Nov 08 17:21:49 nsimon systemd[1]: systemd-udevd.service: Deactivated successfully.
+Nov 08 17:21:49 nsimon systemd[1]: Stopped Rule-based Manager for Device Events and Files.
+Nov 08 17:21:49 nsimon systemd[1]: systemd-udevd.service: Consumed 1.138s CPU time.
+Nov 08 17:21:49 nsimon systemd[1]: systemd-udevd-control.socket: Deactivated successfully.
+Nov 08 17:21:49 nsimon systemd[1]: Closed udev Control Socket.
+Nov 08 17:21:49 nsimon systemd[1]: systemd-udevd-kernel.socket: Deactivated successfully.
+Nov 08 17:21:49 nsimon systemd[1]: Closed udev Kernel Socket.
+Nov 08 17:21:49 nsimon systemd[1]: dracut-pre-udev.service: Deactivated successfully.
+Nov 08 17:21:49 nsimon systemd[1]: Stopped dracut pre-udev hook.
+Nov 08 17:21:49 nsimon systemd[1]: dracut-cmdline.service: Deactivated successfully.
+Nov 08 17:21:49 nsimon systemd[1]: Stopped dracut cmdline hook.
+Nov 08 17:21:49 nsimon systemd[1]: Starting Cleanup udev Database...
+Nov 08 17:21:49 nsimon systemd[1]: systemd-tmpfiles-setup-dev.service: Deactivated successfully.
+Nov 08 17:21:49 nsimon systemd[1]: Stopped Create Static Device Nodes in /dev.
+Nov 08 17:21:49 nsimon systemd[1]: kmod-static-nodes.service: Deactivated successfully.
+Nov 08 17:21:49 nsimon systemd[1]: Stopped Create List of Static Device Nodes.
+Nov 08 17:21:49 nsimon systemd[1]: systemd-sysusers.service: Deactivated successfully.
+Nov 08 17:21:49 nsimon systemd[1]: Stopped Create System Users.
+Nov 08 17:21:49 nsimon systemd[1]: run-credentials-systemd\x2dtmpfiles\x2dsetup\x2ddev.service.mount: Deactivated successfully.
+Nov 08 17:21:49 nsimon systemd[1]: run-credentials-systemd\x2dsysusers.service.mount: Deactivated successfully.
+Nov 08 17:21:49 nsimon systemd[1]: initrd-udevadm-cleanup-db.service: Deactivated successfully.
+Nov 08 17:21:49 nsimon systemd[1]: Finished Cleanup udev Database.
+Nov 08 17:21:49 nsimon systemd[1]: Reached target Switch Root.
+Nov 08 17:21:49 nsimon systemd[1]: Starting Switch Root...
+Nov 08 17:21:49 nsimon kernel: systemd[1]: memfd_create() called without MFD_EXEC or MFD_NOEXEC_SEAL set
+Nov 08 17:21:49 nsimon systemd[1]: Switching root.
+Nov 08 17:21:49 nsimon systemd-journald[335]: Journal stopped
+Nov 08 17:21:49 nsimon systemd-journald[335]: Received SIGTERM from PID 1 (systemd).
+Nov 08 17:21:49 nsimon kernel: audit: type=1404 audit(1699460509.251:2): enforcing=1 old_enforcing=0 auid=4294967295 ses=4294967295 enabled=1 old-enabled=1 lsm=selinux res=1
+Nov 08 17:21:49 nsimon kernel: SELinux:  Class user_namespace not defined in policy.
+Nov 08 17:21:49 nsimon kernel: SELinux: the above unknown classes and permissions will be allowed
+Nov 08 17:21:49 nsimon kernel: SELinux:  policy capability network_peer_controls=1
+Nov 08 17:21:49 nsimon kernel: SELinux:  policy capability open_perms=1
+Nov 08 17:21:49 nsimon kernel: SELinux:  policy capability extended_socket_class=1
+Nov 08 17:21:49 nsimon kernel: SELinux:  policy capability always_check_network=0
+Nov 08 17:21:49 nsimon kernel: SELinux:  policy capability cgroup_seclabel=1
+Nov 08 17:21:49 nsimon kernel: SELinux:  policy capability nnp_nosuid_transition=1
+Nov 08 17:21:49 nsimon kernel: SELinux:  policy capability genfs_seclabel_symlinks=1
+Nov 08 17:21:49 nsimon kernel: SELinux:  policy capability ioctl_skip_cloexec=0
+Nov 08 17:21:49 nsimon kernel: audit: type=1403 audit(1699460509.320:3): auid=4294967295 ses=4294967295 lsm=selinux res=1
+Nov 08 17:21:49 nsimon systemd[1]: Successfully loaded SELinux policy in 70.846ms.
+Nov 08 17:21:49 nsimon systemd[1]: Relabelled /dev, /dev/shm, /run, /sys/fs/cgroup in 28.526ms.
+Nov 08 17:21:49 nsimon systemd[1]: systemd 252-14.el9_2.3.0.1 running in system mode (+PAM +AUDIT +SELINUX -APPARMOR +IMA +SMACK +SECCOMP +GCRYPT +GNUTLS +OPENSSL +ACL +BLKID +CURL +ELFUTILS -FIDO2 +IDN2 -IDN -IPTC +KMOD +LIBCRYPTSETUP +LIBFDISK +PCRE2 -PWQUALITY +P11KIT -QRENCODE +TPM2 +BZIP2 +LZ4 +XZ +ZLIB +ZSTD -BPF_FRAMEWORK +XKBCOMMON +UTMP +SYSVINIT default-hierarchy=unified)
+Nov 08 17:21:49 nsimon systemd[1]: Detected virtualization vmware.
+Nov 08 17:21:49 nsimon systemd[1]: Detected architecture x86-64.
+Nov 08 17:21:49 nsimon systemd-rc-local-generator[767]: /etc/rc.d/rc.local is not marked executable, skipping.
+Nov 08 17:21:49 nsimon systemd[1]: initrd-switch-root.service: Deactivated successfully.
+Nov 08 17:21:49 nsimon systemd[1]: Stopped Switch Root.
+Nov 08 17:21:49 nsimon systemd[1]: systemd-journald.service: Scheduled restart job, restart counter is at 1.
+Nov 08 17:21:49 nsimon systemd[1]: Created slice Slice /system/getty.
+Nov 08 17:21:49 nsimon systemd[1]: Created slice Slice /system/modprobe.
+Nov 08 17:21:49 nsimon systemd[1]: Created slice Slice /system/sshd-keygen.
+Nov 08 17:21:49 nsimon systemd[1]: Created slice User and Session Slice.
+Nov 08 17:21:49 nsimon systemd[1]: Started Dispatch Password Requests to Console Directory Watch.
+Nov 08 17:21:49 nsimon systemd[1]: Started Forward Password Requests to Wall Directory Watch.
+Nov 08 17:21:49 nsimon systemd[1]: Set up automount Arbitrary Executable File Formats File System Automount Point.
+Nov 08 17:21:49 nsimon systemd[1]: Reached target Local Encrypted Volumes.
+Nov 08 17:21:49 nsimon systemd[1]: Stopped target Switch Root.
+Nov 08 17:21:49 nsimon systemd[1]: Stopped target Initrd File Systems.
+Nov 08 17:21:49 nsimon systemd[1]: Stopped target Initrd Root File System.
+Nov 08 17:21:49 nsimon systemd[1]: Reached target Local Integrity Protected Volumes.
+Nov 08 17:21:49 nsimon systemd[1]: Reached target Path Units.
+Nov 08 17:21:49 nsimon systemd[1]: Reached target Remote File Systems.
+Nov 08 17:21:49 nsimon systemd[1]: Reached target Slice Units.
+Nov 08 17:21:49 nsimon systemd[1]: Reached target Local Verity Protected Volumes.
+Nov 08 17:21:49 nsimon systemd[1]: Listening on Device-mapper event daemon FIFOs.
+Nov 08 17:21:49 nsimon systemd[1]: Listening on LVM2 poll daemon socket.
+Nov 08 17:21:49 nsimon systemd[1]: Listening on Process Core Dump Socket.
+Nov 08 17:21:49 nsimon systemd[1]: Listening on initctl Compatibility Named Pipe.
+Nov 08 17:21:49 nsimon systemd[1]: Listening on udev Control Socket.
+Nov 08 17:21:49 nsimon systemd[1]: Listening on udev Kernel Socket.
+Nov 08 17:21:49 nsimon systemd[1]: Activating swap /dev/mapper/rl-swap...
+Nov 08 17:21:49 nsimon systemd[1]: Mounting Huge Pages File System...
+Nov 08 17:21:49 nsimon systemd[1]: Mounting POSIX Message Queue File System...
+Nov 08 17:21:49 nsimon kernel: Adding 2097148k swap on /dev/mapper/rl-swap.  Priority:-2 extents:1 across:2097148k SS
+Nov 08 17:21:49 nsimon systemd[1]: Mounting Kernel Debug File System...
+Nov 08 17:21:49 nsimon systemd[1]: Mounting Kernel Trace File System...
+Nov 08 17:21:49 nsimon systemd[1]: Starting Create List of Static Device Nodes...
+Nov 08 17:21:49 nsimon systemd[1]: Starting Monitoring of LVM2 mirrors, snapshots etc. using dmeventd or progress polling...
+Nov 08 17:21:49 nsimon systemd[1]: Starting Load Kernel Module configfs...
+Nov 08 17:21:49 nsimon systemd[1]: Starting Load Kernel Module drm...
+Nov 08 17:21:49 nsimon systemd[1]: Starting Load Kernel Module fuse...
+Nov 08 17:21:49 nsimon systemd[1]: Starting Read and set NIS domainname from /etc/sysconfig/network...
+Nov 08 17:21:49 nsimon systemd[1]: systemd-fsck-root.service: Deactivated successfully.
+Nov 08 17:21:49 nsimon systemd[1]: Stopped File System Check on Root Device.
+Nov 08 17:21:49 nsimon systemd[1]: Stopped Journal Service.
+Nov 08 17:21:49 nsimon systemd[1]: Starting Journal Service...
+Nov 08 17:21:49 nsimon systemd[1]: Starting Load Kernel Modules...
+Nov 08 17:21:49 nsimon systemd[1]: Starting Generate network units from Kernel command line...
+Nov 08 17:21:49 nsimon systemd[1]: Starting Remount Root and Kernel File Systems...
+Nov 08 17:21:49 nsimon systemd[1]: Repartition Root Disk was skipped because no trigger condition checks were met.
+Nov 08 17:21:49 nsimon systemd[1]: Starting Coldplug All udev Devices...
+Nov 08 17:21:49 nsimon systemd[1]: Activated swap /dev/mapper/rl-swap.
+Nov 08 17:21:49 nsimon systemd-journald[788]: Journal started
+Nov 08 17:21:49 nsimon systemd-journald[788]: Runtime Journal (/run/log/journal/bb7a069cf7444f94922887009ca1c627) is 8.0M, max 72.5M, 64.5M free.
+Nov 08 17:21:49 nsimon systemd[1]: Queued start job for default target Multi-User System.
+Nov 08 17:21:49 nsimon systemd[1]: systemd-journald.service: Deactivated successfully.
+Nov 08 17:21:49 nsimon systemd[1]: Started Journal Service.
+Nov 08 17:21:49 nsimon systemd[1]: Mounted Huge Pages File System.
+Nov 08 17:21:49 nsimon systemd[1]: Mounted POSIX Message Queue File System.
+Nov 08 17:21:49 nsimon lvm[783]:   2 logical volume(s) in volume group "rl" monitored
+Nov 08 17:21:49 nsimon systemd[1]: Mounted Kernel Debug File System.
+Nov 08 17:21:49 nsimon systemd[1]: Mounted Kernel Trace File System.
+Nov 08 17:21:49 nsimon systemd[1]: Finished Create List of Static Device Nodes.
+Nov 08 17:21:49 nsimon systemd[1]: modprobe@configfs.service: Deactivated successfully.
+Nov 08 17:21:49 nsimon systemd[1]: Finished Load Kernel Module configfs.
+Nov 08 17:21:49 nsimon systemd[1]: modprobe@fuse.service: Deactivated successfully.
+Nov 08 17:21:49 nsimon systemd[1]: Finished Load Kernel Module fuse.
+Nov 08 17:21:49 nsimon systemd[1]: Finished Read and set NIS domainname from /etc/sysconfig/network.
+Nov 08 17:21:49 nsimon systemd[1]: Finished Load Kernel Modules.
+Nov 08 17:21:49 nsimon systemd[1]: Finished Generate network units from Kernel command line.
+Nov 08 17:21:49 nsimon systemd[1]: Finished Remount Root and Kernel File Systems.
+Nov 08 17:21:49 nsimon systemd[1]: Reached target Swaps.
+Nov 08 17:21:49 nsimon kernel: ACPI: bus type drm_connector registered
+Nov 08 17:21:49 nsimon systemd[1]: Mounting FUSE Control File System...
+Nov 08 17:21:49 nsimon systemd[1]: Mounting Kernel Configuration File System...
+Nov 08 17:21:49 nsimon systemd[1]: First Boot Wizard was skipped because of an unmet condition check (ConditionFirstBoot=yes).
+Nov 08 17:21:49 nsimon systemd[1]: Rebuild Hardware Database was skipped because of an unmet condition check (ConditionNeedsUpdate=/etc).
+Nov 08 17:21:49 nsimon systemd[1]: Starting Flush Journal to Persistent Storage...
+Nov 08 17:21:49 nsimon systemd[1]: Starting Load/Save Random Seed...
+Nov 08 17:21:49 nsimon systemd[1]: Starting Apply Kernel Variables...
+Nov 08 17:21:49 nsimon systemd[1]: Create System Users was skipped because no trigger condition checks were met.
+Nov 08 17:21:49 nsimon systemd[1]: Starting Create Static Device Nodes in /dev...
+Nov 08 17:21:49 nsimon systemd-journald[788]: Runtime Journal (/run/log/journal/bb7a069cf7444f94922887009ca1c627) is 8.0M, max 72.5M, 64.5M free.
+Nov 08 17:21:49 nsimon systemd-journald[788]: Received client request to flush runtime journal.
+Nov 08 17:21:49 nsimon systemd[1]: modprobe@drm.service: Deactivated successfully.
+Nov 08 17:21:49 nsimon systemd[1]: Finished Load Kernel Module drm.
+Nov 08 17:21:49 nsimon systemd[1]: Finished Monitoring of LVM2 mirrors, snapshots etc. using dmeventd or progress polling.
+Nov 08 17:21:49 nsimon systemd[1]: Mounted FUSE Control File System.
+Nov 08 17:21:49 nsimon systemd[1]: Mounted Kernel Configuration File System.
+Nov 08 17:21:49 nsimon systemd[1]: Finished Flush Journal to Persistent Storage.
+Nov 08 17:21:49 nsimon systemd[1]: Finished Load/Save Random Seed.
+Nov 08 17:21:49 nsimon systemd[1]: First Boot Complete was skipped because of an unmet condition check (ConditionFirstBoot=yes).
+Nov 08 17:21:49 nsimon systemd[1]: Finished Apply Kernel Variables.
+Nov 08 17:21:49 nsimon systemd[1]: Finished Create Static Device Nodes in /dev.
+Nov 08 17:21:49 nsimon systemd[1]: Starting Rule-based Manager for Device Events and Files...
+Nov 08 17:21:49 nsimon systemd-udevd[803]: Using default interface naming scheme 'rhel-9.0'.
+Nov 08 17:21:49 nsimon systemd[1]: Started Rule-based Manager for Device Events and Files.
+Nov 08 17:21:49 nsimon systemd[1]: Finished Coldplug All udev Devices.
+Nov 08 17:21:49 nsimon systemd[1]: Auto-connect to subsystems on FC-NVME devices found during boot was skipped because of an unmet condition check (ConditionPathExists=/sys/class/fc/fc_udev_device/nvme_discovery).
+Nov 08 17:21:49 nsimon systemd[1]: Reached target Preparation for Local File Systems.
+Nov 08 17:21:49 nsimon systemd[1]: Starting Load Kernel Module configfs...
+Nov 08 17:21:49 nsimon systemd[1]: Starting Load Kernel Module fuse...
+Nov 08 17:21:49 nsimon systemd[1]: modprobe@configfs.service: Deactivated successfully.
+Nov 08 17:21:49 nsimon systemd[1]: Finished Load Kernel Module configfs.
+Nov 08 17:21:49 nsimon systemd[1]: modprobe@fuse.service: Deactivated successfully.
+Nov 08 17:21:49 nsimon systemd[1]: Finished Load Kernel Module fuse.
+Nov 08 17:21:49 nsimon systemd[1]: Condition check resulted in VMware Virtual NVMe Disk 1 being skipped.
+Nov 08 17:21:49 nsimon systemd[1]: Mounting /boot...
+Nov 08 17:21:49 nsimon lvm[842]: PV /dev/nvme0n1p2 online, VG rl is complete.
+Nov 08 17:21:49 nsimon kernel: XFS (nvme0n1p1): Mounting V5 Filesystem 3a315ef6-c6bb-48a4-8386-833bb212ba52
+Nov 08 17:21:49 nsimon systemd[1]: Started /usr/sbin/lvm vgchange -aay --autoactivation event rl.
+Nov 08 17:21:49 nsimon kernel: XFS (nvme0n1p1): Ending clean mount
+Nov 08 17:21:49 nsimon systemd[1]: Mounted /boot.
+Nov 08 17:21:49 nsimon systemd[1]: Reached target Local File Systems.
+Nov 08 17:21:49 nsimon systemd[1]: Rebuild Dynamic Linker Cache was skipped because no trigger condition checks were met.
+Nov 08 17:21:49 nsimon systemd[1]: Mark the need to relabel after reboot was skipped because of an unmet condition check (ConditionSecurity=!selinux).
+Nov 08 17:21:49 nsimon systemd[1]: Set Up Additional Binary Formats was skipped because no trigger condition checks were met.
+Nov 08 17:21:49 nsimon systemd[1]: Store a System Token in an EFI Variable was skipped because of an unmet condition check (ConditionPathExists=/sys/firmware/efi/efivars/LoaderFeatures-4a67b082-0a4c-41cf-b6c7-440b29bb8c4f).
+Nov 08 17:21:49 nsimon systemd[1]: Starting Automatic Boot Loader Update...
+Nov 08 17:21:49 nsimon systemd[1]: Commit a transient machine-id on disk was skipped because of an unmet condition check (ConditionPathIsMountPoint=/etc/machine-id).
+Nov 08 17:21:49 nsimon systemd[1]: Starting Create Volatile Files and Directories...
+Nov 08 17:21:49 nsimon lvm[852]:   2 logical volume(s) in volume group "rl" now active
+Nov 08 17:21:49 nsimon bootctl[857]: Couldn't find EFI system partition, skipping.
+Nov 08 17:21:49 nsimon systemd[1]: Finished Automatic Boot Loader Update.
+Nov 08 17:21:49 nsimon systemd[1]: lvm-activate-rl.service: Deactivated successfully.
+Nov 08 17:21:50 nsimon kernel: piix4_smbus 0000:00:07.3: SMBus Host Controller not enabled!
+Nov 08 17:21:50 nsimon kernel: vmw_vmci 0000:00:07.7: Using capabilities 0x1c
+Nov 08 17:21:50 nsimon kernel: Guest personality initialized and is active
+Nov 08 17:21:50 nsimon kernel: input: PC Speaker as /devices/platform/pcspkr/input/input6
+Nov 08 17:21:50 nsimon kernel: mc: Linux media interface: v0.10
+Nov 08 17:21:50 nsimon kernel: VMCI host device registered (name=vmci, major=10, minor=123)
+Nov 08 17:21:50 nsimon kernel: Initialized host personality
+Nov 08 17:21:50 nsimon systemd[1]: Finished Create Volatile Files and Directories.
+Nov 08 17:21:50 nsimon systemd-udevd[810]: id: Truncating stdout of 'dmi_memory_id' up to 16384 byte.
+Nov 08 17:21:50 nsimon systemd[1]: Starting Security Auditing Service...
+Nov 08 17:21:50 nsimon systemd[1]: Rebuild Journal Catalog was skipped because of an unmet condition check (ConditionNeedsUpdate=/var).
+Nov 08 17:21:50 nsimon systemd[1]: Update is Completed was skipped because no trigger condition checks were met.
+Nov 08 17:21:50 nsimon kernel: videodev: Linux video capture interface: v2.00
+Nov 08 17:21:50 nsimon systemd[1]: Listening on Load/Save RF Kill Switch Status /dev/rfkill Watch.
+Nov 08 17:21:50 nsimon kernel: Bluetooth: Core ver 2.22
+Nov 08 17:21:50 nsimon kernel: NET: Registered PF_BLUETOOTH protocol family
+Nov 08 17:21:50 nsimon kernel: Bluetooth: HCI device and connection manager initialized
+Nov 08 17:21:50 nsimon kernel: Bluetooth: HCI socket layer initialized
+Nov 08 17:21:50 nsimon kernel: Bluetooth: L2CAP socket layer initialized
+Nov 08 17:21:50 nsimon kernel: Bluetooth: SCO socket layer initialized
+Nov 08 17:21:50 nsimon auditd[872]: No plugins found, not dispatching events
+Nov 08 17:21:50 nsimon auditd[872]: Init complete, auditd 3.0.7 listening for events (startup state enable)
+Nov 08 17:21:50 nsimon kernel: vmwgfx 0000:00:0f.0: vgaarb: deactivate vga console
+Nov 08 17:21:50 nsimon augenrules[875]: /sbin/augenrules: No change
+Nov 08 17:21:50 nsimon kernel: usb 2-1: Found UVC 1.00 device VMware Virtual USB Video Device (0e0f:000b)
+Nov 08 17:21:50 nsimon kernel: Console: switching to colour dummy device 80x25
+Nov 08 17:21:50 nsimon kernel: vmwgfx 0000:00:0f.0: [drm] FIFO at 0x00000000fe000000 size is 8192 kiB
+Nov 08 17:21:50 nsimon kernel: vmwgfx 0000:00:0f.0: [drm] VRAM at 0x00000000e8000000 size is 131072 kiB
+Nov 08 17:21:50 nsimon kernel: vmwgfx 0000:00:0f.0: [drm] Running on SVGA version 2.
+Nov 08 17:21:50 nsimon kernel: vmwgfx 0000:00:0f.0: [drm] Capabilities: rect copy, cursor, cursor bypass, cursor bypass 2, 8bit emulation, alpha cursor, 3D, extended fifo, multimon, pitchlock, irq mask, display topology, gmr, traces, gmr2, screen object 2, command buffers, command buffers 2, gbobject, dx, hp cmd queue, no bb restriction, cap2 register, 
+Nov 08 17:21:50 nsimon kernel: vmwgfx 0000:00:0f.0: [drm] Capabilities2: grow otable, intra surface copy, dx2, gb memsize 2, screendma reg, otable ptdepth2, non ms to ms stretchblt, cursor mob, mshint, cb max size 4mb, dx3, frame type, trace full fb, extra regs, 
+Nov 08 17:21:50 nsimon kernel: vmwgfx 0000:00:0f.0: [drm] DMA map mode: Caching DMA mappings.
+Nov 08 17:21:50 nsimon kernel: vmwgfx 0000:00:0f.0: [drm] Legacy memory limits: VRAM = 8192 kB, FIFO = 256 kB, surface = 0 kB
+Nov 08 17:21:50 nsimon kernel: vmwgfx 0000:00:0f.0: [drm] MOB limits: max mob size = 1048576 kB, max mob pages = 2097152
+Nov 08 17:21:50 nsimon kernel: vmwgfx 0000:00:0f.0: [drm] Max GMR ids is 64
+Nov 08 17:21:50 nsimon kernel: vmwgfx 0000:00:0f.0: [drm] Max number of GMR pages is 65536
+Nov 08 17:21:50 nsimon kernel: vmwgfx 0000:00:0f.0: [drm] Maximum display memory size is 262144 kiB
+Nov 08 17:21:50 nsimon kernel: usbcore: registered new interface driver btusb
+Nov 08 17:21:50 nsimon augenrules[885]: No rules
+Nov 08 17:21:50 nsimon augenrules[885]: enabled 1
+Nov 08 17:21:50 nsimon augenrules[885]: failure 1
+Nov 08 17:21:50 nsimon augenrules[885]: pid 872
+Nov 08 17:21:50 nsimon augenrules[885]: rate_limit 0
+Nov 08 17:21:50 nsimon augenrules[885]: backlog_limit 8192
+Nov 08 17:21:50 nsimon augenrules[885]: lost 0
+Nov 08 17:21:50 nsimon augenrules[885]: backlog 4
+Nov 08 17:21:50 nsimon augenrules[885]: backlog_wait_time 60000
+Nov 08 17:21:50 nsimon augenrules[885]: backlog_wait_time_actual 0
+Nov 08 17:21:50 nsimon augenrules[885]: enabled 1
+Nov 08 17:21:50 nsimon augenrules[885]: failure 1
+Nov 08 17:21:50 nsimon augenrules[885]: pid 872
+Nov 08 17:21:50 nsimon augenrules[885]: rate_limit 0
+Nov 08 17:21:50 nsimon augenrules[885]: backlog_limit 8192
+Nov 08 17:21:50 nsimon augenrules[885]: lost 0
+Nov 08 17:21:50 nsimon augenrules[885]: backlog 4
+Nov 08 17:21:50 nsimon augenrules[885]: backlog_wait_time 60000
+Nov 08 17:21:50 nsimon augenrules[885]: backlog_wait_time_actual 0
+Nov 08 17:21:50 nsimon augenrules[885]: enabled 1
+Nov 08 17:21:50 nsimon augenrules[885]: failure 1
+Nov 08 17:21:50 nsimon augenrules[885]: pid 872
+Nov 08 17:21:50 nsimon augenrules[885]: rate_limit 0
+Nov 08 17:21:50 nsimon augenrules[885]: backlog_limit 8192
+Nov 08 17:21:50 nsimon augenrules[885]: lost 0
+Nov 08 17:21:50 nsimon augenrules[885]: backlog 4
+Nov 08 17:21:50 nsimon augenrules[885]: backlog_wait_time 60000
+Nov 08 17:21:50 nsimon augenrules[885]: backlog_wait_time_actual 0
+Nov 08 17:21:50 nsimon kernel: usbcore: registered new interface driver uvcvideo
+Nov 08 17:21:50 nsimon kernel: vmwgfx 0000:00:0f.0: [drm] Screen Target display unit initialized
+Nov 08 17:21:50 nsimon kernel: RAPL PMU: API unit is 2^-32 Joules, 0 fixed counters, 10737418240 ms ovfl timer
+Nov 08 17:21:50 nsimon kernel: vmwgfx 0000:00:0f.0: [drm] Fifo max 0x00040000 min 0x00001000 cap 0x0000077f
+Nov 08 17:21:50 nsimon kernel: vmwgfx 0000:00:0f.0: [drm] Using command buffers with DMA pool.
+Nov 08 17:21:50 nsimon kernel: vmwgfx 0000:00:0f.0: [drm] Available shader model: SM_5.
+Nov 08 17:21:50 nsimon kernel: [drm] Initialized vmwgfx 2.20.0 20211206 for 0000:00:0f.0 on minor 0
+Nov 08 17:21:50 nsimon systemd[1]: Starting Load/Save RF Kill Switch Status...
+Nov 08 17:21:50 nsimon kernel: fbcon: vmwgfxdrmfb (fb0) is primary device
+Nov 08 17:21:50 nsimon systemd[1]: Started Security Auditing Service.
+Nov 08 17:21:50 nsimon kernel: Console: switching to colour frame buffer device 160x50
+Nov 08 17:21:50 nsimon kernel: vmwgfx 0000:00:0f.0: [drm] fb0: vmwgfxdrmfb frame buffer device
+Nov 08 17:21:50 nsimon systemd[1]: Reached target Bluetooth Support.
+Nov 08 17:21:50 nsimon systemd[1]: Starting Record System Boot/Shutdown in UTMP...
+Nov 08 17:21:50 nsimon systemd[1]: Started Load/Save RF Kill Switch Status.
+Nov 08 17:21:50 nsimon systemd[1]: Finished Record System Boot/Shutdown in UTMP.
+Nov 08 17:21:50 nsimon systemd[1]: Reached target System Initialization.
+Nov 08 17:21:50 nsimon systemd[1]: Started dnf makecache --timer.
+Nov 08 17:21:50 nsimon systemd[1]: Started Daily rotation of log files.
+Nov 08 17:21:50 nsimon systemd[1]: Started Daily Cleanup of Temporary Directories.
+Nov 08 17:21:50 nsimon systemd[1]: Reached target Timer Units.
+Nov 08 17:21:50 nsimon systemd[1]: Listening on D-Bus System Message Bus Socket.
+Nov 08 17:21:50 nsimon kernel: Bluetooth: hci0: unexpected cc 0x0c12 length: 2 < 3
+Nov 08 17:21:50 nsimon kernel: Bluetooth: hci0: Opcode 0x c12 failed: -38
+Nov 08 17:21:50 nsimon systemd[1]: Listening on SSSD Kerberos Cache Manager responder socket.
+Nov 08 17:21:50 nsimon systemd[1]: Reached target Socket Units.
+Nov 08 17:21:50 nsimon systemd[1]: TPM2 PCR Barrier (Initialization) was skipped because of an unmet condition check (ConditionPathExists=/sys/firmware/efi/efivars/StubPcrKernelImage-4a67b082-0a4c-41cf-b6c7-440b29bb8c4f).
+Nov 08 17:21:50 nsimon systemd[1]: Reached target Basic System.
+Nov 08 17:21:50 nsimon systemd[1]: Starting NTP client/server...
+Nov 08 17:21:50 nsimon systemd[1]: Starting Restore /run/initramfs on shutdown...
+Nov 08 17:21:50 nsimon systemd[1]: Starting firewalld - dynamic firewall daemon...
+Nov 08 17:21:50 nsimon systemd[1]: Started irqbalance daemon.
+Nov 08 17:21:50 nsimon systemd[1]: Low Memory Monitor was skipped because of an unmet condition check (ConditionPathExists=/proc/pressure).
+Nov 08 17:21:50 nsimon systemd[1]: Load CPU microcode update was skipped because of an unmet condition check (ConditionPathExists=/sys/devices/system/cpu/microcode/reload).
+Nov 08 17:21:50 nsimon systemd[1]: Starting System Logging Service...
+Nov 08 17:21:50 nsimon systemd[1]: OpenSSH ecdsa Server Key Generation was skipped because no trigger condition checks were met.
+Nov 08 17:21:50 nsimon systemd[1]: OpenSSH ed25519 Server Key Generation was skipped because no trigger condition checks were met.
+Nov 08 17:21:50 nsimon systemd[1]: OpenSSH rsa Server Key Generation was skipped because no trigger condition checks were met.
+Nov 08 17:21:50 nsimon systemd[1]: Reached target sshd-keygen.target.
+Nov 08 17:21:50 nsimon systemd[1]: System Security Services Daemon was skipped because no trigger condition checks were met.
+Nov 08 17:21:50 nsimon systemd[1]: Reached target User and Group Name Lookups.
+Nov 08 17:21:50 nsimon systemd[1]: Starting User Login Management...
+Nov 08 17:21:50 nsimon systemd[1]: TPM2 PCR Barrier (User) was skipped because of an unmet condition check (ConditionPathExists=/sys/firmware/efi/efivars/StubPcrKernelImage-4a67b082-0a4c-41cf-b6c7-440b29bb8c4f).
+Nov 08 17:21:50 nsimon systemd[1]: Started VGAuth Service for open-vm-tools.
+Nov 08 17:21:50 nsimon systemd[1]: Started Service for virtual machines hosted on VMware.
+Nov 08 17:21:50 nsimon systemd[1]: Finished Restore /run/initramfs on shutdown.
+Nov 08 17:21:50 nsimon rsyslogd[927]: [origin software="rsyslogd" swVersion="8.2102.0-113.el9_2.1" x-pid="927" x-info="https://www.rsyslog.com"] start
+Nov 08 17:21:50 nsimon systemd[1]: Started System Logging Service.
+Nov 08 17:21:50 nsimon chronyd[940]: chronyd version 4.3 starting (+CMDMON +NTP +REFCLOCK +RTC +PRIVDROP +SCFILTER +SIGND +ASYNCDNS +NTS +SECHASH +IPV6 +DEBUG)
+Nov 08 17:21:50 nsimon chronyd[940]: Frequency -473.363 +/- 66.064 ppm read from /var/lib/chrony/drift
+Nov 08 17:21:50 nsimon chronyd[940]: Using right/UTC timezone to obtain leap second data
+Nov 08 17:21:50 nsimon chronyd[940]: Loaded seccomp filter (level 2)
+Nov 08 17:21:50 nsimon VGAuthService[935]: Pref_Init: Using '/etc/vmware-tools/vgauth.conf' as preferences filepath
+Nov 08 17:21:50 nsimon systemd[1]: Started NTP client/server.
+Nov 08 17:21:50 nsimon VGAuthService[935]: Core dump limit set to -1
+Nov 08 17:21:50 nsimon systemd-logind[932]: New seat seat0.
+Nov 08 17:21:50 nsimon systemd-logind[932]: Watching system buttons on /dev/input/event0 (Power Button)
+Nov 08 17:21:50 nsimon systemd-logind[932]: Watching system buttons on /dev/input/event1 (AT Translated Set 2 keyboard)
+Nov 08 17:21:50 nsimon kernel: NET: Registered PF_VSOCK protocol family
+Nov 08 17:21:50 nsimon systemd[1]: Starting D-Bus System Message Bus...
+Nov 08 17:21:50 nsimon systemd[1]: Started D-Bus System Message Bus.
+Nov 08 17:21:50 nsimon dbus-broker-lau[946]: Ready
+Nov 08 17:21:50 nsimon systemd[1]: Started User Login Management.
+Nov 08 17:21:50 nsimon rsyslogd[927]: imjournal: journal files changed, reloading...  [v8.2102.0-113.el9_2.1 try https://www.rsyslog.com/e/0 ]
+Nov 08 17:21:50 nsimon systemd[1]: Started firewalld - dynamic firewall daemon.
+Nov 08 17:21:50 nsimon systemd[1]: Reached target Preparation for Network.
+Nov 08 17:21:50 nsimon systemd[1]: Starting Network Manager...
+Nov 08 17:21:50 nsimon NetworkManager[952]: <info>  [1699460510.7412] NetworkManager (version 1.42.2-8.el9_2) is starting... (boot:1532f093-58b2-416a-be90-c306cf2beda0)
+Nov 08 17:21:50 nsimon NetworkManager[952]: <info>  [1699460510.7415] Read config: /etc/NetworkManager/NetworkManager.conf (run: 15-carrier-timeout.conf)
+Nov 08 17:21:50 nsimon systemd[1]: Started Network Manager.
+Nov 08 17:21:50 nsimon NetworkManager[952]: <info>  [1699460510.7444] bus-manager: acquired D-Bus service "org.freedesktop.NetworkManager"
+Nov 08 17:21:50 nsimon systemd[1]: Reached target Network.
+Nov 08 17:21:50 nsimon NetworkManager[952]: <info>  [1699460510.7485] manager[0x55e58a76c020]: monitoring kernel firmware directory '/lib/firmware'.
+Nov 08 17:21:50 nsimon systemd[1]: Starting Network Manager Wait Online...
+Nov 08 17:21:50 nsimon systemd[1]: Starting OpenSSH server daemon...
+Nov 08 17:21:50 nsimon systemd[1]: Starting Permit User Sessions...
+Nov 08 17:21:50 nsimon sshd[962]: main: sshd: ssh-rsa algorithm is disabled
+Nov 08 17:21:50 nsimon sshd[962]: Server listening on 0.0.0.0 port 22.
+Nov 08 17:21:50 nsimon sshd[962]: Server listening on :: port 22.
+Nov 08 17:21:50 nsimon systemd[1]: Starting Hostname Service...
+Nov 08 17:21:50 nsimon systemd[1]: Started OpenSSH server daemon.
+Nov 08 17:21:50 nsimon systemd[1]: Finished Permit User Sessions.
+Nov 08 17:21:50 nsimon systemd[1]: Started Command Scheduler.
+Nov 08 17:21:50 nsimon systemd[1]: Started Getty on tty1.
+Nov 08 17:21:50 nsimon systemd[1]: Reached target Login Prompts.
+Nov 08 17:21:50 nsimon systemd[1]: Reached target Multi-User System.
+Nov 08 17:21:50 nsimon systemd[1]: Starting Record Runlevel Change in UTMP...
+Nov 08 17:21:50 nsimon crond[972]: (CRON) STARTUP (1.5.7)
+Nov 08 17:21:50 nsimon crond[972]: (CRON) INFO (Syslog will be used instead of sendmail.)
+Nov 08 17:21:50 nsimon crond[972]: (CRON) INFO (RANDOM_DELAY will be scaled with factor 91% if used.)
+Nov 08 17:21:50 nsimon crond[972]: (CRON) INFO (running with inotify support)
+Nov 08 17:21:50 nsimon systemd[1]: systemd-update-utmp-runlevel.service: Deactivated successfully.
+Nov 08 17:21:50 nsimon systemd[1]: Finished Record Runlevel Change in UTMP.
+Nov 08 17:21:50 nsimon systemd[1]: Started Hostname Service.
+Nov 08 17:21:50 nsimon NetworkManager[952]: <info>  [1699460510.8561] hostname: hostname: using hostnamed
+Nov 08 17:21:50 nsimon NetworkManager[952]: <info>  [1699460510.8564] hostname: static hostname changed from (none) to "nsimon"
+Nov 08 17:21:50 nsimon NetworkManager[952]: <info>  [1699460510.8579] dns-mgr: init: dns=default,systemd-resolved rc-manager=symlink (auto)
+Nov 08 17:21:50 nsimon NetworkManager[952]: <info>  [1699460510.8593] manager[0x55e58a76c020]: rfkill: Wi-Fi hardware radio set enabled
+Nov 08 17:21:50 nsimon NetworkManager[952]: <info>  [1699460510.8594] manager[0x55e58a76c020]: rfkill: WWAN hardware radio set enabled
+Nov 08 17:21:50 nsimon NetworkManager[952]: <info>  [1699460510.8650] Loaded device plugin: NMTeamFactory (/usr/lib64/NetworkManager/1.42.2-8.el9_2/libnm-device-plugin-team.so)
+Nov 08 17:21:50 nsimon NetworkManager[952]: <info>  [1699460510.8650] manager: rfkill: Wi-Fi enabled by radio killswitch; enabled by state file
+Nov 08 17:21:50 nsimon NetworkManager[952]: <info>  [1699460510.8651] manager: rfkill: WWAN enabled by radio killswitch; enabled by state file
+Nov 08 17:21:50 nsimon NetworkManager[952]: <info>  [1699460510.8652] manager: Networking is enabled by state file
+Nov 08 17:21:50 nsimon NetworkManager[952]: <info>  [1699460510.8664] settings: Loaded settings plugin: keyfile (internal)
+Nov 08 17:21:50 nsimon NetworkManager[952]: <info>  [1699460510.8687] settings: Loaded settings plugin: ifcfg-rh ("/usr/lib64/NetworkManager/1.42.2-8.el9_2/libnm-settings-plugin-ifcfg-rh.so")
+Nov 08 17:21:50 nsimon NetworkManager[952]: <info>  [1699460510.8718] dhcp: init: Using DHCP client 'internal'
+Nov 08 17:21:50 nsimon NetworkManager[952]: <info>  [1699460510.8721] manager: (lo): new Loopback device (/org/freedesktop/NetworkManager/Devices/1)
+Nov 08 17:21:50 nsimon NetworkManager[952]: <info>  [1699460510.8732] device (lo): state change: unmanaged -> unavailable (reason 'connection-assumed', sys-iface-state: 'external')
+Nov 08 17:21:50 nsimon NetworkManager[952]: <info>  [1699460510.8737] device (lo): state change: unavailable -> disconnected (reason 'connection-assumed', sys-iface-state: 'external')
+Nov 08 17:21:50 nsimon NetworkManager[952]: <info>  [1699460510.8744] device (lo): Activation: starting connection 'lo' (6c85f40b-cbf6-4b62-9270-3a6087b58f9a)
+Nov 08 17:21:50 nsimon NetworkManager[952]: <info>  [1699460510.8753] manager: (ens160): new Ethernet device (/org/freedesktop/NetworkManager/Devices/2)
+Nov 08 17:21:50 nsimon NetworkManager[952]: <info>  [1699460510.8757] device (ens160): state change: unmanaged -> unavailable (reason 'managed', sys-iface-state: 'external')
+Nov 08 17:21:50 nsimon kernel: vmxnet3 0000:03:00.0 ens160: intr type 3, mode 0, 9 vectors allocated
+Nov 08 17:21:50 nsimon kernel: vmxnet3 0000:03:00.0 ens160: NIC Link is Up 10000 Mbps
+Nov 08 17:21:50 nsimon systemd[1]: Starting Network Manager Script Dispatcher Service...
+Nov 08 17:21:50 nsimon NetworkManager[952]: <info>  [1699460510.8831] device (lo): state change: disconnected -> prepare (reason 'none', sys-iface-state: 'external')
+Nov 08 17:21:50 nsimon NetworkManager[952]: <info>  [1699460510.8834] device (lo): state change: prepare -> config (reason 'none', sys-iface-state: 'external')
+Nov 08 17:21:50 nsimon NetworkManager[952]: <info>  [1699460510.8835] device (lo): state change: config -> ip-config (reason 'none', sys-iface-state: 'external')
+Nov 08 17:21:50 nsimon NetworkManager[952]: <info>  [1699460510.8837] device (ens160): carrier: link connected
+Nov 08 17:21:50 nsimon NetworkManager[952]: <info>  [1699460510.8841] device (lo): state change: ip-config -> ip-check (reason 'none', sys-iface-state: 'external')
+Nov 08 17:21:50 nsimon NetworkManager[952]: <info>  [1699460510.8845] device (ens160): state change: unavailable -> disconnected (reason 'carrier-changed', sys-iface-state: 'managed')
+Nov 08 17:21:50 nsimon NetworkManager[952]: <info>  [1699460510.8852] policy: auto-activating connection 'ens160' (27dad714-df98-3330-9f3f-7470603408e5)
+Nov 08 17:21:50 nsimon NetworkManager[952]: <info>  [1699460510.8874] device (ens160): Activation: starting connection 'ens160' (27dad714-df98-3330-9f3f-7470603408e5)
+Nov 08 17:21:50 nsimon NetworkManager[952]: <info>  [1699460510.8875] device (ens160): state change: disconnected -> prepare (reason 'none', sys-iface-state: 'managed')
+Nov 08 17:21:50 nsimon NetworkManager[952]: <info>  [1699460510.8877] manager: NetworkManager state is now CONNECTING
+Nov 08 17:21:50 nsimon NetworkManager[952]: <info>  [1699460510.8878] device (ens160): state change: prepare -> config (reason 'none', sys-iface-state: 'managed')
+Nov 08 17:21:50 nsimon systemd[1]: Started Network Manager Script Dispatcher Service.
+Nov 08 17:21:50 nsimon NetworkManager[952]: <info>  [1699460510.8959] device (lo): state change: ip-check -> secondaries (reason 'none', sys-iface-state: 'external')
+Nov 08 17:21:50 nsimon NetworkManager[952]: <info>  [1699460510.8961] device (lo): state change: secondaries -> activated (reason 'none', sys-iface-state: 'external')
+Nov 08 17:21:50 nsimon NetworkManager[952]: <info>  [1699460510.8964] device (lo): Activation: successful, device activated.
+Nov 08 17:21:51 nsimon systemd[1]: Reached target Sound Card.
+Nov 08 17:21:51 nsimon systemd[1]: Starting Authorization Manager...
+Nov 08 17:21:51 nsimon polkitd[1035]: Started polkitd version 0.117
+Nov 08 17:21:51 nsimon polkitd[1035]: Loading rules from directory /etc/polkit-1/rules.d
+Nov 08 17:21:51 nsimon polkitd[1035]: Loading rules from directory /usr/share/polkit-1/rules.d
+Nov 08 17:21:51 nsimon polkitd[1035]: Finished loading, compiling and executing 4 rules
+Nov 08 17:21:51 nsimon systemd[1]: Started Authorization Manager.
+Nov 08 17:21:51 nsimon polkitd[1035]: Acquired the name org.freedesktop.PolicyKit1 on the system bus
+Nov 08 17:21:51 nsimon NetworkManager[952]: <info>  [1699460511.4186] device (ens160): state change: config -> ip-config (reason 'none', sys-iface-state: 'managed')
+Nov 08 17:21:51 nsimon NetworkManager[952]: <info>  [1699460511.4191] dhcp4 (ens160): activation: beginning transaction (timeout in 45 seconds)
+Nov 08 17:21:51 nsimon NetworkManager[952]: <info>  [1699460511.4212] dhcp4 (ens160): state changed new lease, address=192.168.39.136
+Nov 08 17:21:51 nsimon NetworkManager[952]: <info>  [1699460511.4217] policy: set 'ens160' (ens160) as default for IPv4 routing and DNS
+Nov 08 17:21:51 nsimon NetworkManager[952]: <info>  [1699460511.4240] device (ens160): state change: ip-config -> ip-check (reason 'none', sys-iface-state: 'managed')
+Nov 08 17:21:51 nsimon NetworkManager[952]: <info>  [1699460511.4258] device (ens160): state change: ip-check -> secondaries (reason 'none', sys-iface-state: 'managed')
+Nov 08 17:21:51 nsimon NetworkManager[952]: <info>  [1699460511.4260] device (ens160): state change: secondaries -> activated (reason 'none', sys-iface-state: 'managed')
+Nov 08 17:21:51 nsimon NetworkManager[952]: <info>  [1699460511.4262] manager: NetworkManager state is now CONNECTED_SITE
+Nov 08 17:21:51 nsimon NetworkManager[952]: <info>  [1699460511.4265] device (ens160): Activation: successful, device activated.
+Nov 08 17:21:51 nsimon NetworkManager[952]: <info>  [1699460511.4269] manager: NetworkManager state is now CONNECTED_GLOBAL
+Nov 08 17:21:51 nsimon NetworkManager[952]: <info>  [1699460511.4271] manager: startup complete
+Nov 08 17:21:51 nsimon systemd[1]: Finished Network Manager Wait Online.
+Nov 08 17:21:51 nsimon systemd[1]: Reached target Network is Online.
+Nov 08 17:21:51 nsimon systemd[1]: Starting Crash recovery kernel arming...
+Nov 08 17:21:51 nsimon kdumpctl[1068]: kdump: No kdump initial ramdisk found.
+Nov 08 17:21:51 nsimon kdumpctl[1068]: kdump: Rebuilding /boot/initramfs-6.6.0kdump.img
+Nov 08 17:21:51 nsimon kdumpctl[1116]: kdump: Warning: There might not be enough space to save a vmcore.
+Nov 08 17:21:51 nsimon kdumpctl[1116]: kdump:          The size of /dev/mapper/rl-root should be greater than 3714352 kilo bytes.
+Nov 08 17:21:51 nsimon dracut[1366]: dracut-057-21.git20230214.el9
+Nov 08 17:21:52 nsimon dracut[1368]: Executing: /usr/bin/dracut --add kdumpbase --quiet --hostonly --hostonly-cmdline --hostonly-i18n --hostonly-mode strict --hostonly-nics  -o "plymouth resume ifcfg earlykdump" --mount "/dev/mapper/rl-root /sysroot xfs rw,relatime,seclabel,attr2,inode64,logbufs=8,logbsize=32k,noquota" --squash-compressor zstd --no-hostonly-default-device --add-drivers nvme -f /boot/initramfs-6.6.0kdump.img 6.6.0
+Nov 08 17:21:52 nsimon dracut[1368]: dracut module 'systemd-networkd' will not be installed, because command 'networkctl' could not be found!
+Nov 08 17:21:52 nsimon dracut[1368]: dracut module 'systemd-networkd' will not be installed, because command '/usr/lib/systemd/systemd-networkd' could not be found!
+Nov 08 17:21:52 nsimon dracut[1368]: dracut module 'systemd-networkd' will not be installed, because command '/usr/lib/systemd/systemd-networkd-wait-online' could not be found!
+Nov 08 17:21:52 nsimon dracut[1368]: dracut module 'systemd-resolved' will not be installed, because command 'resolvectl' could not be found!
+Nov 08 17:21:52 nsimon dracut[1368]: dracut module 'systemd-resolved' will not be installed, because command '/usr/lib/systemd/systemd-resolved' could not be found!
+Nov 08 17:21:52 nsimon dracut[1368]: dracut module 'systemd-timesyncd' will not be installed, because command '/usr/lib/systemd/systemd-timesyncd' could not be found!
+Nov 08 17:21:52 nsimon dracut[1368]: dracut module 'systemd-timesyncd' will not be installed, because command '/usr/lib/systemd/systemd-time-wait-sync' could not be found!
+Nov 08 17:21:52 nsimon dracut[1368]: dracut module 'modsign' will not be installed, because command 'keyctl' could not be found!
+Nov 08 17:21:52 nsimon dracut[1368]: dracut module 'busybox' will not be installed, because command 'busybox' could not be found!
+Nov 08 17:21:52 nsimon dracut[1368]: dracut module 'dbus-daemon' will not be installed, because command 'dbus-daemon' could not be found!
+Nov 08 17:21:52 nsimon dracut[1368]: dracut module 'rngd' will not be installed, because command 'rngd' could not be found!
+Nov 08 17:21:52 nsimon dracut[1368]: dracut module 'connman' will not be installed, because command 'connmand' could not be found!
+Nov 08 17:21:52 nsimon dracut[1368]: dracut module 'connman' will not be installed, because command 'connmanctl' could not be found!
+Nov 08 17:21:52 nsimon dracut[1368]: dracut module 'connman' will not be installed, because command 'connmand-wait-online' could not be found!
+Nov 08 17:21:52 nsimon dracut[1368]: dracut module 'network-legacy' will not be installed, because command 'dhclient' could not be found!
+Nov 08 17:21:52 nsimon dracut[1368]: dracut module 'network-wicked' will not be installed, because command 'wicked' could not be found!
+Nov 08 17:21:52 nsimon dracut[1368]: dracut module 'ifcfg' will not be installed, because it's in the list to be omitted!
+Nov 08 17:21:52 nsimon dracut[1368]: dracut module 'plymouth' will not be installed, because it's in the list to be omitted!
+Nov 08 17:21:52 nsimon dracut[1368]: 62bluetooth: Could not find any command of '/usr/lib/bluetooth/bluetoothd /usr/libexec/bluetooth/bluetoothd'!
+Nov 08 17:21:52 nsimon dracut[1368]: dracut module 'btrfs' will not be installed, because command 'btrfs' could not be found!
+Nov 08 17:21:52 nsimon dracut[1368]: dracut module 'dmraid' will not be installed, because command 'dmraid' could not be found!
+Nov 08 17:21:52 nsimon dracut[1368]: dracut module 'mdraid' will not be installed, because command 'mdadm' could not be found!
+Nov 08 17:21:52 nsimon dracut[1368]: dracut module 'pcsc' will not be installed, because command 'pcscd' could not be found!
+Nov 08 17:21:52 nsimon dracut[1368]: dracut module 'tpm2-tss' will not be installed, because command 'tpm2' could not be found!
+Nov 08 17:21:52 nsimon dracut[1368]: dracut module 'cifs' will not be installed, because command 'mount.cifs' could not be found!
+Nov 08 17:21:53 nsimon dracut[1368]: dracut module 'iscsi' will not be installed, because command 'iscsi-iname' could not be found!
+Nov 08 17:21:53 nsimon dracut[1368]: dracut module 'iscsi' will not be installed, because command 'iscsiadm' could not be found!
+Nov 08 17:21:53 nsimon dracut[1368]: dracut module 'iscsi' will not be installed, because command 'iscsid' could not be found!
+Nov 08 17:21:53 nsimon dracut[1368]: 95nfs: Could not find any command of 'rpcbind portmap'!
+Nov 08 17:21:53 nsimon dracut[1368]: dracut module 'resume' will not be installed, because it's in the list to be omitted!
+Nov 08 17:21:53 nsimon dracut[1368]: dracut module 'biosdevname' will not be installed, because command 'biosdevname' could not be found!
+Nov 08 17:21:53 nsimon dracut[1368]: dracut module 'earlykdump' will not be installed, because it's in the list to be omitted!
+Nov 08 17:21:53 nsimon dracut[1368]: dracut module 'memstrack' will not be installed, because command 'memstrack' could not be found!
+Nov 08 17:21:53 nsimon dracut[1368]: memstrack is not available
+Nov 08 17:21:53 nsimon dracut[1368]: If you need to use rd.memdebug>=4, please install memstrack and procps-ng
+Nov 08 17:21:53 nsimon dracut[1368]: dracut module 'systemd-resolved' will not be installed, because command 'resolvectl' could not be found!
+Nov 08 17:21:53 nsimon dracut[1368]: dracut module 'systemd-resolved' will not be installed, because command '/usr/lib/systemd/systemd-resolved' could not be found!
+Nov 08 17:21:53 nsimon dracut[1368]: dracut module 'systemd-timesyncd' will not be installed, because command '/usr/lib/systemd/systemd-timesyncd' could not be found!
+Nov 08 17:21:53 nsimon dracut[1368]: dracut module 'systemd-timesyncd' will not be installed, because command '/usr/lib/systemd/systemd-time-wait-sync' could not be found!
+Nov 08 17:21:53 nsimon dracut[1368]: dracut module 'modsign' will not be installed, because command 'keyctl' could not be found!
+Nov 08 17:21:53 nsimon dracut[1368]: dracut module 'busybox' will not be installed, because command 'busybox' could not be found!
+Nov 08 17:21:53 nsimon dracut[1368]: dracut module 'dbus-daemon' will not be installed, because command 'dbus-daemon' could not be found!
+Nov 08 17:21:53 nsimon dracut[1368]: dracut module 'rngd' will not be installed, because command 'rngd' could not be found!
+Nov 08 17:21:53 nsimon dracut[1368]: dracut module 'connman' will not be installed, because command 'connmand' could not be found!
+Nov 08 17:21:53 nsimon dracut[1368]: dracut module 'connman' will not be installed, because command 'connmanctl' could not be found!
+Nov 08 17:21:53 nsimon dracut[1368]: dracut module 'connman' will not be installed, because command 'connmand-wait-online' could not be found!
+Nov 08 17:21:53 nsimon dracut[1368]: dracut module 'network-legacy' will not be installed, because command 'dhclient' could not be found!
+Nov 08 17:21:53 nsimon dracut[1368]: dracut module 'network-wicked' will not be installed, because command 'wicked' could not be found!
+Nov 08 17:21:53 nsimon dracut[1368]: 62bluetooth: Could not find any command of '/usr/lib/bluetooth/bluetoothd /usr/libexec/bluetooth/bluetoothd'!
+Nov 08 17:21:53 nsimon dracut[1368]: dracut module 'btrfs' will not be installed, because command 'btrfs' could not be found!
+Nov 08 17:21:53 nsimon dracut[1368]: dracut module 'dmraid' will not be installed, because command 'dmraid' could not be found!
+Nov 08 17:21:53 nsimon dracut[1368]: dracut module 'mdraid' will not be installed, because command 'mdadm' could not be found!
+Nov 08 17:21:53 nsimon dracut[1368]: dracut module 'pcsc' will not be installed, because command 'pcscd' could not be found!
+Nov 08 17:21:53 nsimon dracut[1368]: dracut module 'tpm2-tss' will not be installed, because command 'tpm2' could not be found!
+Nov 08 17:21:53 nsimon dracut[1368]: dracut module 'cifs' will not be installed, because command 'mount.cifs' could not be found!
+Nov 08 17:21:53 nsimon dracut[1368]: dracut module 'iscsi' will not be installed, because command 'iscsi-iname' could not be found!
+Nov 08 17:21:53 nsimon dracut[1368]: dracut module 'iscsi' will not be installed, because command 'iscsiadm' could not be found!
+Nov 08 17:21:53 nsimon dracut[1368]: dracut module 'iscsi' will not be installed, because command 'iscsid' could not be found!
+Nov 08 17:21:53 nsimon dracut[1368]: 95nfs: Could not find any command of 'rpcbind portmap'!
+Nov 08 17:21:53 nsimon dracut[1368]: dracut module 'memstrack' will not be installed, because command 'memstrack' could not be found!
+Nov 08 17:21:53 nsimon dracut[1368]: memstrack is not available
+Nov 08 17:21:53 nsimon dracut[1368]: If you need to use rd.memdebug>=4, please install memstrack and procps-ng
+Nov 08 17:21:53 nsimon dracut[1368]: *** Including module: systemd ***
+Nov 08 17:21:54 nsimon dracut[1368]: *** Including module: systemd-initrd ***
+Nov 08 17:21:54 nsimon dracut[1368]: *** Including module: nss-softokn ***
+Nov 08 17:21:54 nsimon dracut[1368]: *** Including module: i18n ***
+Nov 08 17:21:54 nsimon dracut[1368]: *** Including module: drm ***
+Nov 08 17:21:54 nsimon dracut[1368]: *** Including module: prefixdevname ***
+Nov 08 17:21:54 nsimon dracut[1368]: *** Including module: dm ***
+Nov 08 17:21:54 nsimon dracut[1368]: Skipping udev rule: 64-device-mapper.rules
+Nov 08 17:21:54 nsimon dracut[1368]: Skipping udev rule: 60-persistent-storage-dm.rules
+Nov 08 17:21:54 nsimon dracut[1368]: Skipping udev rule: 55-dm.rules
+Nov 08 17:21:54 nsimon dracut[1368]: *** Including module: kernel-modules ***
+Nov 08 17:21:54 nsimon kernel: block dm-0: the capability attribute has been deprecated.
+Nov 08 17:21:54 nsimon kernel: block nvme0n1: No UUID available providing old NGUID
+Nov 08 17:21:55 nsimon dracut[1368]: *** Including module: kernel-modules-extra ***
+Nov 08 17:21:55 nsimon dracut[1368]:   kernel-modules-extra: configuration source "/run/depmod.d" does not exist
+Nov 08 17:21:55 nsimon dracut[1368]:   kernel-modules-extra: configuration source "/lib/depmod.d" does not exist
+Nov 08 17:21:55 nsimon dracut[1368]:   kernel-modules-extra: parsing configuration file "/etc/depmod.d/dist.conf"
+Nov 08 17:21:55 nsimon dracut[1368]:   kernel-modules-extra: /etc/depmod.d/dist.conf: added "updates extra built-in weak-updates" to the list of search directories
+Nov 08 17:21:55 nsimon dracut[1368]: *** Including module: lvm ***
+Nov 08 17:21:55 nsimon dracut[1368]: Skipping udev rule: 64-device-mapper.rules
+Nov 08 17:21:55 nsimon dracut[1368]: Skipping udev rule: 56-lvm.rules
+Nov 08 17:21:55 nsimon dracut[1368]: Skipping udev rule: 60-persistent-storage-lvm.rules
+Nov 08 17:21:55 nsimon dracut[1368]: *** Including module: fstab-sys ***
+Nov 08 17:21:55 nsimon dracut[1368]: *** Including module: rootfs-block ***
+Nov 08 17:21:55 nsimon systemd[1]: systemd-rfkill.service: Deactivated successfully.
+Nov 08 17:21:55 nsimon dracut[1368]: *** Including module: terminfo ***
+Nov 08 17:21:55 nsimon dracut[1368]: *** Including module: udev-rules ***
+Nov 08 17:21:55 nsimon dracut[1368]: Skipping udev rule: 91-permissions.rules
+Nov 08 17:21:55 nsimon dracut[1368]: Skipping udev rule: 80-drivers-modprobe.rules
+Nov 08 17:21:55 nsimon dracut[1368]: Skipping udev rule: 70-persistent-net.rules
+Nov 08 17:21:55 nsimon dracut[1368]: *** Including module: dracut-systemd ***
+Nov 08 17:21:55 nsimon dracut[1368]: *** Including module: usrmount ***
+Nov 08 17:21:55 nsimon dracut[1368]: *** Including module: base ***
+Nov 08 17:21:55 nsimon dracut[1368]: *** Including module: fs-lib ***
+Nov 08 17:21:55 nsimon dracut[1368]: *** Including module: kdumpbase ***
+Nov 08 17:21:55 nsimon dracut[1368]: *** Including module: microcode_ctl-fw_dir_override ***
+Nov 08 17:21:55 nsimon dracut[1368]:   microcode_ctl module: mangling fw_dir
+Nov 08 17:21:55 nsimon dracut[1368]:     microcode_ctl: reset fw_dir to "/lib/firmware/updates /lib/firmware"
+Nov 08 17:21:55 nsimon dracut[1368]:     microcode_ctl: processing data directory  "/usr/share/microcode_ctl/ucode_with_caveats/intel"...
+Nov 08 17:21:56 nsimon dracut[1368]:     microcode_ctl: kernel version "6.6.0" failed early load check for "intel", skipping
+Nov 08 17:21:56 nsimon dracut[1368]:     microcode_ctl: processing data directory  "/usr/share/microcode_ctl/ucode_with_caveats/intel-06-2d-07"...
+Nov 08 17:21:56 nsimon dracut[1368]:     microcode_ctl: configuration "intel-06-2d-07" is ignored
+Nov 08 17:21:56 nsimon dracut[1368]:     microcode_ctl: processing data directory  "/usr/share/microcode_ctl/ucode_with_caveats/intel-06-4e-03"...
+Nov 08 17:21:56 nsimon dracut[1368]:     microcode_ctl: configuration "intel-06-4e-03" is ignored
+Nov 08 17:21:56 nsimon dracut[1368]:     microcode_ctl: processing data directory  "/usr/share/microcode_ctl/ucode_with_caveats/intel-06-4f-01"...
+Nov 08 17:21:56 nsimon dracut[1368]:     microcode_ctl: configuration "intel-06-4f-01" is ignored
+Nov 08 17:21:56 nsimon dracut[1368]:     microcode_ctl: processing data directory  "/usr/share/microcode_ctl/ucode_with_caveats/intel-06-55-04"...
+Nov 08 17:21:56 nsimon dracut[1368]:     microcode_ctl: configuration "intel-06-55-04" is ignored
+Nov 08 17:21:56 nsimon dracut[1368]:     microcode_ctl: processing data directory  "/usr/share/microcode_ctl/ucode_with_caveats/intel-06-5e-03"...
+Nov 08 17:21:56 nsimon dracut[1368]:     microcode_ctl: configuration "intel-06-5e-03" is ignored
+Nov 08 17:21:56 nsimon dracut[1368]:     microcode_ctl: processing data directory  "/usr/share/microcode_ctl/ucode_with_caveats/intel-06-8c-01"...
+Nov 08 17:21:56 nsimon dracut[1368]:     microcode_ctl: configuration "intel-06-8c-01" is ignored
+Nov 08 17:21:56 nsimon dracut[1368]:     microcode_ctl: processing data directory  "/usr/share/microcode_ctl/ucode_with_caveats/intel-06-8e-9e-0x-0xca"...
+Nov 08 17:21:56 nsimon dracut[1368]:     microcode_ctl: kernel version "6.6.0" failed early load check for "intel-06-8e-9e-0x-0xca", skipping
+Nov 08 17:21:56 nsimon dracut[1368]:     microcode_ctl: processing data directory  "/usr/share/microcode_ctl/ucode_with_caveats/intel-06-8e-9e-0x-dell"...
+Nov 08 17:21:56 nsimon dracut[1368]:     microcode_ctl: kernel version "6.6.0" failed early load check for "intel-06-8e-9e-0x-dell", skipping
+Nov 08 17:21:56 nsimon dracut[1368]:     microcode_ctl: final fw_dir: "/lib/firmware/updates /lib/firmware"
+Nov 08 17:21:56 nsimon dracut[1368]: *** Including module: shutdown ***
+Nov 08 17:21:56 nsimon dracut[1368]: *** Including module: squash ***
+Nov 08 17:21:56 nsimon dracut[1368]: *** Including modules done ***
+Nov 08 17:21:56 nsimon dracut[1368]: *** Installing kernel module dependencies ***
+Nov 08 17:21:56 nsimon chronyd[940]: Selected source 51.68.44.27 (2.rocky.pool.ntp.org)
+Nov 08 17:21:56 nsimon chronyd[940]: System clock TAI offset set to 37 seconds
+Nov 08 17:21:56 nsimon dracut[1368]: *** Installing kernel module dependencies done ***
+Nov 08 17:21:56 nsimon dracut[1368]: *** Resolving executable dependencies ***
+Nov 08 17:21:57 nsimon dracut[1368]: *** Resolving executable dependencies done ***
+Nov 08 17:21:57 nsimon dracut[1368]: *** Hardlinking files ***
+Nov 08 17:21:57 nsimon dracut[1368]: Mode:           real
+Nov 08 17:21:57 nsimon dracut[1368]: Files:          424
+Nov 08 17:21:57 nsimon dracut[1368]: Linked:         1 files
+Nov 08 17:21:57 nsimon dracut[1368]: Compared:       0 xattrs
+Nov 08 17:21:57 nsimon dracut[1368]: Compared:       6 files
+Nov 08 17:21:57 nsimon dracut[1368]: Saved:          55.98 KiB
+Nov 08 17:21:57 nsimon dracut[1368]: Duration:       0.002364 seconds
+Nov 08 17:21:57 nsimon dracut[1368]: *** Hardlinking files done ***
+Nov 08 17:21:57 nsimon dracut[1368]: *** Generating early-microcode cpio image ***
+Nov 08 17:21:57 nsimon dracut[1368]: *** Store current command line parameters ***
+Nov 08 17:21:57 nsimon dracut[1368]: Stored kernel commandline:
+Nov 08 17:21:57 nsimon dracut[1368]:  rd.lvm.lv=rl/root
+Nov 08 17:21:57 nsimon dracut[1368]: *** Install squash loader ***
+Nov 08 17:21:58 nsimon dracut[1368]: *** Stripping files ***
+Nov 08 17:21:58 nsimon dracut[1368]: *** Stripping files done ***
+Nov 08 17:21:58 nsimon dracut[1368]: *** Squashing the files inside the initramfs ***
+Nov 08 17:22:01 nsimon systemd[1]: NetworkManager-dispatcher.service: Deactivated successfully.
+Nov 08 17:22:03 nsimon sshd[4818]: main: sshd: ssh-rsa algorithm is disabled
+Nov 08 17:22:03 nsimon dracut[1368]: *** Squashing the files inside the initramfs done ***
+Nov 08 17:22:03 nsimon dracut[1368]: *** Creating image file '/boot/initramfs-6.6.0kdump.img' ***
+Nov 08 17:22:03 nsimon dracut[1368]: *** Creating initramfs image file '/boot/initramfs-6.6.0kdump.img' done ***
+Nov 08 17:22:04 nsimon kernel: PEFILE: Unsigned PE binary
+Nov 08 17:22:04 nsimon kdumpctl[1068]: kdump: kexec: loaded kdump kernel
+Nov 08 17:22:04 nsimon kdumpctl[1068]: kdump: Starting kdump: [OK]
+Nov 08 17:22:04 nsimon systemd[1]: Finished Crash recovery kernel arming.
+Nov 08 17:22:04 nsimon systemd[1]: Startup finished in 2.344s (kernel) + 2.519s (initrd) + 15.056s (userspace) = 19.921s.
+Nov 08 17:22:06 nsimon sshd[4818]: Accepted password for root from 192.168.39.1 port 51791 ssh2
+Nov 08 17:22:06 nsimon systemd[1]: Created slice User Slice of UID 0.
+Nov 08 17:22:06 nsimon systemd[1]: Starting User Runtime Directory /run/user/0...
+Nov 08 17:22:06 nsimon systemd-logind[932]: New session 1 of user root.
+Nov 08 17:22:06 nsimon systemd[1]: Finished User Runtime Directory /run/user/0.
+Nov 08 17:22:06 nsimon systemd[1]: Starting User Manager for UID 0...
+Nov 08 17:22:06 nsimon systemd[4955]: pam_unix(systemd-user:session): session opened for user root(uid=0) by (uid=0)
+Nov 08 17:22:06 nsimon systemd[4955]: Queued start job for default target Main User Target.
+Nov 08 17:22:06 nsimon systemd[4955]: Created slice User Application Slice.
+Nov 08 17:22:06 nsimon systemd[4955]: Mark boot as successful after the user session has run 2 minutes was skipped because of an unmet condition check (ConditionUser=!@system).
+Nov 08 17:22:06 nsimon systemd[4955]: Started Daily Cleanup of User's Temporary Directories.
+Nov 08 17:22:06 nsimon systemd[4955]: Reached target Paths.
+Nov 08 17:22:06 nsimon systemd[4955]: Reached target Timers.
+Nov 08 17:22:06 nsimon systemd[4955]: Starting D-Bus User Message Bus Socket...
+Nov 08 17:22:06 nsimon systemd[4955]: PipeWire PulseAudio was skipped because of an unmet condition check (ConditionUser=!root).
+Nov 08 17:22:06 nsimon systemd[4955]: Listening on PipeWire Multimedia System Socket.
+Nov 08 17:22:06 nsimon systemd[4955]: Starting Create User's Volatile Files and Directories...
+Nov 08 17:22:06 nsimon systemd[4955]: Listening on D-Bus User Message Bus Socket.
+Nov 08 17:22:06 nsimon systemd[4955]: Reached target Sockets.
+Nov 08 17:22:06 nsimon systemd[4955]: Finished Create User's Volatile Files and Directories.
+Nov 08 17:22:06 nsimon systemd[4955]: Reached target Basic System.
+Nov 08 17:22:06 nsimon systemd[4955]: Reached target Main User Target.
+Nov 08 17:22:06 nsimon systemd[4955]: Startup finished in 151ms.
+Nov 08 17:22:06 nsimon systemd[1]: Started User Manager for UID 0.
+Nov 08 17:22:06 nsimon systemd[1]: Started Session 1 of User root.
+Nov 08 17:22:06 nsimon sshd[4818]: pam_unix(sshd:session): session opened for user root(uid=0) by (uid=0)
