@@ -1,0 +1,1 @@
+ACTION=="add", SUBSYSTEM=="usb", ATTR{bInterfaceProtocol}=="01", RUN+="/usr/sbin/insmod /root/ex04/keyboard-hello.ko"
