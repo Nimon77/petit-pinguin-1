@@ -1,0 +1,27 @@
+[root@nsimon ex07]# ls /sys/kernel/debug/
+acpi   clear_warn_once  damon             dma_buf    dri            error_injection     gpio    kprobes  pm_genpd  ras     slab              suspend_stats  tracing  vmmemctl        x86
+bdi    clk              device_component  dmaengine  dynamic_debug  extfrag             hid     mce      printk    regmap  sleep_time        swiotlb        ttm      wakeup_sources  xfs
+block  cxl              devices_deferred  dma_pools  energy_model   fault_around_bytes  kfence  pinctrl  pwm       sched   split_huge_pages  thunderbolt    usb      wwan            zsmalloc
+[root@nsimon ex07]# insmod debugfs_fortytwo.ko
+[root@nsimon ex07]# ls /sys/kernel/debug/
+acpi   clear_warn_once  damon             dma_buf    dri            error_injection     fortytwo  kfence   pinctrl   pwm     sched       split_huge_pages  thunderbolt  usb             wwan  zsmalloc
+bdi    clk              device_component  dmaengine  dynamic_debug  extfrag             gpio      kprobes  pm_genpd  ras     slab        suspend_stats     tracing      vmmemctl        x86
+block  cxl              devices_deferred  dma_pools  energy_model   fault_around_bytes  hid       mce      printk    regmap  sleep_time  swiotlb           ttm          wakeup_sources  xfs
+[root@nsimon ex07]# ls -l /sys/kernel/debug/fortytwo/
+total 0
+-rw-r--r--. 1 root root 0 Dec 13 14:30 foo
+-rw-rw-rw-. 1 root root 0 Dec 13 14:29 id
+-r--r--r--. 1 root root 0 Dec 13 14:28 jiffies
+[root@nsimon ex07]# cat /sys/kernel/debug/fortytwo/id
+nsimon[root@nsimon ex07]# echo "nsimon" > /sys/kernel/debug/fortytwo/id 
+-bash: echo: write error: Invalid argument
+[root@nsimon ex07]# echo -n "nsimon" > /sys/kernel/debug/fortytwo/id 
+[root@nsimon ex07]# cat /sys/kernel/debug/fortytwo/jiffies 
+4295396962
+[root@nsimon ex07]# cat /sys/kernel/debug/fortytwo/jiffies 
+4295398104
+[root@nsimon ex07]# echo "blabla1234" > /sys/kernel/debug/fortytwo/foo 
+[root@nsimon ex07]# cat /sys/kernel/debug/fortytwo/foo 
+blabla1234
+[root@nsimon ex07]# cat /sys/kernel/debug/fortytwo/foo 
+test42
