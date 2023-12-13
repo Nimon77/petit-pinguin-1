@@ -104,7 +104,7 @@ int init_module(void)
 	debugfs_create_u64("jiffies", 0444, dir, (u64 *)&jiffies);
 
 	if (!debugfs_create_file("foo", 0644, dir, NULL, &fops_foo)) {
-		pr_err("debugfs_fortytwo: failed to create /sys/kernel/debug/fortytwo/id\n");
+		pr_err("debugfs_fortytwo: failed to create /sys/kernel/debug/fortytwo/foo\n");
 		return -1;
 	}
 	return 0;
