@@ -1,0 +1,26 @@
+[root@nsimon ex05]# ls -l /dev | grep forty
+[root@nsimon ex05]# make
+make -C /lib/modules/6.6.0-thor_kernel/build M=/root/ex05 modules
+make[1]: Entering directory '/root/linux-6.6'
+  CC [M]  /root/ex05/fortytwo.o
+  MODPOST /root/ex05/Module.symvers
+  CC [M]  /root/ex05/fortytwo.mod.o
+  LD [M]  /root/ex05/fortytwo.ko
+  BTF [M] /root/ex05/fortytwo.ko
+Skipping BTF generation for /root/ex05/fortytwo.ko due to unavailability of vmlinux
+make[1]: Leaving directory '/root/linux-6.6'
+[root@nsimon ex05]# insmod fortytwo.ko
+[root@nsimon ex05]# ls -l /dev | grep forty
+crw-------.  1 root root     10, 121 Dec 19 15:25 fortytwo
+[root@nsimon ex05]# cat /dev/fortytwo 
+nsimon[root@nsimon ex05]# 
+[root@nsimon ex05]# echo "nsimon" > /dev/fortytwo 
+-bash: echo: write error: Invalid argument
+[root@nsimon ex05]# echo -n "toto" > /dev/fortytwo 
+-bash: echo: write error: Invalid argument
+[root@nsimon ex05]# echo -n "nsimon" > /dev/fortytwo 
+[root@nsimon ex05]# echo $?
+0
+[root@nsimon ex05]# rmmod fortytwo
+[root@nsimon ex05]# ls -l /dev | grep forty
+[root@nsimon ex05]# 

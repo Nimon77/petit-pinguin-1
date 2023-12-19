@@ -74,11 +74,15 @@ static ssize_t mymounts_read(struct file *filp, char __user *buf, size_t len, lo
 				return -EFAULT;
 		}
 		for (int i = pathlen - 1; i >= 0; i--) {
-			if (strncmp(*(path + i), "/", 2) == 0)
+			if (strncmp(*(path + i), "/", 2) == 0) {
+				kfree(*(path + i));
 				continue;
+			}
 			if (!strcat(buffer, *(path + i)))
 				return -EFAULT;
+			kfree(*(path + i));
 		}
+		kfree(path);
 		if (buffer[strlen(buffer) - 1] == '\t')
 			if (!strcat(buffer, "/"))
 				return -EFAULT;
